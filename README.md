@@ -3,9 +3,7 @@
 
 I have 11 years of working experience in the telecom sector; I currently work as an Expert DevOps Engineer at Jazz. I am also a professional Microsoft database trainer at EVS institute. I am a self-motivated agile software developer with 6+ years of experience in different stages of SDLC. My domain knowledge is in Telecom Customer Care, Real Estate & E-commerce. My expertise is in business flow automation, creation of ETL processes, enterprise-level progressive web app development, and improving web UI & UX. I am a father of a 6-year-old and a raspberry pi project enthusiast.
 
-> :bulb: **Core Competencies:** T-SQL, C# .NET, SSIS, ASP.Net Core, Business flow automation, Web UI/UX
-
-<mark>Core Competencies:** T-SQL, C# .NET, SSIS, ASP.Net Core, Business flow automation, Web UI/UX</mark>
+> <mark>**Core Competencies:** T-SQL, C# .NET, SSIS, ASP.Net Core, Business flow automation, Web UI/UX</mark>
 
 # Professional Experience
 ---
@@ -51,23 +49,23 @@ _www.jazz.com.pk. Jazz Telecom, Lahore, Pakistan, South Asia_
 ---
 ### Master’s in computer science (MCS)
 `2015 – Ongoing`  
-_www.vu.edu.pk, Virtual University of Pakistan, Lahore, PK_
-Concentrations: Object Oriented Programming, Software Development Life Cycle
+_www.vu.edu.pk, Virtual University of Pakistan, Lahore, PK_  
+**Concentrations:** Object Oriented Programming, Software Development Life Cycle
 
 ### Master’s in commerce (B.COM Honors)
 `2006 - 2010`  
-_www.hcc.edu.pk, Hailey College of Commerce, Lahore, PK_
-Concentrations: Finance, Accountancy, Commerce 
+_www.hcc.edu.pk, Hailey College of Commerce, Lahore, PK_  
+**Concentrations:** Finance, Accountancy, Commerce 
 
 ### Intermediate
 `2004 - 2006`  
-_www.gcslahore.edu.pk, Government College of Science, Lahore, PK_
-Concentrations: Mathematics, Statistics, Economics
+_www.gcslahore.edu.pk, Government College of Science, Lahore, PK_  
+**Concentrations:** Mathematics, Statistics, Economics
 
 ### Matriculation
 `2002 - 2004`  
-_MQ Foundation High School, Lahore, PK_
-Concentrations: Computer Science 
+_MQ Foundation High School, Lahore, PK_  
+**Concentrations:** Computer Science 
 
 ## Certifications
 ---
