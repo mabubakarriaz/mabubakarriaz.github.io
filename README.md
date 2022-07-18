@@ -1,10 +1,12 @@
+---
 # Intro
 ---
 
 I have 11 years of working experience in the telecom sector; I currently work as an Expert DevOps Engineer at Jazz. I am also a professional Microsoft database trainer at EVS institute. I am a self-motivated agile software developer with 6+ years of experience in different stages of SDLC. My domain knowledge is in Telecom Customer Care, Real Estate & E-commerce. My expertise is in business flow automation, creation of ETL processes, enterprise-level progressive web app development, and improving web UI & UX. I am a father of a 6-year-old and a raspberry pi project enthusiast.
 
-> <mark>**Core Competencies:** T-SQL, C# .NET, SSIS, ASP.Net Core, Business flow automation, Web UI/UX</mark>
+> <mark> **Core Competencies:** T-SQL, C# .NET, SSIS, ASP.Net Core, Business flow automation, Web UI/UX</mark>
 
+---
 # Professional Experience
 ---
 ### Expert DevOps Engineer @ Jazz
@@ -45,6 +47,7 @@ _www.jazz.com.pk. Jazz Telecom, Lahore, Pakistan, South Asia_
 -	Monitored & enforced telecom services & credit rating checks using SQL server
 -	Tools & Technologies: Web service (ASMX), C#, T-SQL, VS 2015, SSIS, MS SQL Server 2016 
 
+---
 ## Education
 ---
 ### Master’s in computer science (MCS)
@@ -67,6 +70,7 @@ _www.gcslahore.edu.pk, Government College of Science, Lahore, PK_
 _MQ Foundation High School, Lahore, PK_  
 **Concentrations:** Computer Science 
 
+---
 ## Certifications
 ---
 -	Training on Clouding Computing Azure @ Microsoft (Coursera)
@@ -81,6 +85,7 @@ _MQ Foundation High School, Lahore, PK_
 -	Graphic Designing @ Peak Solutions
 -	Training on Cisco Certified Network Associate @ Corvet Institute Lahore
 
+---
 ## Honors & Awards
 ---
 -	Top Performer 2019 -- _Issued by Jazz People & Organization_ `Jan 2019` 
