@@ -1,3 +1,19 @@
+## Intro
+
+I have 11 years of working experience in the telecom sector; I currently work as an Expert DevOps Engineer at Jazz. I am also a professional Microsoft database trainer at EVS institute. I am a self-motivated agile software developer with 6+ years of experience in different stages of SDLC. My domain knowledge is in Telecom Customer Care, Real Estate & E-commerce. My expertise is in business flow automation, creation of ETL processes, enterprise-level progressive web app development, and improving web UI & UX. I am a father of a 6-year-old and a raspberry pi project enthusiast.
+
+## Professional Experience
+
+## Education
+
+## Certifications
+
+## Honors & Awards
+
+## Personal Particulars 
+
+
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/mabubakarriaz/mabubakarriaz.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
