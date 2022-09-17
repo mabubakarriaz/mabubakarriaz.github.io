@@ -6,7 +6,6 @@ I have 11+ years of working experience in the telecom sector; I currently work a
 
 > <mark> **Core Competencies:** T-SQL, C# .NET, SSIS, ASP.Net Core, Business flow automation, Web UI/UX</mark>
 
----
 # Professional Experience
 ---
 ### Expert DevOps Engineer @ Jazz
@@ -47,8 +46,8 @@ _www.jazz.com.pk. Jazz Telecom, Lahore, Pakistan, South Asia_
 -	Monitored & enforced telecom services & credit rating checks using SQL server
 -	Tools & Technologies: Web service (ASMX), C#, T-SQL, VS 2015, SSIS, MS SQL Server 2016 
 
----
-## Education
+
+# Education
 ---
 ### Master’s in computer science (MCS)
 `2015 – Ongoing`  
@@ -70,10 +69,10 @@ _www.gcslahore.edu.pk, Government College of Science, Lahore, PK_
 _MQ Foundation High School, Lahore, PK_  
 **Concentrations:** Computer Science 
 
+
+# Certifications
 ---
-## Certifications
----
--	Training on Clouding Computing Azure @ Microsoft (Coursera)
+-	Microsoft Certified Azure Fundamentals @ Microsoft
 -	Specialization in Python @ University of Michigan (Coursera) 
 -	Project Management @ Lahore University of Management Sciences (LUMS)
 -	Training on RESTful APIs @ LinkedIn Learning
@@ -85,8 +84,8 @@ _MQ Foundation High School, Lahore, PK_
 -	Graphic Designing @ Peak Solutions
 -	Training on Cisco Certified Network Associate @ Corvet Institute Lahore
 
----
-## Honors & Awards
+
+# Honors & Awards
 ---
 -	Quarterly Divisional Champion Q1 2022 -- _Issued by Jazz People & Organization_ `Jul 2022` 
 -	Top Performer 2019 -- _Issued by Jazz People & Organization_ `Jan 2019` 
