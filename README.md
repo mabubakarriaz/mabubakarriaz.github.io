@@ -88,6 +88,7 @@ _MQ Foundation High School, Lahore, PK_
 ---
 ## Honors & Awards
 ---
+-	Quarterly Divisional Champion Q1 2022 -- _Issued by Jazz People & Organization_ `Jul 2022` 
 -	Top Performer 2019 -- _Issued by Jazz People & Organization_ `Jan 2019` 
 -	On Spot recognition -- _Issued by Director Customer Relationship Management_ `Dec 2015`
 -	Quality Effective Behavior -- _Issued by Vice President Customer Care_ `Aug 2013` 

@@ -1,1 +1,9 @@
-theme: jekyll-theme-hacker
+remote_theme: pages-themes/leap-day@v0.2.0
+#theme: jekyll-theme-hacker
+
+title: [The title of your site]
+description: [A short description of your site's purpose]
+
+
+show_downloads: [true]
+google_analytics: [Your Google Analytics tracking ID]
