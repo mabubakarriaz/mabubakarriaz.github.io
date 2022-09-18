@@ -19,3 +19,7 @@ _[www.gcslahore.edu.pk](https://www.gcslahore.edu.pk), Government College of Sci
 `2002 - 2004`  
 _MQ Foundation High School, Lahore, PK_  
 **Concentrations:** Computer Science 
+
+
+---
+[go back](https://mabubakarriaz.github.io)
