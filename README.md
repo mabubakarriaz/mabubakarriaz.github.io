@@ -59,16 +59,6 @@ _www.vu.edu.pk, Virtual University of Pakistan, Lahore, PK_
 _www.hcc.edu.pk, Hailey College of Commerce, Lahore, PK_  
 **Concentrations:** Finance, Accountancy, Commerce 
 
-### Intermediate
-`2004 - 2006`  
-_www.gcslahore.edu.pk, Government College of Science, Lahore, PK_  
-**Concentrations:** Mathematics, Statistics, Economics
-
-### Matriculation
-`2002 - 2004`  
-_MQ Foundation High School, Lahore, PK_  
-**Concentrations:** Computer Science 
-
 [See full list](../education)
 
 # Certifications
