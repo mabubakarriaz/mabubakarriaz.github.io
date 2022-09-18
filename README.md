@@ -45,7 +45,7 @@ _www.jazz.com.pk. Jazz Telecom, Lahore, Pakistan, South Asia_
 -	Monitored & enforced telecom services & credit rating checks using SQL server
 -	Tools & Technologies: Web service (ASMX), C#, T-SQL, VS 2015, SSIS, MS SQL Server 2016 
 
-[See full list](../Experience)
+[See full list](../experience)
 
 # Education
 
