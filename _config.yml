@@ -1,9 +1,8 @@
 #remote_theme: pages-themes/leap-day@v0.2.0
 #theme: jekyll-theme-hacker
 
-title: [Abubakar Riaz]
-description: [Solution Architect @ PGC |⚡️xJazz | Full Stack .Net Developer👨‍💻| SQL Server Trainer @ EVS🎓| Azure DevOps 🚀]
+title: Abubakar Riaz
+description: Solution Architect @ PGC |⚡️xJazz | Full Stack .Net Developer👨‍💻| SQL Server Trainer @ EVS🎓| Azure DevOps 🚀
 
-
-show_downloads: [false]
-google_analytics: [Your Google Analytics tracking ID]
+show_downloads: false
+#google_analytics: [Your Google Analytics tracking ID]

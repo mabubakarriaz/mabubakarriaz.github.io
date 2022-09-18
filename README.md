@@ -3,7 +3,7 @@
 
 I have 11+ years of working experience in the telecom sector; I currently work as an Expert DevOps Engineer at Jazz. I am also a professional Microsoft database trainer at EVS institute. I am a self-motivated agile software developer with 6+ years of experience in different stages of SDLC. My domain knowledge is in Telecom Customer Care, Real Estate & E-commerce. My expertise is in business flow automation, creation of ETL processes, enterprise-level progressive web app development, and improving web UI & UX. I am a father of a 6-year-old and a raspberry pi project enthusiast.
 
-> <mark> *Core Competencies:* T-SQL, C# .NET, SSIS, ASP.Net Core, Business flow automation, Web UI/UX</mark>
+> <mark> __Core Competencies:__ T-SQL, C# .NET, SSIS, ASP.Net Core, Business flow automation, Web UI/UX</mark>
 
 # Professional Experience
 
@@ -45,6 +45,7 @@ _www.jazz.com.pk. Jazz Telecom, Lahore, Pakistan, South Asia_
 -	Monitored & enforced telecom services & credit rating checks using SQL server
 -	Tools & Technologies: Web service (ASMX), C#, T-SQL, VS 2015, SSIS, MS SQL Server 2016 
 
+[See full list](../Experience)
 
 # Education
 
@@ -68,6 +69,7 @@ _www.gcslahore.edu.pk, Government College of Science, Lahore, PK_
 _MQ Foundation High School, Lahore, PK_  
 **Concentrations:** Computer Science 
 
+[See full list](../education)
 
 # Certifications
 
@@ -83,6 +85,7 @@ _MQ Foundation High School, Lahore, PK_
 -	Graphic Designing @ Peak Solutions
 -	Training on Cisco Certified Network Associate @ Corvet Institute Lahore
 
+[See full list](../certifications)
 
 # Honors & Awards
 
@@ -91,3 +94,5 @@ _MQ Foundation High School, Lahore, PK_
 -	On Spot recognition -- _Issued by Director Customer Relationship Management_ `Dec 2015`
 -	Quality Effective Behavior -- _Issued by Vice President Customer Care_ `Aug 2013` 
 -	Quality Work -- _Issued by Vice President Customer Care_ `May 2012`
+
+[See full list](../awards)
