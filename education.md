@@ -22,4 +22,4 @@ _MQ Foundation High School, Lahore, PK_
 
 
 ---
-[go back](https://mabubakarriaz.github.io)
+[jump to main page](https://mabubakarriaz.github.io)

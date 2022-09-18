@@ -4,4 +4,4 @@ The full list is being complied.
 
 
 ---
-[go back](https://mabubakarriaz.github.io)
+[jump to main page](https://mabubakarriaz.github.io)
