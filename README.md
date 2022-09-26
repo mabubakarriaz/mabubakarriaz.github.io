@@ -7,9 +7,17 @@ I have 11+ years of working experience in the telecom sector; I currently work a
 
 # Professional Experience
 
+### Solutions Architect @ PGC
+
+`Sep 2022 – Ongoing (1 mo)`  
+_www.pgc.edu, Punjab Group, Lahore, Pakistan, South Asia_
+
+- Implementing microservices architecture for the education management system.
+- Tools & Technologies: Azure DevOps, C# 10, T-SQL, VS 2022, PostgreSQL, Docker
+
 ### Expert DevOps Engineer @ Jazz
 
-`Aug 2018 – Ongoing (4 years)`  
+`Aug 2018 – Sep 2022 (4.2 years)`  
 _www.jazz.com.pk, Jazz Telecom, Lahore, Pakistan, South Asia_
 
 - Roles: Expert DevOps Engineer (10 mos), Expert Development & databases (1yr 10mos), Specialist Development & database (1yr 5 mos).
