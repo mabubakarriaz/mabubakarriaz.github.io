@@ -11,10 +11,6 @@ The full list is being complied.
 [other page](../hirarchy/xyz.md)
 [other page](../hirarchy/xyz.html)
 
-<embed src="../assets/certificates/doc.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: 
-        <a href="../assets/certificates/doc.pdf">Download PDF</a>.</p>
-    </embed>
-
+<a href="../assets/certificates/doc.pdf" target="_blank">Hello, world!</a>
 ---
 [jump to main page](https://mabubakarriaz.github.io)
