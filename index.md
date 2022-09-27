@@ -77,7 +77,7 @@ __Concentrations:__ Object Oriented Programming, Software Development Life Cycle
 _www.hcc.edu.pk, Hailey College of Commerce, Lahore, PK_  
 __Concentrations:__ Finance, Accountancy, Commerce
 
-[See full list](../education)
+[See full list](../education/)
 
 # Certifications
 
