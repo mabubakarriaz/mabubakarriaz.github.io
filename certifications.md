@@ -12,5 +12,7 @@ The full list is being complied.
 [other page](../hirarchy/xyz.html)
 
 <a href="../assets/certificates/doc.pdf" target="_blank">Hello, world!</a>
+
+[link](../assets/certificates/doc.pdf){:target="_blank"}
 ---
 [jump to main page](https://mabubakarriaz.github.io)
