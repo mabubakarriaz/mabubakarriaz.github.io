@@ -1,11 +1,11 @@
 # Education
 
-### Master’s in computer science (MCS)
+### Master’s in computer science (MCS) [🎖](../education/assets/masters_computer_science_degree_education_abubakarriaz.pdf "see degree"){:target="_blank"}
 
 `2015 – Ongoing`  
 _[www.vu.edu.pk](https://www.vu.edu.pk){:target="_blank"}, Virtual University of Pakistan, Lahore, PK_  
 **Concentrations:** Object Oriented Programming, Software Development Life Cycle
-[🎖](../education/assets/masters_computer_science_degree_education_abubakarriaz.pdf "see degree"){:target="_blank"}
+
 
 ### Master’s in commerce (B.COM Honors)
 
