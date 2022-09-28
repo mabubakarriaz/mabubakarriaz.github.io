@@ -5,7 +5,7 @@
 `2015 – Ongoing`  
 _[www.vu.edu.pk](https://www.vu.edu.pk){:target="_blank"}, Virtual University of Pakistan, Lahore, PK_  
 **Concentrations:** Software Engineering  
-[see degree🔗](../education/assets/masters_computer_science_degree_education_abubakarriaz.pdf "see locally hosted degree image"){:target="_blank"} ![External Link](../assets/external_link_icon.png)
+[see degree](../education/assets/masters_computer_science_degree_education_abubakarriaz.pdf "see locally hosted degree image"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 ### 🎖Master’s in commerce (B.COM Honors)
 
