@@ -4,15 +4,15 @@
 
 `2015 – Ongoing`  
 _[www.vu.edu.pk](https://www.vu.edu.pk){:target="_blank"}, Virtual University of Pakistan, Lahore, PK_  
-**Concentrations:** Object Oriented Programming, Software Development Life Cycle  
-[see degree📜](../education/assets/masters_computer_science_degree_education_abubakarriaz.pdf "see locally hosted degree image"){:target="_blank"}
+**Concentrations:** Software Engineering  
+[see degree](../education/assets/masters_computer_science_degree_education_abubakarriaz.pdf "see locally hosted degree image"){:target="_blank"} ![External Link](../assets/external_link_icon.png)
 
 ### 🎖Master’s in commerce (B.COM Honors)
 
 `2006 - 2010`  
 _[www.hcc.edu.pk](http://www.hcc.edu.pk){:target="_blank"}, Hailey College of Commerce, Lahore, PK_  
 **Concentrations:** Finance, Accountancy, Commerce  
-[see degree📜](../education/assets/masters_computer_science_degree_education_abubakarriaz.pdf "see locally hosted degree image"){:target="_blank"}
+[see degree](../education/assets/masters_computer_science_degree_education_abubakarriaz.pdf "see locally hosted degree image"){:target="_blank"}
 
 ### 🎖Intermediate
 
