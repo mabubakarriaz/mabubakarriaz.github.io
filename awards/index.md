@@ -32,7 +32,7 @@ __Rewarded on__ Project Automation of High Usage Report (HUR) files
 `May 2012`  
 _www.jazz.com.pk, Jazz Telecom, Lahore, Pakistan, South Asia_  
 __Issued by__ Mobilink Vice President Customer Care_  
-__Rewarded on__ Effective reporting style of SAT team  
+__Rewarded on__ Effective reporting of SAT team  
 [see award](../awards/assets/bachelor_abubakarriaz.jpg "see award picture"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 ---

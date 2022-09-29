@@ -53,5 +53,6 @@ _www.jazz.com.pk. Jazz Telecom, Lahore, Pakistan, South Asia_
 - Enhanced ETL operations using SSIS and scripts.
 - Monitored & enforced telecom services & credit rating checks using SQL server
 - Tools & Technologies: Web service (ASMX), C#, T-SQL, VS 2015, SSIS, MS SQL Server 2016
+
 ---
 [jump to main page](https://mabubakarriaz.github.io)
