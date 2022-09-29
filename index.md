@@ -81,26 +81,26 @@ __Concentrations:__ Finance, Accountancy, Commerce
 
 # 🎖️Certifications
 
-🎖️ Microsoft Certified Azure Fundamentals @ Microsoft
-🎖️ Specialization in Python @ University of Michigan (Coursera)
-🎖️ Project Management @ Lahore University of Management Sciences (LUMS)
-🎖️ Training on RESTful APIs @ LinkedIn Learning
-🎖️ Training on .Net Stack @ LinkedIn Learning
-🎖️ Training on Xamarin Developer @ LinkedIn Learning
-🎖️ Training on Search Engine Optimization @ IT Heights Lahore.
-🎖️ Certified SQL Server Professional @ EVS Institute Lahore.
-🎖️ Certified .NET Specialist @ EVS Institute Lahore.
-🎖️ Graphic Designing @ Peak Solutions
-🎖️ Training on Cisco Certified Network Associate @ Corvet Institute Lahore
+🎖️ Microsoft Certified Azure Fundamentals @ Microsoft  
+🎖️ Specialization in Python @ University of Michigan (Coursera)  
+🎖️ Project Management @ Lahore University of Management Sciences (LUMS)  
+🎖️ Training on RESTful APIs @ LinkedIn Learning  
+🎖️ Training on .Net Stack @ LinkedIn Learning  
+🎖️ Training on Xamarin Developer @ LinkedIn Learning  
+🎖️ Training on Search Engine Optimization @ IT Heights Lahore.  
+🎖️ Certified SQL Server Professional @ EVS Institute Lahore.  
+🎖️ Certified .NET Specialist @ EVS Institute Lahore.  
+🎖️ Graphic Designing @ Peak Solutions  
+🎖️ Training on Cisco Certified Network Associate @ Corvet Institute Lahore  
 
 [See full list](../certifications)
 
 # 🏆Honors & Awards
 
-🏆 Quarterly Divisional Champion Q1 2022 -- _Issued by Jazz People & Organization_ `Jul 2022`
-🏆 Top Performer 2019 -- _Issued by Jazz People & Organization_ `Jan 2019`
-🏆 On Spot recognition -- _Issued by Director Customer Relationship Management_ `Dec 2015`
-🏆 Quality Effective Behavior -- _Issued by Vice President Customer Care_ `Aug 2013`
-🏆 Quality Work -- _Issued by Vice President Customer Care_ `May 2012`
+🏆 Quarterly Divisional Champion Q1 2022 -- _Issued by Jazz People & Organization_ `Jul 2022`  
+🏆 Top Performer 2019 -- _Issued by Jazz People & Organization_ `Jan 2019`  
+🏆 On Spot recognition -- _Issued by Director Customer Relationship Management_ `Dec 2015`  
+🏆 Quality Effective Behavior -- _Issued by Vice President Customer Care_ `Aug 2013`  
+🏆 Quality Work -- _Issued by Vice President Customer Care_ `May 2012`  
 
 [See full list](../awards)
