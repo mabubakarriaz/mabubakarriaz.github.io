@@ -5,9 +5,9 @@ I have 11+ years of working experience in the telecom sector; I currently work a
 
 > <mark> __Core Competencies:__ T-SQL, C# .NET, SSIS, ASP.Net Core, Business flow automation, Web UI/UX</mark>
 
-# Professional Experience
+# 💼Professional Experience
 
-### Solutions Architect @ PGC
+### 💼Solutions Architect @ PGC
 
 `Sep 2022 – Ongoing (1 mo)`  
 _www.pgc.edu, Punjab Group, Lahore, Pakistan, South Asia_
@@ -15,7 +15,7 @@ _www.pgc.edu, Punjab Group, Lahore, Pakistan, South Asia_
 - Implementing microservices architecture for the education management system.
 - Tools & Technologies: Azure DevOps, C# 10, T-SQL, VS 2022, PostgreSQL, Docker
 
-### Expert DevOps Engineer @ Jazz
+### 💼Expert DevOps Engineer @ Jazz
 
 `Aug 2018 – Sep 2022 (4.2 years)`  
 _www.jazz.com.pk, Jazz Telecom, Lahore, Pakistan, South Asia_
@@ -29,7 +29,7 @@ _www.jazz.com.pk, Jazz Telecom, Lahore, Pakistan, South Asia_
 - Delivered Mobile Location Protocol (MLP) integration for tracing customers' live location.
 - Tools & Technologies: Azure DevOps, C# 10, T-SQL, VS 2022, MS SQL Server 2019
 
-### Microsoft Database Exam Trainer @ EVS
+### 💼Microsoft Database Exam Trainer @ EVS
 
 `Mar 2017 – Ongoing (5.5 years)`  
 _www.evslearning.com, EVS Institute, Lahore, Pakistan, South Asia_
@@ -38,7 +38,7 @@ _www.evslearning.com, EVS Institute, Lahore, Pakistan, South Asia_
 - Formulated a robust course outline forged around students' Q&A sessions.
 - Tools: MS SQL Server 2019, Google Classrooms, Exam 70-761, 70-762
 
-### Senior Web Developer @ Mindbridge
+### 💼Senior Web Developer @ Mindbridge
 
 `May 2018 – Aug 2018 (4 months)`  
 _www.mindbridge.net, Ferotek, subsidiary of MindBridge, Lahore, Pakistan, South Asia_
@@ -47,7 +47,7 @@ _www.mindbridge.net, Ferotek, subsidiary of MindBridge, Lahore, Pakistan, South 
 - Integrated & aligned database of ZKTeco Turnstile software for login automation.
 - Tools & Technologies: ZKTeco, C#, T-SQL, VS 2017, SSIS, MS SQL Server 2018
 
-### Executive Application Developer & Analyst @ Jazz
+### 💼Executive Application Developer & Analyst @ Jazz
 
 `Jan 2011 – Mar 2017 (6.3 years)`  
 _www.jazz.com.pk. Jazz Telecom, Lahore, Pakistan, South Asia_
@@ -63,15 +63,15 @@ _www.jazz.com.pk. Jazz Telecom, Lahore, Pakistan, South Asia_
 
 [See full list](../experience)
 
-# Education
+# 🎓Education
 
-### Master’s in computer science (MCS)
+### 🎓Master’s in computer science (MCS)
 
 `2015 – Ongoing`  
 _www.vu.edu.pk, Virtual University of Pakistan, Lahore, PK_  
 __Concentrations:__ Object Oriented Programming, Software Development Life Cycle
 
-### Master’s in commerce (B.COM Honors)
+### 🎓Master’s in commerce (B.COM Honors)
 
 `2006 - 2010`  
 _www.hcc.edu.pk, Hailey College of Commerce, Lahore, PK_  
@@ -79,28 +79,28 @@ __Concentrations:__ Finance, Accountancy, Commerce
 
 [See full list](../education/)
 
-# Certifications
+# 🎖️Certifications
 
-- Microsoft Certified Azure Fundamentals @ Microsoft
-- Specialization in Python @ University of Michigan (Coursera)
-- Project Management @ Lahore University of Management Sciences (LUMS)
-- Training on RESTful APIs @ LinkedIn Learning
-- Training on .Net Stack @ LinkedIn Learning
-- Training on Xamarin Developer @ LinkedIn Learning
-- Training on Search Engine Optimization @ IT Heights Lahore.
-- Certified SQL Server Professional @ EVS Institute Lahore.
-- Certified .NET Specialist @ EVS Institute Lahore.
-- Graphic Designing @ Peak Solutions
-- Training on Cisco Certified Network Associate @ Corvet Institute Lahore
+🎖️ Microsoft Certified Azure Fundamentals @ Microsoft
+🎖️ Specialization in Python @ University of Michigan (Coursera)
+🎖️ Project Management @ Lahore University of Management Sciences (LUMS)
+🎖️ Training on RESTful APIs @ LinkedIn Learning
+🎖️ Training on .Net Stack @ LinkedIn Learning
+🎖️ Training on Xamarin Developer @ LinkedIn Learning
+🎖️ Training on Search Engine Optimization @ IT Heights Lahore.
+🎖️ Certified SQL Server Professional @ EVS Institute Lahore.
+🎖️ Certified .NET Specialist @ EVS Institute Lahore.
+🎖️ Graphic Designing @ Peak Solutions
+🎖️ Training on Cisco Certified Network Associate @ Corvet Institute Lahore
 
 [See full list](../certifications)
 
-# Honors & Awards
+# 🏆Honors & Awards
 
-- Quarterly Divisional Champion Q1 2022 -- _Issued by Jazz People & Organization_ `Jul 2022`
-- Top Performer 2019 -- _Issued by Jazz People & Organization_ `Jan 2019`
-- On Spot recognition -- _Issued by Director Customer Relationship Management_ `Dec 2015`
-- Quality Effective Behavior -- _Issued by Vice President Customer Care_ `Aug 2013`
-- Quality Work -- _Issued by Vice President Customer Care_ `May 2012`
+🏆 Quarterly Divisional Champion Q1 2022 -- _Issued by Jazz People & Organization_ `Jul 2022`
+🏆 Top Performer 2019 -- _Issued by Jazz People & Organization_ `Jan 2019`
+🏆 On Spot recognition -- _Issued by Director Customer Relationship Management_ `Dec 2015`
+🏆 Quality Effective Behavior -- _Issued by Vice President Customer Care_ `Aug 2013`
+🏆 Quality Work -- _Issued by Vice President Customer Care_ `May 2012`
 
 [See full list](../awards)
