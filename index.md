@@ -101,7 +101,6 @@ __Concentrations:__ Finance, Accountancy, Commerce
 - Top Performer 2019 -- _Issued by Jazz People & Organization_ `Jan 2019`
 - On Spot recognition -- _Issued by Jazz Director Customer Relationship Management_ `Dec 2015`
 - Quality Effective Behavior -- _Issued by Mobilink Vice President Customer Care_ `Aug 2013`
-- Quality Work -- _Issued by Mobilink Vice President Customer Care_ `May 2012`
 
 [See full list](../awards/)
 
