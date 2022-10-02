@@ -3,8 +3,16 @@
 [See role wise](../certifications/)
 ## 2022
 
-- Design Patterns
-- Object-Oriented Design
+🎖️ __Design Patterns__  
+`Sep 2022`  
+_University of Alberta - Coursera_  
+[Verify from coursera.org](https://www.coursera.org/verify/HSN2WCCP58VX "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+  
+🎖️ __Object-Oriented Design__  
+`Sep 2022`  
+_University of Alberta - Coursera_  
+[Verify from coursera.org](https://www.coursera.org/verify/LK98BXWKVCNZ "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
 - Database Design and Basic SQL in PostgreSQL
 - Microsoft Certified: Azure Fundamentals
 - Preparing for the AZ-900 Microsoft Azure Fundamentals Exam
