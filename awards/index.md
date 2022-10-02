@@ -37,3 +37,13 @@ __Rewarded on__ Effective reporting of SAT team
 
 ---
 [jump to main page](https://mabubakarriaz.github.io)
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T8M8FBW7SY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-T8M8FBW7SY');
+</script>
