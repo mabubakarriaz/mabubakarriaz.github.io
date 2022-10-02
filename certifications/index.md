@@ -1,5 +1,7 @@
 # Certifications
 
+[See yearly](../certifications/yearly)
+
 🎖️ __BBC Spoken English__  
 `Jun 2004`  
 _Lingua Home_  
@@ -12,7 +14,7 @@ Credential ID 0000
 
 🎖️ __Cisco Certified Network Associate (CCNA)__  
 `Mar 2012`  
-_Corvit Networks_   
+_Corvit Networks_  
 Credential ID 0000
 
 🎖️ __Graphic Designing__  
@@ -22,7 +24,7 @@ Credential ID P2G/Shadman/Metric.B-12/17551
 
 🎖️ __Mastering your Projects - The PMBOK Way__  
 `Aug 2013`  
-_www.jazz.com.pk, Jazz Telecom, Lahore, Pakistan, South Asia_   
+_www.jazz.com.pk, Jazz Telecom, Lahore, Pakistan, South Asia_  
 Credential ID 0000
 
 🎖️ __Certified SQL Server Specialist__  
@@ -37,7 +39,7 @@ Credential ID 0000
 
 🎖️ __Excel Advance__  
 `Mar 2014`  
-_www.jazz.com.pk, Jazz Telecom, Lahore, Pakistan, South Asia_   
+_www.jazz.com.pk, Jazz Telecom, Lahore, Pakistan, South Asia_  
 Credential ID 0000
 
 🎖️ __Certified .Net Specialist__  
@@ -47,11 +49,10 @@ Credential ID 13090006
 
 🎖️ __Training on Search Engine Optimization__  
 `Dec 2017`  
-_ITHeight_   
+_ITHeight_  
 Credential ID 0000
 
-
-- Mastering Xamarin.Forms Development: 1 Pages, Layout, and - - Navigation
+- Mastering Xamarin.Forms Development: 1 Pages, Layout, and  Navigation
 - Introduction to Xamarin.Forms
 - XAML in Xamarin.Forms
 - Become a Xamarin.Forms Developer
@@ -97,7 +98,6 @@ Credential ID 0000
 - Database Design and Basic SQL in PostgreSQL
 - Object-Oriented Design
 - Design Patterns
-
 
 ---
 [jump to main page](https://mabubakarriaz.github.io)
