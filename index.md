@@ -82,8 +82,8 @@ __Concentrations:__ Finance, Accountancy, Commerce
 # 🎖️Certifications
 
 - Microsoft Certified Azure Fundamentals @ Microsoft
-- Specialization in Python @ University of Michigan (Coursera)
-- Project Management @ Lahore University of Management Sciences (LUMS)
+- Specialization in Python @ University of Michigan - Coursera
+- Project Management @ Lahore University of Management Sciences - LUMS
 - Training on RESTful APIs @ LinkedIn Learning
 - Training on .Net Stack @ LinkedIn Learning
 - Training on Xamarin Developer @ LinkedIn Learning
