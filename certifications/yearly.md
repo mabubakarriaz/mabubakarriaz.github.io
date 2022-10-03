@@ -1,6 +1,7 @@
 # Certifications
 
 [See role wise](../certifications/)
+
 ## 2022
 
 🎖️ __Specialization in Software Design & Architecture__  
@@ -106,7 +107,7 @@ _LinkedIn Learning_
 
 ## 2021
 
-🎖️ __Cybersecurity Awareness: Building Your Cybersecurity Vocabulary__  
+🎖️ __Introduction to Blazor__  
 `Dec 2021`  
 _LinkedIn Learning_  
 [Verify from linkedin.com](https://www.linkedin.com/learning/certificates/7316ffdb59583d1b50c333b23fe7c48b3562e3c26af591104d5f6b27eaee8a75 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
@@ -140,25 +141,92 @@ _Lahore University of Management Sciences - LUMS_
 
 ## 2019
 
-- Deploying ASP.NET Core Applications
-- Microsoft SQL Server 2016: Installation and Administration
-- Become a RESTful API Developer
-- Web Security: Oauth and OpenId Connect
-- ASP.NET Core: New Features
-- ASP.NET Core: Razor Pages
-- Agile Foundations
-- Proven Tips for Managing Your Time
-- API Testing and Validation
-- Designing RESTful APIs
-- HTTP Essential Training
-- Learning REST APIs
-- Building Web APIs with ASP.Net Web API 2.2
-- Learning ASP.NET Core MVC
-- Become a Xamarin.Forms Developer
-- Resources and Styles in Xamarin.Forms
-- Introduction to Xamarin.Forms
-- XAML in Xamarin.Forms
-- Mastering Xamarin.Forms Development: 1 Pages, Layout, and Navigation
+🎖️ __Deploying ASP.NET Core Applications__  
+`Oct 2019`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/d42d0a051b6b20bc20147609eb884e3492f561f331ba7c52cb3e3cc25294e863 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+🎖️ __Microsoft SQL Server 2016: Installation and Administration__  
+`Oct 2019`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/2d95e2d05cdd4ffaee1f33ea9a695cfe6f23053dc7deaba0a68fe4b127c01770 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+🎖️ __Learning Path to Become a RESTful API Developer__  
+`Oct 2019`  
+_LinkedIn Learning_  
+[See certificate XXXX](../certifications/assets/A0%20-%20Certificate%20Of%20Completion%20-%20Become%20a%20RESTful%20API%20Developer.pdf "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+> ✨ __Learning REST APIs__  
+> `Jun 2019`  
+> [Verify from linkedin.com](https://www.linkedin.com/learning/certificates/eaa95497698b4101f8972b09660798bb34bf56f94ca47e32d03768c03aaae76c "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+> ✨ __HTTP Essential Training__  
+> `Jun 2019`  
+> [Verify from linkedin.com](https://www.linkedin.com/learning/certificates/f0d4384640c804b59b852b181faaf153bddc6e218396f7c80f41cc6ab3e238e5 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+> ✨ __Designing RESTful APIs__  
+> `Jun 2019`  
+> [Verify from linkedin.com](https://www.linkedin.com/learning/certificates/f151e4bbb6c3804b71e8e9e10003b360cabb97800a9a87193516e21a7598a088 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+> ✨ __API Testing and Validation__  
+> `Jun 2019`  
+> [Verify from linkedin.com](https://www.linkedin.com/learning/certificates/3a0433449db65f6d7e3e9b3bfd900d500091d2e5acc7f5e80cf571ff19d741cb "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+> ✨ __Web Security: Oauth and OpenId Connect__  
+> `Oct 2019`  
+> [Verify from linkedin.com](https://www.linkedin.com/learning/certificates/e9388917485f88b55cf0b2e0d0d125ef1d52b02234702b14a2318f29a706e9be "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+🎖️ __ASP.NET Core: New Features__  
+`Oct 2019`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/ad3a48c16ad220abd9492353a587135ecdcc83f665c4ef5d5053f249ef32702a "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+🎖️ __ASP.NET Core: Razor Pages__  
+`Sep 2019`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/ef453b540de7f4dd39d37688d8c769cd80969d7eb9524c20e884d3695948f388 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+🎖️ __Agile Foundations__  
+`Aug 2019`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/b607e4ebfbd5500de94043a303d91909eaa63dc71ef9b79a479ad855e2249177 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+🎖️ __Proven Tips for Managing Your Time__  
+`Aug 2019`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/15b3d37095b2895f860252e020d6cff7a6f52ed6371b1955901b55c56e73d753 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+🎖️ __Building Web APIs with ASP.Net Web API 2.2__  
+`Jun 2019`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/b9a7940cfcff64ae0b506d054e2b9fd4835b31d9d8cf266163136a38c6ae8faa "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+🎖️ __Learning ASP.NET Core MVC__  
+`May 2019`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/41ae2fcc84d3ef9d993a709d0e683fceef4fa2f11090a09bcb9e05938411d96b "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+🎖️ __Learning Path to Become a Xamarin.Forms Developer__  
+`May 2019`  
+_LinkedIn Learning_  
+[See certificate XXXX](../certifications/assets/A0%20-%20Certificate%20Of%20Completion%20-%20Become%20A%20Xamarin%20Forms%20Developer.pdf "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+> ✨ __Introduction to Xamarin.Forms__  
+> `May 2019`  
+> [Verify from linkedin.com](https://www.linkedin.com/learning/certificates/bf7ed3e530d9b808436911e1cde15ba22fba735f9ce60d76295837a635372d52 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+> ✨ __XAML in Xamarin.Forms__  
+> `May 2019`  
+> [Verify from linkedin.com](https://www.linkedin.com/learning/certificates/ccf4ff1bec1b7c281cb69e2a04d11e201721129546b87f99708058b5c6c98b7b "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+> ✨ __Resources and Styles in Xamarin.Forms__  
+> `May 2019`  
+> [Verify from linkedin.com](https://www.linkedin.com/learning/certificates/e8f09f39dde4aecc0ac104e9aebaaa05bdb630f53e70e2bbfdc944a6656b6fb0 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+🎖️ __Mastering Xamarin.Forms Development: 1 Pages, Layout, and Navigation__  
+`May 2019`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/931b51654e87ef84de999d7349793c0942e1dc24a47327a860535f525f81e471 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 ## 2018
 
