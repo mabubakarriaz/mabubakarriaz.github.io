@@ -137,7 +137,7 @@ _LinkedIn Learning_
 🎖️ __Programme on Project Management__  
 `Jan 2020`  
 _Lahore University of Management Sciences - LUMS_  
-[see certificate XXXX](https://www.linkedin.com/learning/certificates/b1775b54f399bc651f81c3433cb5a887ae9a3b3855d603814b2a481fc9ac4f28 "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+[see certificate](../certifications/assets/20200131_programme-on-project-management_certificate_abubakarriaz.webp "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 ## 2019
 
@@ -154,7 +154,7 @@ _LinkedIn Learning_
 🎖️ __Learning Path to Become a RESTful API Developer__  
 `Oct 2019`  
 _LinkedIn Learning_  
-[See certificate XXXX](../certifications/assets/A0%20-%20Certificate%20Of%20Completion%20-%20Become%20a%20RESTful%20API%20Developer.pdf "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+[See certificate](../certifications/assets/20191009_become-a-restful-api-developer_certificate_abubakarriaz.webp "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 > ✨ __Learning REST APIs__  
 > `Jun 2019`  
@@ -209,7 +209,7 @@ _LinkedIn Learning_
 🎖️ __Learning Path to Become a Xamarin.Forms Developer__  
 `May 2019`  
 _LinkedIn Learning_  
-[See certificate XXXX](../certifications/assets/A0%20-%20Certificate%20Of%20Completion%20-%20Become%20A%20Xamarin%20Forms%20Developer.pdf "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+[See certificate](../certifications/assets/20190526_become-a-xamarin-forms-developer_certificate_abubakarriaz.webp "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 > ✨ __Introduction to Xamarin.Forms__  
 > `May 2019`  
@@ -237,7 +237,7 @@ _LinkedIn Learning_
 🎖️ __Training on Search Engine Optimization__  
 `Dec 2017`  
 _ITHeight_  
-[see certificate XXXX](https://www.linkedin.com/learning/certificates/b1775b54f399bc651f81c3433cb5a887ae9a3b3855d603814b2a481fc9ac4f28 "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+[see certificate](../certifications/assets/20180115_training-on-search-engine-optimization_certificate_abubakarriaz.webp "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 ## 2016
 
@@ -252,48 +252,46 @@ _ITHeight_
 🎖️ __Certified .Net Specialist__  
 `Apr 2014`  
 _EVS Professional Training Institute_  
-[see certificate XXXX](https://www.linkedin.com/learning/certificates/b1775b54f399bc651f81c3433cb5a887ae9a3b3855d603814b2a481fc9ac4f28 "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png) Certificate Id: 13090006
+[see certificate](../certifications/assets/20140815_certified-dot-net-specialist_certificate_abubakarriaz.webp "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png) Certificate Id: 13090006
 
 🎖️ __Project Management Using Microsoft Project__  
 `Mar 2014`  
 _www.jazz.com.pk, Jazz Telecom, Lahore, Pakistan, South Asia_  
-[see certificate XXXX](https://www.linkedin.com/learning/certificates/b1775b54f399bc651f81c3433cb5a887ae9a3b3855d603814b2a481fc9ac4f28 "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+[see certificate](../certifications/assets/20140314_project-management-using-microsoft-project_certificate_abubakarriaz.webp "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 🎖️ __Excel Advance__  
 `Mar 2014`  
 _www.jazz.com.pk, Jazz Telecom, Lahore, Pakistan, South Asia_  
-[see certificate XXXX](https://www.linkedin.com/learning/certificates/b1775b54f399bc651f81c3433cb5a887ae9a3b3855d603814b2a481fc9ac4f28 "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+[see certificate](../certifications/assets/20140325_excel-advance_certificate_abubakarriaz.webp "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 ## 2013
 
 🎖️ __Certified SQL Server Specialist__  
 `Sep 2013`  
 _EVS Professional Training Institute_  
-[see certificate XXXX](https://www.linkedin.com/learning/certificates/b1775b54f399bc651f81c3433cb5a887ae9a3b3855d603814b2a481fc9ac4f28 "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png) Certificate Id: L0113090006
+[see certificate](../certifications/assets/20131229_certified-sql-server-specialist_certificate_abubakarriaz.webp "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png) Certificate Id: L0113090006
 
 🎖️ __Mastering your Projects - The PMBOK Way__  
 `Aug 2013`  
 _www.jazz.com.pk, Jazz Telecom, Lahore, Pakistan, South Asia_  
-[see certificate XXXX](https://www.linkedin.com/learning/certificates/b1775b54f399bc651f81c3433cb5a887ae9a3b3855d603814b2a481fc9ac4f28 "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+[see certificate](../certifications/assets/20130823_mastering-your-projects-pmbox-way_certificate_abubakarriaz.webp "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 ## 2012
 
 🎖️ __Graphic Designing__  
 `Aug 2012`  
 _Peak Solutions College_  
-[see certificate XXXX](https://www.linkedin.com/learning/certificates/b1775b54f399bc651f81c3433cb5a887ae9a3b3855d603814b2a481fc9ac4f28 "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png) Certificate Id: P2G/Shadman/Metric.B-12/17551
+[see certificate](../certifications/assets/20120801_graphic-designing_certificate_abubakarriaz.webp "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png) Certificate Id: P2G/Shadman/Metric.B-12/17551
 
 🎖️ __Cisco Certified Network Associate (CCNA)__  
 `Mar 2012`  
 _Corvit Networks_  
-[see certificate XXXX](https://www.linkedin.com/learning/certificates/b1775b54f399bc651f81c3433cb5a887ae9a3b3855d603814b2a481fc9ac4f28 "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 ## 2011
 
 🎖️ __PHP Web Development__  
 `Nov 2011`  
-_Peak Solutions College_  
-[see certificate XXXX](https://www.linkedin.com/learning/certificates/b1775b54f399bc651f81c3433cb5a887ae9a3b3855d603814b2a481fc9ac4f28 "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+_Peak Solutions College_
 
 ## 2010
 
@@ -318,9 +316,9 @@ _Peak Solutions College_
 ## 2004
 
 🎖️ __BBC Spoken English__  
-`Jun 2004`  
+`Aug 2004`  
 _Lingua Home_  
-[see certificate XXXX](https://www.linkedin.com/learning/certificates/b1775b54f399bc651f81c3433cb5a887ae9a3b3855d603814b2a481fc9ac4f28 "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)  
+[see certificate](../certifications/assets/20040806_bbc-spoken-english_certificate_abubakarriaz.webp "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)  
 
 ---
 [jump to main page](https://mabubakarriaz.github.io)
