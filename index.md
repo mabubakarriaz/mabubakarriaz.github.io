@@ -1,7 +1,7 @@
 
 # Intro
 
-I have 11+ years of working experience in the telecom sector; I currently work as an Expert DevOps Engineer at Jazz. I am also a professional Microsoft database trainer at EVS institute. I am a self-motivated agile software developer with 6+ years of experience in different stages of SDLC. My domain knowledge is in Telecom Customer Care, Real Estate & E-commerce. My expertise is in business flow automation, creation of ETL processes, enterprise-level progressive web app development, and improving web UI & UX. I am a father of a 6-year-old and a raspberry pi project enthusiast.
+I have 11+ years of working experience in the telecom sector; I am currently working as a Solution Architect at Punjab Group. I am also a professional Microsoft database trainer at EVS institute. I am a self-motivated agile software developer with 6+ years of experience in different stages of SDL. My domain knowledge is in Telecom, Education, Real Estate & E-commerce. My expertise is in business flow automation, creation of ETL processes, enterprise-level progressive web app development, and improving web UI & UX. I am a father of a 6-year-old and a raspberry pi project enthusiast.
 
 > <mark> __Core Competencies:__ T-SQL, C# .NET, SSIS, ASP.Net Core, Business flow automation, Web UI/UX</mark>
 
@@ -28,15 +28,6 @@ _www.jazz.com.pk, Jazz Telecom, Lahore, Pakistan, South Asia_
 - Handled USSD protocol integration with RESTful ASP.Net web API.
 - Delivered Mobile Location Protocol (MLP) integration for tracing customers' live location.
 - Tools & Technologies: Azure DevOps, C# 10, T-SQL, VS 2022, MS SQL Server 2019
-
-### 💼Microsoft Database Exam Trainer @ EVS
-
-`Mar 2017 – Ongoing (5.5 years)`  
-_www.evslearning.com, EVS Institute, Lahore, Pakistan, South Asia_
-
-- Succeeded in training 15 cohorts in Query & administration of SQL Server.
-- Formulated a robust course outline forged around students' Q&A sessions.
-- Tools: MS SQL Server 2019, Google Classrooms, Exam 70-761, 70-762
 
 ### 💼Senior Web Developer @ Mindbridge
 
@@ -81,17 +72,15 @@ __Concentrations:__ Finance, Accountancy, Commerce
 
 # 🎖️Certifications
 
-- Microsoft Certified Azure Fundamentals @ Microsoft
+- Microsoft Certified Azure Fundamentals AZ-900 @ Microsoft
 - Specialization in Python @ University of Michigan - Coursera
 - Project Management @ Lahore University of Management Sciences - LUMS
 - Training on RESTful APIs @ LinkedIn Learning
 - Training on .Net Stack @ LinkedIn Learning
 - Training on Xamarin Developer @ LinkedIn Learning
-- Training on Search Engine Optimization @ IT Heights Lahore.
-- Certified SQL Server Professional @ EVS Institute Lahore.
-- Certified .NET Specialist @ EVS Institute Lahore.
-- Graphic Designing @ Peak Solutions
-- Training on Cisco Certified Network Associate @ Corvet Institute Lahore
+- Training on Search Engine Optimization @ IT Heights, Lahore
+- Certified SQL Server Professional @ EVS Institute, Lahore
+- Certified .NET Specialist @ EVS Institute, Lahore
 
 [See full list](../certifications/)
 
