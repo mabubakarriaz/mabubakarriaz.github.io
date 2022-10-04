@@ -140,7 +140,7 @@ _LinkedIn Learning_
 
 🎖️ __Programme on Project Management__  
 `Jan 2020`  
-_Lahore University of Management Sciences - LUMS_  
+_Lahore University of Management Sciences - LUMS, Lahore, Pakistan, South Asia_  
 [see certificate](../certifications/assets/20200131_programme-on-project-management_certificate_abubakarriaz.webp "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 ## 2019
@@ -240,7 +240,7 @@ _LinkedIn Learning_
 
 🎖️ __Training on Search Engine Optimization__  
 `Dec 2017`  
-_ITHeight_  
+_ITHeight, Lahore, Pakistan, South Asia_  
 [see certificate](../certifications/assets/20180115_training-on-search-engine-optimization_certificate_abubakarriaz.webp "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 ## 2016
@@ -255,47 +255,47 @@ _ITHeight_
 
 🎖️ __Certified .Net Specialist__  
 `Apr 2014`  
-_EVS Professional Training Institute_  
-[see certificate](../certifications/assets/20140815_certified-dot-net-specialist_certificate_abubakarriaz.webp "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png) Certificate Id: 13090006
+_EVS Professional Training Institute, Lahore, Pakistan, South Asia_  
+[see certificate](../certifications/assets/20140815_certified-dot-net-specialist_certificate_abubakarriaz.webp "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 🎖️ __Project Management Using Microsoft Project__  
 `Mar 2014`  
-_www.jazz.com.pk, Jazz Telecom, Lahore, Pakistan, South Asia_  
+_Jazz Telecom, Lahore, Pakistan, South Asia_  
 [see certificate](../certifications/assets/20140314_project-management-using-microsoft-project_certificate_abubakarriaz.webp "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 🎖️ __Excel Advance__  
 `Mar 2014`  
-_www.jazz.com.pk, Jazz Telecom, Lahore, Pakistan, South Asia_  
+_Jazz Telecom, Lahore, Pakistan, South Asia_  
 [see certificate](../certifications/assets/20140325_excel-advance_certificate_abubakarriaz.webp "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 ## 2013
 
 🎖️ __Certified SQL Server Specialist__  
 `Sep 2013`  
-_EVS Professional Training Institute_  
-[see certificate](../certifications/assets/20131229_certified-sql-server-specialist_certificate_abubakarriaz.webp "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png) Certificate Id: L0113090006
+_EVS Professional Training Institute, Lahore, Pakistan, South Asia_  
+[see certificate](../certifications/assets/20131229_certified-sql-server-specialist_certificate_abubakarriaz.webp "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 🎖️ __Mastering your Projects - The PMBOK Way__  
 `Aug 2013`  
-_www.jazz.com.pk, Jazz Telecom, Lahore, Pakistan, South Asia_  
+_Jazz Telecom, Lahore, Pakistan, South Asia_  
 [see certificate](../certifications/assets/20130823_mastering-your-projects-pmbox-way_certificate_abubakarriaz.webp "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 ## 2012
 
 🎖️ __Graphic Designing__  
 `Aug 2012`  
-_Peak Solutions College_  
-[see certificate](../certifications/assets/20120801_graphic-designing_certificate_abubakarriaz.webp "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png) Certificate Id: P2G/Shadman/Metric.B-12/17551
+_Peak Solutions College, Lahore, Pakistan, South Asia_  
+[see certificate](../certifications/assets/20120801_graphic-designing_certificate_abubakarriaz.webp "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 🎖️ __Cisco Certified Network Associate (CCNA)__  
 `Mar 2012`  
-_Corvit Networks_  
+_Corvit Networks, Lahore, Pakistan, South Asia_  
 
 ## 2011
 
 🎖️ __PHP Web Development__  
 `Nov 2011`  
-_Peak Solutions College_
+_Peak Solutions College, Lahore, Pakistan, South Asia_
 
 ## 2010
 
@@ -321,7 +321,7 @@ _Peak Solutions College_
 
 🎖️ __BBC Spoken English__  
 `Aug 2004`  
-_Lingua Home_  
+_Lingua Home, Lahore, Pakistan, South Asia_  
 [see certificate](../certifications/assets/20040806_bbc-spoken-english_certificate_abubakarriaz.webp "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)  
 
 ---
