@@ -16,6 +16,10 @@ _University of Alberta - Coursera_
 > `Sep 2022`  
 > [Verify from coursera.org](https://www.coursera.org/verify/LK98BXWKVCNZ "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
+>✨ __Software Architecture__  
+> `Oct 2022`  
+> [Verify from coursera.org](https://www.coursera.org/verify/627HUVGK8XFL "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
 🎖️ __Specialization in PostgreSQL for Everybody__  
 `Sep 2022`  
 _University of Michigan - Coursera_  

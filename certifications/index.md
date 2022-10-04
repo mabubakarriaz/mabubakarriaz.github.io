@@ -6,6 +6,7 @@
 
 - Object-Oriented Design
 - Design Patterns
+- Software Architecture
 
 ## Agile Project Manager
 
