@@ -84,7 +84,7 @@ __Concentrations:__ Finance, Accountancy, Commerce
 
 [See full list](../certifications/)
 
-# 🎖️Projects
+# 🏗️Projects
 
 - Backend Voice of Customer web app - ASP.Net Core  
 - Restoration on Commitment API - RESTful API  

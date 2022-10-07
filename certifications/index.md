@@ -20,6 +20,10 @@ _University of Alberta - Coursera_
 > `Oct 2022`  
 > [Verify from coursera.org](https://www.coursera.org/verify/627HUVGK8XFL "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
+>✨ __Service-Oriented Architecture__  
+> `Oct 2022`  
+> [Verify from coursera.org XXXX](https://www.coursera.org/verify/627HUVGK8XFL "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
 ## Agile Project Manager
 
 🎖️ __Programme on Project Management__  
