@@ -74,15 +74,28 @@ __Concentrations:__ Finance, Accountancy, Commerce
 
 - Microsoft Certified Azure Fundamentals AZ-900 @ Microsoft
 - Specialization in Python @ University of Michigan - Coursera
+- Specialization in Software Design & Architecture @ University of Alberta - Coursera
 - Project Management @ Lahore University of Management Sciences - LUMS
 - Training on RESTful APIs @ LinkedIn Learning
 - Training on .Net Stack @ LinkedIn Learning
-- Training on Xamarin Developer @ LinkedIn Learning
 - Training on Search Engine Optimization @ IT Heights, Lahore
 - Certified SQL Server Professional @ EVS Institute, Lahore
 - Certified .NET Specialist @ EVS Institute, Lahore
 
 [See full list](../certifications/)
+
+# 🎖️Projects
+
+- Backend Voice of Customer web app - ASP.Net Core  
+- Restoration on Commitment API - RESTful API  
+- Service Home Delivery Web App - ASP.Net Core  
+- Digital Business Solution Services ETL - SSIS Packages  
+- Blocking & Restoration Through CSV - Core Console App  
+- Credit Monitoring Web App - ASP.Net MVC app  
+- Digital Fraud Complain API - WSDL API  
+- Nearest Jazz Locator API - SOAP API  
+
+[See full list](../projects/)
 
 # 🏆Honors & Awards
 
