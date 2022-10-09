@@ -5,7 +5,7 @@
 ## 2022
 
 🎖️ __Specialization in Software Design & Architecture__  
-`Sep 2022`  
+`Oct 2022`  
 _University of Alberta - Coursera_  
 [Verify from coursera.org](https://www.coursera.org/verify/specialization/N79FKTLCPW7P "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 

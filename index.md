@@ -72,15 +72,15 @@ __Concentrations:__ Finance, Accountancy, Commerce
 
 # 🎖️Certifications
 
-- Microsoft Certified Azure Fundamentals AZ-900 @ Microsoft
-- Specialization in Python @ University of Michigan - Coursera
 - Specialization in Software Design & Architecture @ University of Alberta - Coursera
 - Project Management @ Lahore University of Management Sciences - LUMS
+- Microsoft Certified Azure Fundamentals AZ-900 @ Microsoft
+- Specialization in Python @ University of Michigan - Coursera
+- Certified SQL Server Professional @ EVS Institute, Lahore
+- Certified .NET Specialist @ EVS Institute, Lahore
 - Training on RESTful APIs @ LinkedIn Learning
 - Training on .Net Stack @ LinkedIn Learning
 - Training on Search Engine Optimization @ IT Heights, Lahore
-- Certified SQL Server Professional @ EVS Institute, Lahore
-- Certified .NET Specialist @ EVS Institute, Lahore
 
 [See full list](../certifications/)
 
