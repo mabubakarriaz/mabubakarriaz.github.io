@@ -7,6 +7,7 @@
 🎖️ __Specialization in Software Design & Architecture__  
 `Sep 2022`  
 _University of Alberta - Coursera_  
+[Verify from coursera.org](https://www.coursera.org/verify/specialization/N79FKTLCPW7P "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 > ✨ __Design Patterns__  
 > `Sep 2022`  
@@ -22,7 +23,7 @@ _University of Alberta - Coursera_
 
 >✨ __Service-Oriented Architecture__  
 > `Oct 2022`  
-> [Verify from coursera.org XXXX](https://www.coursera.org/verify/627HUVGK8XFL "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+> [Verify from coursera.org](https://www.coursera.org/verify/4Z4HYPLQ6J5D "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 ## Agile Project Manager
 
