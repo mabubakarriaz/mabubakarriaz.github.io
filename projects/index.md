@@ -5,26 +5,28 @@
 The projects I created from scratch.
 
 1. Backend Voice of Customer web app  
--- A system to intelligently get previous day's interactions from all activity types, locations, and teams to enable front end staff for feedback collection and gauging service level. (Estimated Vendor Cost (Dev & Support): $40K/annum)
+_Estimated Vendor Cost (Dev & Support): $40K/annum_  
+-- A system to intelligently get previous day's interactions from all activity types, locations, and teams to enable front end staff for feedback collection and gauging service level. 
 
 3. FTP Common language runtime
 4. Call of Fame web app  
--- Call of Fame is a web application where Agents can pitch their best call for recognition. Different Mgmt layers then evaluate the claim and decide the winner. (Estimated Vendor Cost (Dev & Support): $25K/annum)
+_Estimated Vendor Cost (Dev & Support): $25K/annum_  
+-- Call of Fame is a web application where Agents can pitch their best call for recognition. Different Mgmt layers then evaluate the claim and decide the winner. 
 
 4. EmailTopia Service API
 5. Franchise Complain Executive API
 6. Franchise Voice of customer Web app
 7. Restoration on Commitment API
 8. Service Home Delivery Web App  
--- A unique platform to enable customers to order a service through 
-USSD and Jazz staff will go to his/her doorstep fully equipped to provide offered services.
-(Estimated Vendor Cost (Dev & Support): $30K/annum)
+_Estimated Vendor Cost (Dev & Support): $30K/annum_  
+-- A unique platform to enable customers to order a service through USSD and Jazz staff will go to his/her doorstep fully equipped to provide offered services.
 
 9. Whatsapp Notification Consent API
 10. Super Office ETL
 
 12. Digital Business Solution Services ETL  
--- CSRTB Data Marts – Orchestrated data marts using ETL for CX applications, dashboards, and operational reporting. (Estimated Vendor Cost (Dev & Support): $100K/annum)
+_Estimated Vendor Cost (Dev & Support): $100K/annum_  
+-- CSRTB Data Marts – Orchestrated data marts using ETL for CX applications, dashboards, and operational reporting.
 
 12. Baseline ETL      
 14. Blocking & Restoration Through CSV
@@ -39,7 +41,8 @@ USSD and Jazz staff will go to his/her doorstep fully equipped to provide offere
 23. Financial Processes
 24. 7896 Collector short code
 25. 7089 Office Locator  
--- Developed a system to find nearest Jazz touch point through an SMS short code. (Estimated Vendor Cost (Dev & Support): $20K/annum)
+_Estimated Vendor Cost (Dev & Support): $20K/annum_  
+-- Developed a system to find nearest Jazz touch point through an SMS short code.
 
 27. Limit Enchancement project
 
@@ -50,7 +53,8 @@ The projects I maintained and helped in change request.
 
 1. Credit and Collection system desktop app
 2. Customer Portfolio Management desktop app  
--- Customer Profile Management is a Web application where Postpaid Customers are called for different initiatives like Credit Exceed, Unpaid and Suspended categories to win back considering debt and financial health. (Estimated Vendor Cost (Dev & Support): $25K/annum)
+_Estimated Vendor Cost (Dev & Support): $25K/annum_  
+-- Customer Profile Management is a Web application where Postpaid Customers are called for different initiatives like Credit Exceed, Unpaid and Suspended categories to win back considering debt and financial health.
 
 4. Quality Assurance System Desktop App
 5. Auto FCSA Reporter Desktop App
