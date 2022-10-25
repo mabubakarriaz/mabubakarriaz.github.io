@@ -4,6 +4,16 @@
 
 ## 2022
 
+🎖️ __Learning Docker__  
+`Oct 2022`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/75e3fec4bacd8d212aecbba72449779b54429a8cad18a45bc8369b813abfba05 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+🎖️ __Docker for absolute beginners__  
+`Oct 2022`  
+_Coursera_  
+[Verify from coursera.org](https://www.coursera.org/verify/H5UA4GP4KWC5 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
 🎖️ __Specialization in Software Design & Architecture__  
 `Oct 2022`  
 _University of Alberta - Coursera_  

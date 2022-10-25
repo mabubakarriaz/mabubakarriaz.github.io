@@ -2,6 +2,30 @@
 
 [See year wise](../certifications/yearly)
 
+## Docker Expert
+
+🎖️ __Learning Docker__  
+`Oct 2022`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/75e3fec4bacd8d212aecbba72449779b54429a8cad18a45bc8369b813abfba05 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+🎖️ __Docker for absolute beginners__  
+`Oct 2022`  
+_Coursera_  
+[Verify from coursera.org](https://www.coursera.org/verify/H5UA4GP4KWC5 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+## DevOps Engineer
+
+🎖️ __Learning Azure DevOps 2018__  
+`Aug 2022`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/fb2da9b85b8421a82a7defa0dee81c22a1e4ecce68176b2ac4795c237313592f "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+🎖️ __Continuous Delivery with Azure DevOps__  
+`Aug 2020`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/b174e5afd825c88da4171a5e478d55ce7f05f3fe4247d05ddb5916db4f16158d "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
 ## Software Architect
 
 🎖️ __Specialization in Software Design & Architecture__  
@@ -47,18 +71,6 @@ _Jazz Telecom, Lahore, Pakistan, South Asia_
 _Jazz Telecom, Lahore, Pakistan, South Asia_  
 [see certificate](../certifications/assets/20130823_mastering-your-projects-pmbox-way_certificate_abubakarriaz.webp "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
-## DevOps Engineer
-
-🎖️ __Learning Azure DevOps 2018__  
-`Aug 2022`  
-_LinkedIn Learning_  
-[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/fb2da9b85b8421a82a7defa0dee81c22a1e4ecce68176b2ac4795c237313592f "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
-
-🎖️ __Continuous Delivery with Azure DevOps__  
-`Aug 2020`  
-_LinkedIn Learning_  
-[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/b174e5afd825c88da4171a5e478d55ce7f05f3fe4247d05ddb5916db4f16158d "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
-
 ## Azure Developer
 
 🎖️ __Microsoft Certified: Azure Fundamentals__  
@@ -91,7 +103,6 @@ _University of Michigan - Coursera_
 `Aug 2022`  
 _Microsoft - Coursera_  
 [Verify from coursera.org](https://www.coursera.org/verify/WFR79YPZ9WEE "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
-
 
 ## Go Developer
 
