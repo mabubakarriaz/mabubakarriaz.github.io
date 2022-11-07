@@ -16,6 +16,11 @@ _Coursera_
 
 ## DevOps Engineer
 
+🎖️ __Linux: Introduction to Shell Scripting for DevOps__  
+`Nov 2022`  
+_Coursera_  
+[Verify from coursera.org](https://www.coursera.org/verify/PVC8USRE74XC "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
 🎖️ __Learning Jenkins__  
 `Oct 2022`  
 _LinkedIn Learning_  
