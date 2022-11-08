@@ -19,7 +19,7 @@ _Coursera_
 🎖️ __Learning GitHub Actions__  
 `Nov 2022`  
 _LinkedIn Learning_  
-[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/cc3c3810d9a5026bf732bc7ed13a97b3e27f3d8ddc233ac19aeb742a4f36c51c "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/598ed8e92655c116209dc5724ec9f7def8e5f36068f104bc6fe5eba5d1382e26 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 🎖️ __Linux: Introduction to Shell Scripting for DevOps__  
 `Nov 2022`  
