@@ -4,6 +4,21 @@
 
 ## 2022
 
+🎖️ __Learning Terraform__  
+`Nov 2022`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/4659b2be306a9df12533d1ffab694450345522e467993c1dd0b07c0707f9aa66 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+🎖️ __Terraform for absolute beginners__  
+`Nov 2022`  
+_Coursera_  
+[Verify from coursera.org](https://www.coursera.org/verify/3JUFR2N3LVKU "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+🎖️ __GitHub Actions First Look__  
+`Nov 2022`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/ec38a9594b549309c4bb186b345d1f15ab8333248c5b0c1a3672062ba0e29bbf "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
 🎖️ __Learning GitHub Actions__  
 `Nov 2022`  
 _LinkedIn Learning_  
