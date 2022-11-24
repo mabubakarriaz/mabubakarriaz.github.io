@@ -7,13 +7,13 @@ I have 11+ years of working experience in the telecom sector; I am currently wor
 
 # 💼Professional Experience
 
-### 💼Solutions Architect @ PGC
+### 💼Senior DevOps Engineer @ Tkxel
 
-`Sep 2022 – Ongoing (1 mo)`  
-_www.pgc.edu, Punjab Group, Lahore, Pakistan, South Asia_
+`Oct 2022 – Ongoing (2 mos)`  
+_www.tkxel.com, Tkxel LLC, Lahore, Pakistan, South Asia_
 
-- Implementing microservices architecture for the education management system.
-- Tools & Technologies: Azure DevOps, C# 10, T-SQL, VS 2022, PostgreSQL, Docker
+✔️ Implementing CI/CD pipeline using github actions.  
+➡️ Tools & Technologies: Terraform, docker, Linux, GitHub, Ansible, Microsoft Azure, Amazon Web Services (AWS), Jenkins
 
 ### 💼Expert DevOps Engineer @ Jazz
 

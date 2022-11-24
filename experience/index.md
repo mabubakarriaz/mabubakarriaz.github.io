@@ -1,8 +1,16 @@
 # Experience
 
+### 💼Senior DevOps Engineer @ Tkxel
+
+`Oct 2022 – Ongoing (2 mos)`  
+_www.tkxel.com, Tkxel LLC, Lahore, Pakistan, South Asia_
+
+✔️ Implementing CI/CD pipeline using github actions.  
+➡️ Tools & Technologies: Terraform, docker, Linux, GitHub, Ansible, Microsoft Azure, Amazon Web Services (AWS), Jenkins
+
 ### 💼Solutions Architect @ PGC
 
-`Sep 2022 – Ongoing (2 mos)`  
+`Sep 2022 – Oct 2022 (2 mos)`  
 _www.pgc.edu, Punjab Group, Lahore, Pakistan, South Asia_
 
 ✔️ Implementing microservices architecture for the education management system.  
