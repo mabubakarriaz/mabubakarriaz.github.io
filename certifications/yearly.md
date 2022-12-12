@@ -4,6 +4,11 @@
 
 ## 2022
 
+🎖️ __Learning Ansible__  
+`Dec 2022`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/502ec923acbb1f32c51792724bb4d5680998e31164ba65ce49a0096c90fe8ef5 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
 🎖️ __Learning Terraform__  
 `Nov 2022`  
 _LinkedIn Learning_  
