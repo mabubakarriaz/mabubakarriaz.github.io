@@ -16,6 +16,11 @@ _Coursera_
 
 ## DevOps Engineer
 
+🎖️ __Ansible Essential Training__  
+`Dec 2022`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/fc4ec582a7a239dc6a194eb0896499ac279a76ed3746a67f40c04fd2bd60a401 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
 🎖️ __Learning Ansible__  
 `Dec 2022`  
 _LinkedIn Learning_  
