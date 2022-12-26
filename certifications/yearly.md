@@ -4,6 +4,11 @@
 
 ## 2022
 
+🎖️ __Learning Vagrant__  
+`Dec 2022`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/825d907dfba0b5e3d77b5ea39b37186875194bc66b3378d010eebda67febe44c "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
 🎖️ __Ansible Essential Training__  
 `Dec 2022`  
 _LinkedIn Learning_  
