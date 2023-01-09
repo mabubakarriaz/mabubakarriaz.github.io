@@ -2,7 +2,47 @@
 
 [See role wise](../certifications/)
 
+## 2023
+
+🎖️ __XXXX Azure Administrator Associate XXXX__  
+`Jan 2023`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/75e3fec4bacd8d212aecbba72449779b54429a8cad18a45bc8369b813abfba05 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+> ✨ __Azure Administration: Implement and Manage Storage__  
+> `Jan 2023`  
+> [Verify from linkedin.com](https://www.linkedin.com/learning/certificates/cbf9e357d25dd9f42ecde579c1a297f19481b86cf5fc14b30f3721570606487a "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+> ✨ __Azure Administration: Deploy and Manage Compute Resources__  
+> `Jan 2023`  
+> [Verify from linkedin.com](https://www.linkedin.com/learning/certificates/f1fca2cf9a02734b50872bb9c99b9c0764c7f3807658fff6dc8a203fc110259d "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+> ✨ __Azure Administration: Configure and Manage Virtual Networking__  
+> `Jan 2023`  
+> [Verify from linkedin.com](https://www.linkedin.com/learning/certificates/44ffd763ef8fbbd432b882bb7ef4c481fefcea18799ffbee9006a9d910ef37ee "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+> ✨ __XXXX Azure Administration: Load Balancers and Application Gateways XXXX__  
+> `Jan 2023`  
+> [Verify from linkedin.com](https://www.linkedin.com/learning/certificates/c194f5b3226e6b55e0225a94847085f2ef6af5181da08eedec61acedee270596 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+> ✨ __Azure Administration: Monitor and Back Up Azure Resources__  
+> `Jan 2023`  
+> [Verify from linkedin.com](https://www.linkedin.com/learning/certificates/c194f5b3226e6b55e0225a94847085f2ef6af5181da08eedec61acedee270596 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
 ## 2022
+
+🎖️ __XXXX Azure Administrator Associate XXXX__  
+`Oct 2022`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/75e3fec4bacd8d212aecbba72449779b54429a8cad18a45bc8369b813abfba05 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+> ✨ __Azure Administration: Identities and Governance__  
+> `Dec 2022`  
+> [Verify from linkedin.com](https://www.linkedin.com/learning/certificates/5052c0aa1dfbe508060ba4e053f9f425b97692bc3fa4f61eeee7ca54aad9925d "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+> ✨ __Exam Tips Microsoft Azure Administrator AZ104__  
+> `Dec 2022`  
+> [Verify from linkedin.com](https://www.linkedin.com/learning/certificates/b769d8b7aef4a7c0a1a31442aac41b57596d97c280cfd19890016ed49696277c "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 🎖️ __Learning Vagrant__  
 `Dec 2022`  
