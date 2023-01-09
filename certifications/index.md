@@ -4,10 +4,10 @@
 
 ## Azure Engineer
 
-🎖️ __XXXX Azure Administrator Associate XXXX__  
+🎖️ __Prepare for the Microsoft Azure Administrator (AZ-104) Certification Exam__  
 `Oct 2022`  
 _LinkedIn Learning_  
-[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/75e3fec4bacd8d212aecbba72449779b54429a8cad18a45bc8369b813abfba05 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/1e579c7928970c05d0d5557a9d6436c280fe6a17828ed45a1cfbfcc987d9bda2 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 > ✨ __Azure Administration: Identities and Governance__  
 > `Dec 2022`  
@@ -25,9 +25,9 @@ _LinkedIn Learning_
 > `Jan 2023`  
 > [Verify from linkedin.com](https://www.linkedin.com/learning/certificates/44ffd763ef8fbbd432b882bb7ef4c481fefcea18799ffbee9006a9d910ef37ee "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
-> ✨ __XXXX Azure Administration: Load Balancers and Application Gateways XXXX__  
+> ✨ __Azure Administration: Load Balancers and Application Gateways__  
 > `Jan 2023`  
-> [Verify from linkedin.com](https://www.linkedin.com/learning/certificates/c194f5b3226e6b55e0225a94847085f2ef6af5181da08eedec61acedee270596 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+> [Verify from linkedin.com](https://www.linkedin.com/learning/certificates/d65de9a4a19b5e339cb5feb5689e58d20c598f13fb757e8c39d47f92b948052d "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 > ✨ __Azure Administration: Monitor and Back Up Azure Resources__  
 > `Jan 2023`  
