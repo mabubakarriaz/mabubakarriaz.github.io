@@ -5,8 +5,8 @@
 `Oct 2022 – Ongoing (1 yr)`  
 _www.tkxel.com, Tkxel LLC, Lahore, Pakistan, South Asia_
 
-✔️Automated a self-built C# & powershell packager using GitHub Actions pipelines.
-✔️Implemented a Linux sidecar container in Azure container instance (ACI)
+✔️Automated a self-built C# & powershell packager using GitHub Actions pipelines.  
+✔️Implemented a Linux sidecar container in Azure container instance (ACI)  
 ➡️ Tools & Technologies: GitHub Actions, Linux bash, Powershell, PostgreSQL, Docker
 
 ### 💼Solutions Architect @ PGC

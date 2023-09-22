@@ -12,9 +12,9 @@ I have 11+ years of working experience in the telecom sector; I am currently wor
 `Oct 2022 – Ongoing (1 yr)`  
 _www.tkxel.com, Tkxel LLC, Lahore, Pakistan, South Asia_
 
-✔️Automated a self-built C# & powershell packager using GitHub Actions pipelines.
-✔️Implemented a Linux sidecar container in Azure container instance (ACI)
-➡️ Tools & Technologies: GitHub Actions, Linux bash, Powershell, PostgreSQL, Docker
+- Automated a self-built C# & powershell packager using GitHub Actions pipelines.
+- Implemented a Linux sidecar container in Azure container instance (ACI)
+- Tools & Technologies: GitHub Actions, Linux bash, Powershell, PostgreSQL, Docker
 
 ### 💼Expert DevOps Engineer @ Jazz
 
