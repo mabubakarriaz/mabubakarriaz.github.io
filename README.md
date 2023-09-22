@@ -1,4 +1,4 @@
 
 # Digital portfolio
 
-A portfolio made using github pages and custom domain routing through cname.
+A portfolio made using markdown in GitHub pages & custom domain routing through CNAME.

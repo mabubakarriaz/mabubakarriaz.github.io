@@ -9,11 +9,12 @@ I have 11+ years of working experience in the telecom sector; I am currently wor
 
 ### 💼Senior DevOps Engineer @ Tkxel
 
-`Oct 2022 – Ongoing (2 mos)`  
+`Oct 2022 – Ongoing (1 yr)`  
 _www.tkxel.com, Tkxel LLC, Lahore, Pakistan, South Asia_
 
-✔️ Implementing CI/CD pipeline using github actions.  
-➡️ Tools & Technologies: Terraform, docker, Linux, GitHub, Ansible, Microsoft Azure, Amazon Web Services (AWS), Jenkins
+✔️Automated a self-built C# & powershell packager using GitHub Actions pipelines.
+✔️Implemented a Linux sidecar container in Azure container instance (ACI)
+➡️ Tools & Technologies: GitHub Actions, Linux bash, Powershell, PostgreSQL, Docker
 
 ### 💼Expert DevOps Engineer @ Jazz
 
@@ -74,7 +75,7 @@ __Concentrations:__ Finance, Accountancy, Commerce
 
 - Specialization in Software Design & Architecture @ University of Alberta - Coursera
 - Project Management @ Lahore University of Management Sciences - LUMS
-- Microsoft Certified Azure Fundamentals AZ-900 @ Microsoft
+- Microsoft Certified Azure Administrator AZ-104 @ Microsoft
 - Specialization in Python @ University of Michigan - Coursera
 - Certified SQL Server Professional @ EVS Institute, Lahore
 - Certified .NET Specialist @ EVS Institute, Lahore

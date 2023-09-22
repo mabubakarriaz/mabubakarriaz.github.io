@@ -2,11 +2,12 @@
 
 ### 💼Senior DevOps Engineer @ Tkxel
 
-`Oct 2022 – Ongoing (2 mos)`  
+`Oct 2022 – Ongoing (1 yr)`  
 _www.tkxel.com, Tkxel LLC, Lahore, Pakistan, South Asia_
 
-✔️ Implementing CI/CD pipeline using github actions.  
-➡️ Tools & Technologies: Terraform, docker, Linux, GitHub, Ansible, Microsoft Azure, Amazon Web Services (AWS), Jenkins
+✔️Automated a self-built C# & powershell packager using GitHub Actions pipelines.
+✔️Implemented a Linux sidecar container in Azure container instance (ACI)
+➡️ Tools & Technologies: GitHub Actions, Linux bash, Powershell, PostgreSQL, Docker
 
 ### 💼Solutions Architect @ PGC
 
