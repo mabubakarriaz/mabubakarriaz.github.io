@@ -1,15 +1,24 @@
 
 # Intro
 
-I have 11+ years of working experience in the telecom sector; I am currently working as a Solution Architect at Punjab Group. I am also a professional Microsoft database trainer at EVS institute. I am a self-motivated agile software developer with 6+ years of experience in different stages of SDL. My domain knowledge is in Telecom, Education, Real Estate & E-commerce. My expertise is in business flow automation, creation of ETL processes, enterprise-level progressive web app development, and improving web UI & UX. I am a father of a 6-year-old and a raspberry pi project enthusiast.
+I have 13+ years of working experience in the telecom sector; I am currently working as a Principal DevOps Engineer at Tkxel. I am also a professional Microsoft database trainer at EVS institute. I am a self-motivated agile software developer with 6+ years of experience in different stages of SDL. My domain knowledge is in Telecom, Education, Real Estate & E-commerce. My expertise is in business flow automation, creation of ETL processes, enterprise-level progressive web app development, and improving web UI & UX. I am a father of 2 and a raspberry pi project enthusiast.
 
-> <mark> __Core Competencies:__ T-SQL, C# .NET, SSIS, ASP.Net Core, Business flow automation, Web UI/UX</mark>
+> <mark> __Core Competencies:__ Azure, T-SQL, C# .NET, SSIS, ASP.Net Core, Business flow automation, Web UI/UX</mark>
 
 # 💼Professional Experience
 
+### 💼Principal DevOps Engineer @ Tkxel
+
+`Oct 2023 – Ongoing (6 mo)`  
+_www.tkxel.com, Tkxel LLC, Lahore, Pakistan, South Asia_
+
+- Automated a self-built C# & powershell packager using GitHub Actions pipelines.
+- Implemented a Linux sidecar container in Azure container instance (ACI)
+- Tools & Technologies: GitHub Actions, Linux bash, Powershell, PostgreSQL, Docker
+
 ### 💼Senior DevOps Engineer @ Tkxel
 
-`Oct 2022 – Ongoing (1 yr)`  
+`Oct 2022 – Oct 2023 (1 yr 1 mo)`  
 _www.tkxel.com, Tkxel LLC, Lahore, Pakistan, South Asia_
 
 - Automated a self-built C# & powershell packager using GitHub Actions pipelines.
@@ -73,13 +82,14 @@ __Concentrations:__ Finance, Accountancy, Commerce
 
 # 🎖️Certifications
 
+- Hashicorp Certified Terraform Associate @ Hashicorp
+- GitHub Certified Foundations & GitHub Actions @ GitHub
 - Specialization in Software Design & Architecture @ University of Alberta - Coursera
 - Project Management @ Lahore University of Management Sciences - LUMS
 - Microsoft Certified Azure Administrator AZ-104 @ Microsoft
 - Specialization in Python @ University of Michigan - Coursera
 - Certified SQL Server Professional @ EVS Institute, Lahore
 - Certified .NET Specialist @ EVS Institute, Lahore
-- Training on RESTful APIs @ LinkedIn Learning
 - Training on .Net Stack @ LinkedIn Learning
 - Training on Search Engine Optimization @ IT Heights, Lahore
 

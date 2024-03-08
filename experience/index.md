@@ -1,8 +1,17 @@
 # Experience
 
+### 💼Principal DevOps Engineer @ Tkxel
+
+`Oct 2023 – Ongoing (6 mo)`  
+_www.tkxel.com, Tkxel LLC, Lahore, Pakistan, South Asia_
+
+- Automated a self-built C# & powershell packager using GitHub Actions pipelines.
+- Implemented a Linux sidecar container in Azure container instance (ACI)
+- Tools & Technologies: GitHub Actions, Linux bash, Powershell, PostgreSQL, Docker
+
 ### 💼Senior DevOps Engineer @ Tkxel
 
-`Oct 2022 – Ongoing (1 yr)`  
+`Oct 2022 – Oct 2023 (1 yr 1 mo)`  
 _www.tkxel.com, Tkxel LLC, Lahore, Pakistan, South Asia_
 
 ✔️Automated a self-built C# & powershell packager using GitHub Actions pipelines.  

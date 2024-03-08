@@ -84,6 +84,11 @@ _LinkedIn Learning_
 _Coursera_  
 [Verify from coursera.org](https://www.coursera.org/verify/PVC8USRE74XC "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
+🎖️ __Jenkins Essential Training__  
+`Oct 2022`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/6f45a0694128d88d2846bb35d8a0e0d8a30b6f9a958db39b2bdeb2beee8cf84d "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
 🎖️ __Learning Jenkins__  
 `Oct 2022`  
 _LinkedIn Learning_  
