@@ -82,6 +82,7 @@ __Concentrations:__ Finance, Accountancy, Commerce
 
 # 🎖️Certifications
 
+- Microsoft Certified Azure Developer AZ-204 @ Microsoft
 - Hashicorp Certified Terraform Associate @ Hashicorp
 - GitHub Certified Foundations & GitHub Actions @ GitHub
 - Specialization in Software Design & Architecture @ University of Alberta - Coursera
@@ -90,7 +91,6 @@ __Concentrations:__ Finance, Accountancy, Commerce
 - Specialization in Python @ University of Michigan - Coursera
 - Certified SQL Server Professional @ EVS Institute, Lahore
 - Certified .NET Specialist @ EVS Institute, Lahore
-- Training on .Net Stack @ LinkedIn Learning
 - Training on Search Engine Optimization @ IT Heights, Lahore
 
 [See full list](../certifications/)
