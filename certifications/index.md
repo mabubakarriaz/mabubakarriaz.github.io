@@ -56,6 +56,21 @@ _Coursera_
 
 ## DevOps Engineer
 
+🎖️ __HashiCorp Certified: Terraform Associate (003)__  
+`Mar 2024`  
+_HashiCorp_  
+[Verify from credly.com](https://www.credly.com/badges/626c7454-8c32-4247-a4b6-7b011e413d4e/public_url "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+🎖️ __GitHub Actions__  
+`Feb 2024`  
+_GitHub_  
+[Verify from credly.com](https://www.credly.com/go/3BqfE2T5 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+🎖️ __GitHub Foundations__  
+`Feb 2024`  
+_GitHub_  
+[Verify from credly.com](https://www.credly.com/go/b4JcELvO "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
 🎖️ __Learning Vagrant__  
 `Dec 2022`  
 _LinkedIn Learning_  
@@ -158,6 +173,26 @@ _Jazz Telecom, Lahore, Pakistan, South Asia_
 [see certificate](../certifications/assets/20130823_mastering-your-projects-pmbox-way_certificate_abubakarriaz.webp "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 ## Azure Developer
+
+🎖️ __Azure Developer Associate (AZ-204) Cert Prep: Implementing VMs and Batch Jobs__  
+`Nov 2023`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/64f961345ad03d3911a898927a1b5def79fcaacc3de1d3781249d195bfc63d82 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+🎖️ __Azure Essential Training for Developers__  
+`Nov 2023`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/67cff660af3e2e22b6ba95ea58750670036007efc4816dc571ce38d963f6a379 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+🎖️ __Building a Web Application on Microsoft Azure (2020)__  
+`Nov 2023`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/532da581a9f5d11831dd99318ea87fd5a0120ad110ab3ad7034f3cbc68d0d70a "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+🎖️ __Exam Tips: Developing Solutions for Microsoft Azure (AZ-204)__  
+`Nov 2023`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/c0b8752bee6f1261842de7e3e5a77a26ca57f013918cad4e2a6063a89e6930be "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 🎖️ __Microsoft Certified: Azure Fundamentals__  
 `Aug 2022`  
