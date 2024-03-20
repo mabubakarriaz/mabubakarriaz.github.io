@@ -4,6 +4,11 @@
 
 ## 2023
 
+🎖️ __Microsoft Certified: Azure Administrator Assiciate__  
+`Jun 2023`  
+_Microsoft_  
+[Verify from credly.com](https://www.credly.com/badges/d3a18d32-7727-413d-9d79-fcaffd377a4f "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
 🎖️ __Prepare for the Microsoft Azure Administrator (AZ-104) Certification Exam__  
 `Jan 2023`  
 _LinkedIn Learning_  
