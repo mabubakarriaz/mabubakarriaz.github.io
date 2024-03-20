@@ -2,7 +2,27 @@
 
 [See year wise](../certifications/yearly)
 
-## Azure Engineer
+## Azure Cloud Engineer
+
+🎖️ __Azure Developer Associate (AZ-204) Cert Prep: Implementing VMs and Batch Jobs__  
+`Nov 2023`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/64f961345ad03d3911a898927a1b5def79fcaacc3de1d3781249d195bfc63d82 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+🎖️ __Azure Essential Training for Developers__  
+`Nov 2023`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/67cff660af3e2e22b6ba95ea58750670036007efc4816dc571ce38d963f6a379 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+🎖️ __Building a Web Application on Microsoft Azure (2020)__  
+`Nov 2023`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/532da581a9f5d11831dd99318ea87fd5a0120ad110ab3ad7034f3cbc68d0d70a "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+🎖️ __Exam Tips: Developing Solutions for Microsoft Azure (AZ-204)__  
+`Nov 2023`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/c0b8752bee6f1261842de7e3e5a77a26ca57f013918cad4e2a6063a89e6930be "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 🎖️ __Microsoft Certified: Azure Administrator Assiciate__  
 `Jun 2023`  
@@ -42,17 +62,36 @@ _LinkedIn Learning_
 > `Dec 2022`  
 > [Verify from linkedin.com](https://www.linkedin.com/learning/certificates/b769d8b7aef4a7c0a1a31442aac41b57596d97c280cfd19890016ed49696277c "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
-## Docker Expert
+🎖️ __Microsoft Certified: Azure Fundamentals__  
+`Aug 2022`  
+_Microsoft_  
+[Verify from credly.com](https://www.credly.com/badges/3ab60d12-f366-4e6b-af46-119f00cac75c/public_url "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
-🎖️ __Learning Docker__  
-`Oct 2022`  
-_LinkedIn Learning_  
-[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/75e3fec4bacd8d212aecbba72449779b54429a8cad18a45bc8369b813abfba05 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+🎖️ __Specialization in Microsoft Azure Fundamentals AZ-900 Exam Prep__  
+`Aug 2022`  
+_University of Michigan - Coursera_  
+[Verify from coursera.org](https://www.coursera.org/verify/specialization/VSDBRB9AG3JX "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
-🎖️ __Docker for absolute beginners__  
-`Oct 2022`  
-_Coursera_  
-[Verify from coursera.org](https://www.coursera.org/verify/H5UA4GP4KWC5 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+> ✨ __Introduction to Microsoft Azure Cloud Services__  
+> `Jul 2022`  
+> [Verify from coursera.org](https://www.coursera.org/verify/BH6CEGA2TQNX "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)  
+
+> ✨ __Microsoft Azure Management Tools and Security Solutions__  
+> `Jul 2022`  
+> [Verify from coursera.org](https://www.coursera.org/verify/DN3H96L6PMPD "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+> ✨ __Microsoft Azure Services and Lifecycles__  
+> `Aug 2022`  
+> [Verify from coursera.org](https://www.coursera.org/verify/RRSQT23Z3NQX "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+> ✨ __Preparing for the AZ-900 Microsoft Azure Fundamentals Exam__  
+> `Aug 2022`  
+> [Verify from coursera.org](https://www.coursera.org/verify/RGK2WJXAG2XN "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+🎖️ __Microsoft Azure SQL__  
+`Aug 2022`  
+_Microsoft - Coursera_  
+[Verify from coursera.org](https://www.coursera.org/verify/WFR79YPZ9WEE "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 ## DevOps Engineer
 
@@ -127,6 +166,18 @@ _LinkedIn Learning_
 _LinkedIn Learning_  
 [Verify from linkedin.com](https://www.linkedin.com/learning/certificates/b174e5afd825c88da4171a5e478d55ce7f05f3fe4247d05ddb5916db4f16158d "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
+## Docker Expert
+
+🎖️ __Learning Docker__  
+`Oct 2022`  
+_LinkedIn Learning_  
+[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/75e3fec4bacd8d212aecbba72449779b54429a8cad18a45bc8369b813abfba05 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
+🎖️ __Docker for absolute beginners__  
+`Oct 2022`  
+_Coursera_  
+[Verify from coursera.org](https://www.coursera.org/verify/H5UA4GP4KWC5 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
 ## Software Architect
 
 🎖️ __Specialization in Software Design & Architecture__  
@@ -171,59 +222,6 @@ _Jazz Telecom, Lahore, Pakistan, South Asia_
 `Aug 2013`  
 _Jazz Telecom, Lahore, Pakistan, South Asia_  
 [see certificate](../certifications/assets/20130823_mastering-your-projects-pmbox-way_certificate_abubakarriaz.webp "Local verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
-
-## Azure Developer
-
-🎖️ __Azure Developer Associate (AZ-204) Cert Prep: Implementing VMs and Batch Jobs__  
-`Nov 2023`  
-_LinkedIn Learning_  
-[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/64f961345ad03d3911a898927a1b5def79fcaacc3de1d3781249d195bfc63d82 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
-
-🎖️ __Azure Essential Training for Developers__  
-`Nov 2023`  
-_LinkedIn Learning_  
-[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/67cff660af3e2e22b6ba95ea58750670036007efc4816dc571ce38d963f6a379 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
-
-🎖️ __Building a Web Application on Microsoft Azure (2020)__  
-`Nov 2023`  
-_LinkedIn Learning_  
-[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/532da581a9f5d11831dd99318ea87fd5a0120ad110ab3ad7034f3cbc68d0d70a "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
-
-🎖️ __Exam Tips: Developing Solutions for Microsoft Azure (AZ-204)__  
-`Nov 2023`  
-_LinkedIn Learning_  
-[Verify from linkedin.com](https://www.linkedin.com/learning/certificates/c0b8752bee6f1261842de7e3e5a77a26ca57f013918cad4e2a6063a89e6930be "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
-
-🎖️ __Microsoft Certified: Azure Fundamentals__  
-`Aug 2022`  
-_Microsoft_  
-[Verify from credly.com](https://www.credly.com/badges/3ab60d12-f366-4e6b-af46-119f00cac75c/public_url "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
-
-🎖️ __Specialization in Microsoft Azure Fundamentals AZ-900 Exam Prep__  
-`Aug 2022`  
-_University of Michigan - Coursera_  
-[Verify from coursera.org](https://www.coursera.org/verify/specialization/VSDBRB9AG3JX "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
-
-> ✨ __Introduction to Microsoft Azure Cloud Services__  
-> `Jul 2022`  
-> [Verify from coursera.org](https://www.coursera.org/verify/BH6CEGA2TQNX "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)  
-
-> ✨ __Microsoft Azure Management Tools and Security Solutions__  
-> `Jul 2022`  
-> [Verify from coursera.org](https://www.coursera.org/verify/DN3H96L6PMPD "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
-
-> ✨ __Microsoft Azure Services and Lifecycles__  
-> `Aug 2022`  
-> [Verify from coursera.org](https://www.coursera.org/verify/RRSQT23Z3NQX "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
-
-> ✨ __Preparing for the AZ-900 Microsoft Azure Fundamentals Exam__  
-> `Aug 2022`  
-> [Verify from coursera.org](https://www.coursera.org/verify/RGK2WJXAG2XN "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
-
-🎖️ __Microsoft Azure SQL__  
-`Aug 2022`  
-_Microsoft - Coursera_  
-[Verify from coursera.org](https://www.coursera.org/verify/WFR79YPZ9WEE "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
 
 ## Go Developer
 
