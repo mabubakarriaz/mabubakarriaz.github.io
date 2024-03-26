@@ -4,6 +4,11 @@
 
 ## Azure Cloud Engineer
 
+🎖️ __Microsoft Certified: Azure Developer Associate__  
+`Mar 2024`  
+_Microsoft_  
+[Verify from microsoft.com](https://learn.microsoft.com/en-us/users/abubakarriaz/credentials/8f447d69818048a7 "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
 🎖️ __Azure Developer Associate (AZ-204) Cert Prep: Implementing VMs and Batch Jobs__  
 `Nov 2023`  
 _LinkedIn Learning_  
