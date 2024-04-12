@@ -4,6 +4,11 @@
 
 ## 2024
 
+🎖️ __Foundational C# with Microsoft__  
+`Apr 2024`  
+_freeCodeCamp_  
+[Verify from freeCodeCamp](https://freecodecamp.org/certification/mabubakarriaz/foundational-c-sharp-with-microsoft "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
 🎖️ __Microsoft Certified: Azure Developer Associate__  
 `Mar 2024`  
 _Microsoft_  

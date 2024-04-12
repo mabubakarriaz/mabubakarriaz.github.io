@@ -254,6 +254,11 @@ _University of Michigan - Coursera_
 
 ## ASP.NET Core Developer
 
+🎖️ __Foundational C# with Microsoft__  
+`Apr 2024`  
+_freeCodeCamp_  
+[Verify from freeCodeCamp](https://freecodecamp.org/certification/mabubakarriaz/foundational-c-sharp-with-microsoft "Online verification link"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+
 🎖️ __Deploying ASP.NET Core Applications__  
 `Oct 2019`  
 _LinkedIn Learning_  
