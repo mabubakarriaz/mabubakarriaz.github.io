@@ -1,10 +1,16 @@
-#remote_theme: pages-themes/leap-day@v0.2.0
-#theme: jekyll-theme-hacker
-
 title: Abubakar Riaz
-description: DevOps Engineer @ tkxel |⚡️xJazz | Full Stack .Net Developer👨‍💻| SQL Server Trainer @ EVS🎓| Azure DevOps 🚀
+description: Principal DevOps Engineer | Azure-Certified | Full Stack .NET Developer | SQL Server Trainer
+
+url: "https://abubakarriaz.com.pk"
+baseurl: ""
+
+author:
+  name: Abubakar Riaz
 
 show_downloads: false
-#google_analytics: G-T8M8FBW7SY
 
-#google_analytics: UA-99327936-2
+exclude:
+  - README.md
+  - CLAUDE.md
+  - Gemfile
+  - Gemfile.lock
