@@ -65,11 +65,24 @@ Compare extracted PDF content against existing file content. Identify what is ne
 The landing page sections to update (identified by HTML comments):
 
 - **Hero** (`<!-- HERO -->`): title, role text, tagline, years of experience, hero badge cards (top 3 certs), social links
-- **Experience** (`<!-- EXPERIENCE -->`): most recent 3 roles — title, company, date range, 2–3 bullet points
-- **Certifications** (`<!-- CERTIFICATIONS -->`): featured cert cards (top 6–8)
+- **About** (`<!-- ABOUT -->`): update the about-text paragraphs from the LinkedIn PDF summary — professional tagline, current role, years of experience, areas of expertise, domain knowledge, and personal note. Also update the Core Competencies skill tags using the following process:
+  1. **Source**: scan the **tools and technologies** listed across all roles in the LinkedIn PDF experience section (e.g., tags like "GitHub Actions", "Terraform", "Azure DevOps", "C# .NET", etc.).
+  2. **Selection criteria** — keep a skill if it meets at least one:
+     - Appears in **2 or more roles** (demonstrates sustained use, not a one-off)
+     - Is a **senior/expert-level signal** (e.g., Solution Architecture, IaC, CI/CD, Observability)
+     - Is **highly in-demand** in the current market (e.g., Terraform, Docker, Kubernetes, GitHub Actions, OpenTelemetry)
+     - Is a **core language or platform** that underpins the career (e.g., C# .NET, T-SQL, Azure Cloud)
+  3. **Exclude** generic or commodity skills that don't differentiate (e.g., "Microsoft Office", "Windows", basic tools everyone uses).
+  4. **Categorize** into three tiers matching the existing CSS classes:
+     - `skill-primary` (3–4 tags): highest-level strategic competencies (e.g., Solution Architecture, Cloud Computing, Data Engineering, DevOps)
+     - `skill-secondary` (4–6 tags): core platforms and frameworks with strong market demand (e.g., Azure Cloud, C# .NET, GitHub Actions, Terraform, Docker)
+     - `skill-tertiary` (4–6 tags): specific tools and technologies that demonstrate depth (e.g., T-SQL, SSIS, ASP.NET Core, PowerShell, Azure DevOps, Kubernetes)
+  5. **Do not** simply copy the LinkedIn "Top Skills" list verbatim — derive the tags from the full experience section to ensure completeness and accuracy.
+- **Experience** (`<!-- EXPERIENCE -->`): reflect the CV's own grouping/summarization of experience — if the CV groups roles under the same employer or presents a condensed view, mirror that structure. Do not always default to listing 3 individual roles; follow how the CV frames the career story. Each entry gets 2–3 bullet points.
+- **Certifications** (`<!-- CERTIFICATIONS -->`): curated diverse mix of 6–8 featured certs drawn from the CV's completed list. Prioritize breadth across issuers and skill domains (e.g., one Azure Expert, one DevOps, one GitHub, one HashiCorp/other, one Google/Coursera). Do **not** fill the section with cards all from the same issuer or category.
 - **Projects** (`<!-- PROJECTS -->`): top 3–4 projects
 - **Education** (`<!-- EDUCATION -->`): highest degree entry
-- **Awards** (`<!-- AWARDS -->`): top 3 awards
+- **Awards** (`<!-- AWARDS -->`): editorially select the most notable/impressive awards (e.g., external recognitions, promotions, competitive honors). Do not simply pick the most recent — choose awards that best represent professional credibility. Typically 3–5 items.
 
 **Preserve exactly**: all CSS classes, `animate-on-scroll`, `{{ relative_url }}` Liquid filters, HTML structure, and `&amp;` entity encoding for `&` in HTML content. Do not add Google Analytics or `<head>` content — those are in the layout.
 
@@ -200,7 +213,10 @@ After all edits:
 1. Run `git diff --stat` to summarize changes.
 2. Show the user a brief summary of what was updated in each file.
 3. Stage and commit with a descriptive message following the pattern of recent commits (e.g., `Sync portfolio content with latest CV and LinkedIn profile`).
-4. Create a pull request from the session branch to `main` using `gh pr create`.
+4. **Create or update the pull request**:
+   - If no PR exists for the current branch, create one with `gh pr create`.
+   - If a PR already exists (check with `gh pr list --head <branch>`), update its title and body to reflect the latest changes using `gh pr edit <number> --title "..." --body "..."`.
+   - Always ensure the PR title and description accurately reflect all changes made in the session, even if the PR was created in a previous run.
 
 ## Rules
 
