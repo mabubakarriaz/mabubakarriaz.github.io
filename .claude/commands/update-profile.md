@@ -65,7 +65,19 @@ Compare extracted PDF content against existing file content. Identify what is ne
 The landing page sections to update (identified by HTML comments):
 
 - **Hero** (`<!-- HERO -->`): title, role text, tagline, years of experience, hero badge cards (top 3 certs), social links
-- **About** (`<!-- ABOUT -->`): update the about-text paragraphs from the LinkedIn PDF summary — professional tagline, current role, years of experience, areas of expertise, domain knowledge, and personal note. Also update the Core Competencies skill tags to match the LinkedIn Top Skills and current tech stack.
+- **About** (`<!-- ABOUT -->`): update the about-text paragraphs from the LinkedIn PDF summary — professional tagline, current role, years of experience, areas of expertise, domain knowledge, and personal note. Also update the Core Competencies skill tags using the following process:
+  1. **Source**: scan the **tools and technologies** listed across all roles in the LinkedIn PDF experience section (e.g., tags like "GitHub Actions", "Terraform", "Azure DevOps", "C# .NET", etc.).
+  2. **Selection criteria** — keep a skill if it meets at least one:
+     - Appears in **2 or more roles** (demonstrates sustained use, not a one-off)
+     - Is a **senior/expert-level signal** (e.g., Solution Architecture, IaC, CI/CD, Observability)
+     - Is **highly in-demand** in the current market (e.g., Terraform, Docker, Kubernetes, GitHub Actions, OpenTelemetry)
+     - Is a **core language or platform** that underpins the career (e.g., C# .NET, T-SQL, Azure Cloud)
+  3. **Exclude** generic or commodity skills that don't differentiate (e.g., "Microsoft Office", "Windows", basic tools everyone uses).
+  4. **Categorize** into three tiers matching the existing CSS classes:
+     - `skill-primary` (3–4 tags): highest-level strategic competencies (e.g., Solution Architecture, Cloud Computing, Data Engineering, DevOps)
+     - `skill-secondary` (4–6 tags): core platforms and frameworks with strong market demand (e.g., Azure Cloud, C# .NET, GitHub Actions, Terraform, Docker)
+     - `skill-tertiary` (4–6 tags): specific tools and technologies that demonstrate depth (e.g., T-SQL, SSIS, ASP.NET Core, PowerShell, Azure DevOps, Kubernetes)
+  5. **Do not** simply copy the LinkedIn "Top Skills" list verbatim — derive the tags from the full experience section to ensure completeness and accuracy.
 - **Experience** (`<!-- EXPERIENCE -->`): reflect the CV's own grouping/summarization of experience — if the CV groups roles under the same employer or presents a condensed view, mirror that structure. Do not always default to listing 3 individual roles; follow how the CV frames the career story. Each entry gets 2–3 bullet points.
 - **Certifications** (`<!-- CERTIFICATIONS -->`): curated diverse mix of 6–8 featured certs drawn from the CV's completed list. Prioritize breadth across issuers and skill domains (e.g., one Azure Expert, one DevOps, one GitHub, one HashiCorp/other, one Google/Coursera). Do **not** fill the section with cards all from the same issuer or category.
 - **Projects** (`<!-- PROJECTS -->`): top 3–4 projects
