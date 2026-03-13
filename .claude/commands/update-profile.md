@@ -65,6 +65,7 @@ Compare extracted PDF content against existing file content. Identify what is ne
 The landing page sections to update (identified by HTML comments):
 
 - **Hero** (`<!-- HERO -->`): title, role text, tagline, years of experience, hero badge cards (top 3 certs), social links
+- **About** (`<!-- ABOUT -->`): update the about-text paragraphs from the LinkedIn PDF summary — professional tagline, current role, years of experience, areas of expertise, domain knowledge, and personal note. Also update the Core Competencies skill tags to match the LinkedIn Top Skills and current tech stack.
 - **Experience** (`<!-- EXPERIENCE -->`): reflect the CV's own grouping/summarization of experience — if the CV groups roles under the same employer or presents a condensed view, mirror that structure. Do not always default to listing 3 individual roles; follow how the CV frames the career story. Each entry gets 2–3 bullet points.
 - **Certifications** (`<!-- CERTIFICATIONS -->`): curated diverse mix of 6–8 featured certs drawn from the CV's completed list. Prioritize breadth across issuers and skill domains (e.g., one Azure Expert, one DevOps, one GitHub, one HashiCorp/other, one Google/Coursera). Do **not** fill the section with cards all from the same issuer or category.
 - **Projects** (`<!-- PROJECTS -->`): top 3–4 projects
@@ -200,7 +201,10 @@ After all edits:
 1. Run `git diff --stat` to summarize changes.
 2. Show the user a brief summary of what was updated in each file.
 3. Stage and commit with a descriptive message following the pattern of recent commits (e.g., `Sync portfolio content with latest CV and LinkedIn profile`).
-4. Create a pull request from the session branch to `main` using `gh pr create`.
+4. **Create or update the pull request**:
+   - If no PR exists for the current branch, create one with `gh pr create`.
+   - If a PR already exists (check with `gh pr list --head <branch>`), update its title and body to reflect the latest changes using `gh pr edit <number> --title "..." --body "..."`.
+   - Always ensure the PR title and description accurately reflect all changes made in the session, even if the PR was created in a previous run.
 
 ## Rules
 
