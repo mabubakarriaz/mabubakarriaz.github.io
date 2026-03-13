@@ -1,11 +1,29 @@
 title: Abubakar Riaz
-description: Principal DevOps Engineer | Azure-Certified | Full Stack .NET Developer | SQL Server Trainer
+tagline: "Associate Cloud Architect · Azure Solutions Architect Expert · DevOps Engineer"
+description: "Associate Cloud Architect at Tkxel. Azure Solutions Architect Expert and Microsoft Certified Trainer with 15+ years in IT. Specializing in DevOps, CI/CD, and cloud architecture."
 
 url: "https://abubakarriaz.com.pk"
 baseurl: ""
 
 author:
   name: Abubakar Riaz
+  github: mabubakarriaz
+  linkedin: mabubakarriaz
+
+social:
+  name: Abubakar Riaz
+  links:
+    - https://github.com/mabubakarriaz
+    - https://www.linkedin.com/in/mabubakarriaz
+    - https://learn.microsoft.com/en-us/users/abubakarriaz
+    - https://blog.abubakarriaz.com.pk
+
+logo: /assets/images/og-image.png
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 show_downloads: false
 
