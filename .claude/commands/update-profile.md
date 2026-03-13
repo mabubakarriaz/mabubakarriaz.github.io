@@ -65,11 +65,11 @@ Compare extracted PDF content against existing file content. Identify what is ne
 The landing page sections to update (identified by HTML comments):
 
 - **Hero** (`<!-- HERO -->`): title, role text, tagline, years of experience, hero badge cards (top 3 certs), social links
-- **Experience** (`<!-- EXPERIENCE -->`): most recent 3 roles — title, company, date range, 2–3 bullet points
-- **Certifications** (`<!-- CERTIFICATIONS -->`): featured cert cards (top 6–8)
+- **Experience** (`<!-- EXPERIENCE -->`): reflect the CV's own grouping/summarization of experience — if the CV groups roles under the same employer or presents a condensed view, mirror that structure. Do not always default to listing 3 individual roles; follow how the CV frames the career story. Each entry gets 2–3 bullet points.
+- **Certifications** (`<!-- CERTIFICATIONS -->`): curated diverse mix of 6–8 featured certs drawn from the CV's completed list. Prioritize breadth across issuers and skill domains (e.g., one Azure Expert, one DevOps, one GitHub, one HashiCorp/other, one Google/Coursera). Do **not** fill the section with cards all from the same issuer or category.
 - **Projects** (`<!-- PROJECTS -->`): top 3–4 projects
 - **Education** (`<!-- EDUCATION -->`): highest degree entry
-- **Awards** (`<!-- AWARDS -->`): top 3 awards
+- **Awards** (`<!-- AWARDS -->`): editorially select the most notable/impressive awards (e.g., external recognitions, promotions, competitive honors). Do not simply pick the most recent — choose awards that best represent professional credibility. Typically 3–5 items.
 
 **Preserve exactly**: all CSS classes, `animate-on-scroll`, `{{ relative_url }}` Liquid filters, HTML structure, and `&amp;` entity encoding for `&` in HTML content. Do not add Google Analytics or `<head>` content — those are in the layout.
 
