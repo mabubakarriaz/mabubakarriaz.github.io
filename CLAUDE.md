@@ -4,38 +4,80 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-This is a static personal portfolio site hosted on GitHub Pages with a custom domain (`abubakarriaz.com.pk`). It uses Jekyll to render Markdown files. There is no local build step — pushing to `main` deploys the site automatically via GitHub Pages.
+This is a static personal portfolio site hosted on GitHub Pages with a custom domain (`abubakarriaz.com.pk`). It uses Jekyll 4.4 with a custom layout — no remote theme. Pushing to `main` deploys automatically via GitHub Pages.
+
+For local development, run `bundle exec jekyll serve` (requires Ruby + Bundler).
 
 ## Site Configuration
 
-- [`_config.yml`](_config.yml): Jekyll site metadata (title, description). The remote theme and Google Analytics are commented out here but Analytics is embedded inline in each page.
+- [`_config.yml`](_config.yml): Jekyll site metadata (title, description, url, author). CLAUDE.md and README.md are in the `exclude` list so they don't get built.
 - [`CNAME`](CNAME): Routes the custom domain `abubakarriaz.com.pk` to the GitHub Pages site.
+- [`Gemfile`](Gemfile): Jekyll 4.4 + `jekyll-feed` + `jekyll-seo-tag` plugins.
 
 ## Content Architecture
 
-All content is authored in Markdown. The site is organized as a flat set of section directories, each with its own `index.md`:
+All pages are Jekyll HTML files (`.html`) with YAML front matter. The site uses a flat section-directory structure, each with its own `index.html`:
 
-- [`index.md`](index.md) — Main landing page with intro, summarized experience, education, certifications, projects, and awards. Links out to full-list pages in each section.
-- [`certifications/index.md`](certifications/index.md) — Full certifications list, grouped by skill category (e.g., Azure Cloud Engineer, DevOps Engineer). Also has `yearly.md` for a chronological view.
-- [`experience/index.md`](experience/index.md) — Full work history.
-- [`education/index.md`](education/index.md) — Full education history.
-- [`projects/index.md`](projects/index.md) — Full projects list.
-- [`awards/index.md`](awards/index.md) — Full awards list.
+- [`index.html`](index.html) — Main landing page (hero, summarized experience, education, certifications, projects, awards). Links out to full-list pages in each section.
+- [`certifications/index.html`](certifications/index.html) — Full certifications list grouped by skill category. Also has [`certifications/yearly.html`](certifications/yearly.html) for a chronological view.
+- [`experience/index.html`](experience/index.html) — Full work history (timeline layout).
+- [`education/index.html`](education/index.html) — Full education history.
+- [`projects/index.html`](projects/index.html) — Full projects list.
+- [`awards/index.html`](awards/index.html) — Full awards list.
+
+## Layout System
+
+**[`_layouts/default.html`](_layouts/default.html)** is the single shared layout, applied via `layout: default` in each page's front matter. It provides:
+
+- Navbar with anchor links (About, Experience, Certs, Projects, Education, Awards)
+- Inter + JetBrains Mono fonts from Google Fonts
+- `assets/css/main.css` and `assets/js/main.js`
+- Footer with GitHub/LinkedIn icons
+- Google Analytics (tag `G-T8M8FBW7SY`) — **centralized here, not per-page**
+
+Do **not** add GA tags or `<head>` content to individual pages — the layout handles it.
 
 ## Content Conventions
 
-**External links** use Jekyll's Kramdown attribute syntax to open in a new tab, followed by the external link icon image:
-```md
-[Link text](https://example.com "tooltip"){:target="_blank"} ![External Link](../assets/external_link_icon_12_12.png)
+**Page front matter** structure:
+
+```html
+---
+layout: default
+title: Page Title
+description: Page meta description for SEO.
+---
 ```
 
-**Certifications hierarchy** uses two visual levels:
-- Primary certifications: `🎖️ __Cert Name__`
-- Sub-certifications (part of a specialization): blockquote with `✨ __Cert Name__`
+**External links** use standard HTML with `target="_blank" rel="noopener noreferrer"`:
 
-**Google Analytics** tag is embedded at the bottom of each page directly in Markdown (not in a layout file).
+```html
+<a href="https://example.com" target="_blank" rel="noopener noreferrer">Link text</a>
+```
 
-**Local certificate images** are stored as `.webp` files under each section's `assets/` folder (e.g., `certifications/assets/`). External verifications link to credly.com, linkedin.com, or coursera.org.
+**Certifications** use card components (`cert-card` class) grouped under `cert-category` headers. Each card has:
+
+- `cert-issuer-bar` with an issuer class (e.g., `azure`, `github`, `google`)
+- `cert-icon` (emoji), `cert-name`, `cert-issuer-label`, `cert-date`
+
+**Experience** uses a `timeline` layout with `timeline-item` → `timeline-card` → `timeline-header` + `timeline-bullets`.
+
+**Awards** use `award-full-item` with icon, title, issuer, and date.
+
+**Date format** used in content: `Mon YYYY` (e.g., `Mar 2025`) for certifications; `Mon YYYY – Present` or `Mon YYYY – Mon YYYY` for employment periods.
+
+**Animation class**: Add `animate-on-scroll` to any card/item that should fade in on scroll.
+
+**Local images** (e.g., certificate screenshots) are stored as `.webp` files under each section's `assets/` folder (e.g., `certifications/assets/`). External verifications link to credly.com, linkedin.com, or coursera.org.
+
+**Internal links** use Jekyll's `relative_url` filter:
+
+```html
+<a href="{{ '/' | relative_url }}">Home</a>
+<a href="{{ '/certifications/yearly' | relative_url }}">By Year</a>
+```
+
+## Git Workflow
 
 **Date format** used in content: `` `Mon YYYY` `` for certification dates, `` `Mon YYYY – Mon YYYY (duration)` `` for employment periods.
 
