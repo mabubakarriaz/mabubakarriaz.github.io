@@ -19,7 +19,8 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code} %{url_effective}\" \"http://127.0.0.1:4000/certifications/yearly\")",
       "Bash(gh pr:*)",
       "Bash(git -C d:/TFS/github.com/mabubakarriaz/mabubakarriaz.github.io ls-files _site/)",
-      "Bash(python3 -c \":*)"
+      "Bash(python3 -c \":*)",
+      "Bash(node -e \":*)"
     ]
   }
 }
