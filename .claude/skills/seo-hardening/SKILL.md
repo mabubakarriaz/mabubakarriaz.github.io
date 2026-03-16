@@ -78,6 +78,41 @@ Before committing, mentally verify each acceptance criterion from the Notion tas
 - Are Jekyll Liquid variables used correctly?
 - Are there any hardcoded values that should be dynamic?
 
+### Step 5a — Test Locally (Before Committing)
+
+Run a local Jekyll server and verify the change works before pushing:
+
+```bash
+/c/Ruby32-x64/bin/bundle exec jekyll serve --no-watch &
+sleep 8
+```
+
+**What to test locally (use `curl` against `http://127.0.0.1:4000`):**
+
+```bash
+# Check HTTP status of affected pages
+curl -s -o /dev/null -w "%{http_code} %{url_effective}\n" http://127.0.0.1:4000/
+curl -s -o /dev/null -w "%{http_code} %{url_effective}\n" http://127.0.0.1:4000/certifications/
+curl -s -o /dev/null -w "%{http_code} %{url_effective}\n" http://127.0.0.1:4000/certifications/yearly/
+# ... etc. for affected pages
+
+# Verify a specific tag is present in page source
+curl -s http://127.0.0.1:4000/ | grep -i "canonical\|og:title\|json-ld\|description"
+
+# Verify sitemap/robots.txt content
+curl -s http://127.0.0.1:4000/sitemap.xml | head -20
+curl -s http://127.0.0.1:4000/robots.txt
+```
+
+**Also verify Jekyll _site output structure:**
+```bash
+ls _site/<affected-dir>/
+# e.g. a page at /section/yearly/ should have _site/section/yearly/index.html
+# NOT _site/section/yearly.html (flat file won't serve with trailing slash on GitHub Pages)
+```
+
+> **Key rule:** If a page needs a trailing-slash URL on GitHub Pages, it must be `section/page/index.html` — not `section/page.html`. GitHub Pages is a static file server and cannot redirect flat `.html` files to trailing-slash URLs.
+
 ### Step 6 — Commit and Push
 
 ```bash
@@ -120,7 +155,60 @@ Tell the user:
 - What branch was created
 - What files were changed and why
 - How to verify the acceptance criteria
-- That they should review the PR, merge it, and then mark the task as done in Notion
+- That they should review the PR and merge it — once merged, inform you so you can run post-merge verification
+- That they should mark the task done in Notion only after post-merge verification passes
+
+### Step 9 — Post-Merge Verification (After User Confirms Merge)
+
+**Wait for the user to say the PR is merged before running these steps.**
+
+Once merged, verify the live site at `https://abubakarriaz.com.pk` using the methods below. GitHub Pages usually deploys within 1–2 minutes of a merge — check the Actions tab if unsure.
+
+#### Method 1 — curl (fast, for HTTP status + tag presence)
+
+```bash
+# Check all affected pages return 200
+curl -s -o /dev/null -w "%{http_code} %{url_effective}\n" https://abubakarriaz.com.pk/
+curl -s -o /dev/null -w "%{http_code} %{url_effective}\n" https://abubakarriaz.com.pk/<affected-page>/
+
+# Verify specific tags in page source
+curl -s https://abubakarriaz.com.pk/ | grep -i "<tag-to-verify>"
+# e.g. canonical: grep -i "canonical"
+# e.g. OG tags:   grep -i "og:title\|og:description\|og:image"
+# e.g. JSON-LD:   grep -i "application/ld+json"
+# e.g. sitemap:   curl -s https://abubakarriaz.com.pk/sitemap.xml | head -30
+# e.g. robots:    curl -s https://abubakarriaz.com.pk/robots.txt
+```
+
+#### Method 2 — Playwright MCP (for browser-rendered validation)
+
+Use Playwright MCP when the task involves:
+- Tags injected by JavaScript (rare for Jekyll but possible)
+- Visual rendering checks (OG image, layout, 404 page appearance)
+- Clicking links and verifying navigation (e.g. trailing slash redirects)
+- Any task where view-source alone is insufficient
+
+```
+# Example Playwright steps:
+1. Navigate to https://abubakarriaz.com.pk/<page>/
+2. Check page title matches expected value
+3. Inspect <head> for canonical / OG / JSON-LD tags
+4. Click internal links and verify no 404s
+5. Take a screenshot for visual confirmation
+```
+
+#### What counts as "verified"
+
+| Task type | Verification method |
+|---|---|
+| HTTP status (no 404s) | curl → 200 on all affected URLs |
+| Tag present in `<head>` | curl + grep on page source |
+| Sitemap / robots.txt | curl the file, check content |
+| JSON-LD valid | curl + grep for script tag; paste into Rich Results Test if uncertain |
+| Internal links work | curl each href; or Playwright click-through |
+| Visual / layout | Playwright screenshot |
+
+Once all checks pass, tell the user they can mark the task done in Notion.
 
 ---
 
@@ -137,9 +225,11 @@ Tell the user:
 ## Important Notes
 
 - **Never push directly to `main`** — always use a task branch
-- **Never mark tasks done in Notion** — the user does this manually after reviewing and merging the PR
+- **Never mark tasks done in Notion** — the user confirms the merge, you run post-merge verification, then they mark it done
 - **Jekyll Liquid syntax matters** — test mentally that filters like `| absolute_url` and `| default:` work correctly
 - **JSON-LD must be valid JSON** — double-check bracket/brace matching and quote escaping
 - **The blog subdomain (blog.abubakarriaz.com.pk) is out of scope** — don't touch it
 - **If the GitHub repo URL is uncertain**, ask the user before creating the branch
 - **For image tasks (3.3, 4.2)**, describe what the image/change should look like and provide the code — actual image file generation may need a separate tool or manual step
+- **Flat files vs directory indexes on GitHub Pages:** Any page that should be served at `/section/page/` (trailing slash) **must** be `section/page/index.html`, NOT `section/page.html`. GitHub Pages is a static file server — `page.html` only serves at `/section/page` or `/section/page.html`. Always check `ls _site/<dir>/` after building to confirm the output structure matches the expected URL.
+- **Local server command:** Use `/c/Ruby32-x64/bin/bundle exec jekyll serve --no-watch` (the system `bundle` shim is broken — always use the full path)
