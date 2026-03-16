@@ -126,7 +126,11 @@ Tell the user:
 
 ## Quick Reference — Task Number Index
 
-See `references/wbs-index.md` for the full task list with brief descriptions. Load it when you need to quickly look up what a task number refers to.
+- See `references/wbs-index.md` for the full task list with brief descriptions. Load it when you need to quickly look up what a task number refers to.
+- and overview why these tasks matter from Notion pages > Streams > MVP
+- you can get the context of work areas from Notion pages > Streams > MVP > Personal Portfolio 
+- A detailed roadmap from Notion pages > Streams > MVP > Personal Portfolio > Roadmap
+- and SEO hardening WBS tasks from Notion pages > Streams > MVP > Personal Portfolio > Roadmap > 2. SEO Hardening
 
 ---
 
