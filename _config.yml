@@ -25,6 +25,9 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+webmaster_verifications:
+  bing: ""   # Paste Bing Webmaster Tools verification code here, then push to deploy
+
 show_downloads: false
 
 exclude:
