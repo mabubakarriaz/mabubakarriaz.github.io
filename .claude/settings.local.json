@@ -20,7 +20,12 @@
       "Bash(gh pr:*)",
       "Bash(git -C d:/TFS/github.com/mabubakarriaz/mabubakarriaz.github.io ls-files _site/)",
       "Bash(python3 -c \":*)",
-      "Bash(node -e \":*)"
+      "Bash(node -e \":*)",
+      "Bash(curl -s https://abubakarriaz.com.pk/)",
+      "mcp__claude_ai_Notion__notion-update-page",
+      "Bash(git checkout:*)",
+      "Bash(git pull:*)",
+      "Bash(curl -s http://127.0.0.1:4000/)"
     ]
   }
 }
