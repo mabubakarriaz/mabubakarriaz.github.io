@@ -66,6 +66,15 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": {{ site.author.name | jsonify }},
+    "url": {{ site.url | jsonify }},
+    "author": { "@id": "{{ site.url }}/#person" }
+  }
+  </script>
   {% endif %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
