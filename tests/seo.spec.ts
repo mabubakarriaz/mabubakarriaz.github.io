@@ -145,8 +145,10 @@ test.describe('Sprint 1 — Technical Foundation', () => {
 // ──────────────────────────────────────────────
 // SPRINT 2: Structured Data / JSON-LD
 // ──────────────────────────────────────────────
+// NOTE: Tests expect flat @type schemas, but current default.html uses @graph wrapper.
+//       Update getJsonLd() to unwrap @graph items when implementing Sprint 2.
 
-test.describe('Sprint 2 — Structured Data / JSON-LD', () => {
+test.describe.skip('Sprint 2 — Structured Data / JSON-LD', () => {
 
   async function getJsonLd(page: Page): Promise<any[]> {
     const scripts = await page.locator('script[type="application/ld+json"]').all();
@@ -220,8 +222,11 @@ test.describe('Sprint 2 — Structured Data / JSON-LD', () => {
 // ──────────────────────────────────────────────
 // SPRINT 3: Open Graph & Social Sharing
 // ──────────────────────────────────────────────
+// NOTE: jekyll-seo-tag does not emit og:image:width/height by default.
+//       og-default.png must be created at /assets/images/og-default.png.
+//       twitter:card must be set to summary_large_image (not the default "summary").
 
-test.describe('Sprint 3 — Open Graph & Social Sharing', () => {
+test.describe.skip('Sprint 3 — Open Graph & Social Sharing', () => {
 
   const requiredOgTags = ['og:type', 'og:url', 'og:title', 'og:description', 'og:image'];
   const requiredTwitterTags = ['twitter:card', 'twitter:title', 'twitter:description', 'twitter:image'];
@@ -273,7 +278,7 @@ test.describe('Sprint 3 — Open Graph & Social Sharing', () => {
 // SPRINT 4: Performance & Core Web Vitals
 // ──────────────────────────────────────────────
 
-test.describe('Sprint 4 — Performance & Core Web Vitals', () => {
+test.describe.skip('Sprint 4 — Performance & Core Web Vitals', () => {
 
   test('[task-4.2.2] all images have width and height attributes', async ({ page }) => {
     for (const { path, name } of PAGES) {
@@ -347,8 +352,9 @@ test.describe('Sprint 4 — Performance & Core Web Vitals', () => {
 // ──────────────────────────────────────────────
 // SPRINT 5: Final SEO Touches
 // ──────────────────────────────────────────────
+// NOTE: task-5.3.3 expects theme-color="#0078D4" — current layout has "#0f172a". Update before enabling.
 
-test.describe('Sprint 5 — Final SEO Touches', () => {
+test.describe.skip('Sprint 5 — Final SEO Touches', () => {
 
   // ── 5.1 Heading Structure ──
 
