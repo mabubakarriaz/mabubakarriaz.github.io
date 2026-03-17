@@ -8,7 +8,7 @@ import { defineConfig, devices } from '@playwright/test';
  * For local testing: BASE_URL=http://localhost:4000 npx playwright test
  */
 export default defineConfig({
-  testDir: './tests',
+  testDir: '.',
   testMatch: '**/*.spec.ts',
   timeout: 30_000,
   retries: 1,            // Retry once on flaky network responses
