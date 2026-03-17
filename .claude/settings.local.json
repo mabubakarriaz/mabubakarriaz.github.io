@@ -20,7 +20,9 @@
       "Bash(gh pr:*)",
       "Bash(git -C d:/TFS/github.com/mabubakarriaz/mabubakarriaz.github.io ls-files _site/)",
       "Bash(python3 -c \":*)",
-      "Bash(node -e \":*)"
+      "Bash(node -e \":*)",
+      "Bash(gh run:*)",
+      "Bash(npm install:*)"
     ]
   }
 }
