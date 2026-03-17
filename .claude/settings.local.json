@@ -29,7 +29,11 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(git push:*)",
-      "Bash(gh run:*)"
+      "Bash(gh run:*)",
+      "Bash(curl -s http://127.0.0.1:4000/experience/)",
+      "Bash(for page:*)",
+      "Bash(do echo:*)",
+      "Bash(curl -s \"http://127.0.0.1:4000/certifications/yearly/\")"
     ]
   }
 }
