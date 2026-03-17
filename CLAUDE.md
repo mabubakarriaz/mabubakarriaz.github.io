@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a static personal portfolio site hosted on GitHub Pages with a custom domain (`abubakarriaz.com.pk`). It uses Jekyll 4.4 with a custom layout — no remote theme. Pushing to `main` deploys automatically via GitHub Pages.
 
-For local development, run `bundle exec jekyll serve` (requires Ruby + Bundler).
+For local development, run `/c/Ruby32-x64/bin/bundle exec jekyll serve --no-watch` (requires Ruby + Bundler). **Do not use the bare `bundle` shim** — the system shim is broken on this machine and will fail silently or error out.
 
 ## Site Configuration
 
@@ -85,5 +85,15 @@ description: Page meta description for SEO.
 
 - **New branch per session**: At the start of each working session, create a new branch from `main` with a short descriptive name (e.g., `update-experience-titles`, `add-certifications`).
 - **Create a PR after final changes**: Once all changes in the session are complete, create a pull request from the session branch to `main`.
-- **Update the same PR if the session continues**: If the conversation continues with more changes, push additional commits to the same branch — do not create a new PR. Always update the existing PR's title and body with `gh pr edit` to reflect the full set of changes made, whether the PR was just created or already existed.
+- **Update the same PR if the session continues**: If the conversation continues with more changes, push additional commits to the same branch — do not create a new PR. Always update the existing PR's title and body to reflect the full set of changes made, whether the PR was just created or already existed.
 - **Never push directly to `main`**.
+
+## Local Environment Quirks
+
+These commands **fail on this machine** — use the alternatives instead:
+
+| Broken | Use instead | Why |
+| --- | --- | --- |
+| `bundle exec jekyll serve` | `/c/Ruby32-x64/bin/bundle exec jekyll serve --no-watch` | System `bundle` shim is broken |
+| `python3 -c "..."` | `node -e "..."` | Python is not installed |
+| `gh pr edit --body "..."` | `gh api repos/mabubakarriaz/mabubakarriaz.github.io/pulls/{N} -X PATCH -f body="..."` | `gh pr edit` fails with GitHub Projects (classic) deprecation GraphQL error |
