@@ -148,9 +148,8 @@ test.describe('Sprint 1 — Technical Foundation', () => {
 // ──────────────────────────────────────────────
 // SPRINT 2: Structured Data / JSON-LD
 // ──────────────────────────────────────────────
-// NOTE: Enable after tasks 2.1.1, 2.2.1, and 2.3.1 are all implemented.
 
-test.describe.skip('Sprint 2 — Structured Data / JSON-LD', () => {
+test.describe('Sprint 2 — Structured Data / JSON-LD', () => {
 
   async function getJsonLd(page: Page): Promise<any[]> {
     const scripts = await page.locator('script[type="application/ld+json"]').all();
@@ -174,7 +173,7 @@ test.describe.skip('Sprint 2 — Structured Data / JSON-LD', () => {
     expect(person, 'Homepage must have Person JSON-LD').toBeTruthy();
     expect(person['@context']).toBe('https://schema.org');
     expect(person['name']).toBe('Abubakar Riaz');
-    expect(person['url']).toBe('https://abubakarriaz.com.pk');
+    expect(person['url']).toBe(BASE_URL);
     expect(person['sameAs'], 'sameAs must include LinkedIn').toContain('https://www.linkedin.com/in/mabubakarriaz');
     expect(person['sameAs'], 'sameAs must include GitHub').toContain('https://github.com/mabubakarriaz');
     expect(Array.isArray(person['hasCredential']), 'hasCredential should be an array').toBe(true);
@@ -188,7 +187,8 @@ test.describe.skip('Sprint 2 — Structured Data / JSON-LD', () => {
     const website = schemas.find(s => s['@type'] === 'WebSite');
     expect(website, 'Homepage must have WebSite JSON-LD').toBeTruthy();
     expect(website['@context']).toBe('https://schema.org');
-    expect(website['url']).toBe('https://abubakarriaz.com.pk');
+    // jekyll-seo-tag emits the root URL with a trailing slash
+    expect(website['url']).toBe(BASE_URL + '/');
     expect(website['name']).toBe('Abubakar Riaz');
   });
 
@@ -204,7 +204,7 @@ test.describe.skip('Sprint 2 — Structured Data / JSON-LD', () => {
 
       const home = breadcrumb['itemListElement'].find((i: any) => i.position === 1);
       expect(home, 'First breadcrumb item must exist').toBeTruthy();
-      expect(home['item'], 'First breadcrumb item must be homepage').toBe('https://abubakarriaz.com.pk/');
+      expect(home['item'], 'First breadcrumb item must be homepage').toBe(BASE_URL + '/');
     });
   }
 
