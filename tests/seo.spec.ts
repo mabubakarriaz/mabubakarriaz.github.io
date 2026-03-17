@@ -145,8 +145,7 @@ test.describe('Sprint 1 — Technical Foundation', () => {
 // ──────────────────────────────────────────────
 // SPRINT 2: Structured Data / JSON-LD
 // ──────────────────────────────────────────────
-// NOTE: Tests expect flat @type schemas, but current default.html uses @graph wrapper.
-//       Update getJsonLd() to unwrap @graph items when implementing Sprint 2.
+// NOTE: Enable after tasks 2.1.1, 2.2.1, and 2.3.1 are all implemented.
 
 test.describe.skip('Sprint 2 — Structured Data / JSON-LD', () => {
 
