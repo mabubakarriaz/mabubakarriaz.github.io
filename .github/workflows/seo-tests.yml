@@ -45,11 +45,16 @@ jobs:
         env:
           BASE_URL: https://abubakarriaz.com.pk
 
+      - name: Setup Ruby
+        if: github.event_name == 'pull_request'
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
       - name: Build site locally for PR tests
         if: github.event_name == 'pull_request'
         run: |
-          gem install bundler
-          bundle install
           bundle exec jekyll build
           bundle exec jekyll serve --detach --port 4000
 

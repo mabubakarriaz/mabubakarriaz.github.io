@@ -11,6 +11,8 @@ import { test, expect, Page } from '@playwright/test';
  * Run a specific task: npx playwright test --grep "task-1.1.1"
  */
 
+const BASE_URL = process.env.BASE_URL ?? 'https://abubakarriaz.com.pk';
+
 // All pages to run cross-page tests against
 const PAGES = [
   { path: '/', name: 'Home' },
@@ -66,8 +68,9 @@ test.describe('Sprint 1 — Technical Foundation', () => {
         await page.goto(path);
 
         const canonical = await page.locator('link[rel="canonical"]').getAttribute('href');
+        const expectedHost = new URL(BASE_URL).host;
         expect(canonical, `${name}: canonical tag must exist`).toBeTruthy();
-        expect(canonical, `${name}: canonical must be absolute URL`).toMatch(/^https:\/\/abubakarriaz\.com\.pk/);
+        expect(canonical, `${name}: canonical must be absolute URL with correct host`).toContain(expectedHost);
         expect(canonical, `${name}: canonical must point to correct path`).toContain(path);
       });
     }
