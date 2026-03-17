@@ -148,9 +148,8 @@ test.describe('Sprint 1 — Technical Foundation', () => {
 // ──────────────────────────────────────────────
 // SPRINT 2: Structured Data / JSON-LD
 // ──────────────────────────────────────────────
-// NOTE: Enable after tasks 2.1.1, 2.2.1, and 2.3.1 are all implemented.
 
-test.describe.skip('Sprint 2 — Structured Data / JSON-LD', () => {
+test.describe('Sprint 2 — Structured Data / JSON-LD', () => {
 
   async function getJsonLd(page: Page): Promise<any[]> {
     const scripts = await page.locator('script[type="application/ld+json"]').all();
@@ -188,7 +187,8 @@ test.describe.skip('Sprint 2 — Structured Data / JSON-LD', () => {
     const website = schemas.find(s => s['@type'] === 'WebSite');
     expect(website, 'Homepage must have WebSite JSON-LD').toBeTruthy();
     expect(website['@context']).toBe('https://schema.org');
-    expect(website['url']).toBe('https://abubakarriaz.com.pk');
+    // jekyll-seo-tag emits the root URL with a trailing slash
+    expect(website['url']).toBe('https://abubakarriaz.com.pk/');
     expect(website['name']).toBe('Abubakar Riaz');
   });
 
