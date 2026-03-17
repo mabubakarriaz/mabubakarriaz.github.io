@@ -10,71 +10,63 @@
   <link rel="sitemap" type="application/xml" href="{{ '/sitemap.xml' | relative_url }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
   <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
+  {% if page.url == "/" %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
+    "@type": "Person",
+    "@id": "{{ site.url }}/#person",
+    "name": {{ site.author.name | jsonify }},
+    "givenName": "Abubakar",
+    "familyName": "Riaz",
+    "jobTitle": "Associate Cloud Architect",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Tkxel",
+      "url": "https://www.tkxel.com"
+    },
+    "url": {{ site.url | jsonify }},
+    "image": "{{ site.url }}/assets/images/profile.jpg",
+    "sameAs": [
+      "https://www.linkedin.com/in/mabubakarriaz",
+      "https://github.com/mabubakarriaz",
+      "https://learn.microsoft.com/en-us/users/abubakarriaz",
+      "https://blog.abubakarriaz.com.pk"
+    ],
+    "knowsAbout": [
+      "Cloud Architecture", "DevOps", "Azure",
+      "Terraform", "CI/CD", "Kubernetes",
+      "Infrastructure as Code", ".NET", "GitHub Actions"
+    ],
+    "hasCredential": [
       {
-        "@type": "Person",
-        "@id": "{{ site.url }}/#person",
-        "name": {{ site.author.name | jsonify }},
-        "url": {{ site.url | jsonify }},
-        "jobTitle": "Associate Cloud Architect",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Tkxel"
-        },
-        "alumniOf": [
-          {"@type": "EducationalOrganization", "name": "Virtual University of Pakistan"},
-          {"@type": "EducationalOrganization", "name": "Hailey College of Commerce, Lahore"}
-        ],
-        "sameAs": [
-          "https://github.com/mabubakarriaz",
-          "https://www.linkedin.com/in/mabubakarriaz",
-          "https://learn.microsoft.com/en-us/users/abubakarriaz",
-          "https://blog.abubakarriaz.com.pk"
-        ],
-        "knowsAbout": [
-          "Azure Cloud Computing",
-          "DevOps Engineering",
-          "Solution Architecture",
-          "C# .NET Development",
-          "Infrastructure as Code",
-          "CI/CD Pipelines",
-          "Terraform",
-          "Docker",
-          "GitHub Actions"
-        ]
+        "@type": "EducationalOccupationalCredential",
+        "name": "Azure Solutions Architect Expert (AZ-305)",
+        "credentialCategory": "certification",
+        "recognizedBy": { "@type": "Organization", "name": "Microsoft" }
       },
       {
-        "@type": "WebSite",
-        "@id": "{{ site.url }}/#website",
-        "url": {{ site.url | jsonify }},
-        "name": {{ site.title | jsonify }},
-        "description": {{ site.description | jsonify }},
-        "author": {"@id": "{{ site.url }}/#person"}
-      }{% unless page.url == "/" %},
+        "@type": "EducationalOccupationalCredential",
+        "name": "DevOps Engineer Expert (AZ-400)",
+        "credentialCategory": "certification",
+        "recognizedBy": { "@type": "Organization", "name": "Microsoft" }
+      },
       {
-        "@type": "BreadcrumbList",
-        "@id": {{ site.url | append: page.url | append: "#breadcrumb" | jsonify }},
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": {{ site.url | jsonify }}
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": {{ page.title | jsonify }},
-            "item": {{ site.url | append: page.url | jsonify }}
-          }
-        ]
-      }{% endunless %}
+        "@type": "EducationalOccupationalCredential",
+        "name": "Microsoft Certified Trainer (MCT)",
+        "credentialCategory": "certification",
+        "recognizedBy": { "@type": "Organization", "name": "Microsoft" }
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Terraform Associate (003)",
+        "credentialCategory": "certification",
+        "recognizedBy": { "@type": "Organization", "name": "HashiCorp" }
+      }
     ]
   }
   </script>
+  {% endif %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
