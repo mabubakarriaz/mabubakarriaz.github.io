@@ -256,11 +256,13 @@ test.describe('Sprint 3 — Open Graph & Social Sharing', () => {
 
     test(`[task-3.2.1] ${name} page has all required Twitter Card tags`, async ({ page }) => {
       await page.goto(path);
+      // Use .first() because jekyll-seo-tag emits its own twitter:card (summary)
+      // after our manually placed tags — crawlers use the first occurrence
       for (const tag of requiredTwitterTags) {
-        const content = await page.locator(`meta[name="${tag}"]`).getAttribute('content');
+        const content = await page.locator(`meta[name="${tag}"]`).first().getAttribute('content');
         expect(content, `${name}: ${tag} must exist and have content`).toBeTruthy();
       }
-      const card = await page.locator('meta[name="twitter:card"]').getAttribute('content');
+      const card = await page.locator('meta[name="twitter:card"]').first().getAttribute('content');
       expect(card, `${name}: twitter:card should be summary_large_image`).toBe('summary_large_image');
     });
 

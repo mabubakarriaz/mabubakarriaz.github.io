@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Twitter Card: placed before jekyll-seo-tag so crawlers pick up our values first -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ page.title | default: site.title }}" />
+  <meta name="twitter:description" content="{{ page.description | default: site.description }}" />
+  <meta name="twitter:image" content="{{ page.og_image | default: '/assets/images/og-default.png' | absolute_url }}" />
   {% seo %}
   {% feed_meta %}
   <!-- Open Graph: supplementary tags not covered by jekyll-seo-tag -->
@@ -10,10 +15,6 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="{% if page.og_image_alt %}{{ page.og_image_alt }}{% else %}{{ site.author.name }} — Professional Portfolio{% endif %}" />
-  <!-- Twitter Card: title/description/image — jekyll-seo-tag only emits these with twitter.username configured -->
-  <meta name="twitter:title" content="{{ page.title | default: site.title }}" />
-  <meta name="twitter:description" content="{{ page.description | default: site.description }}" />
-  <meta name="twitter:image" content="{{ page.og_image | default: '/assets/images/og-default.png' | absolute_url }}" />
   <meta name="theme-color" content="#0f172a">
   <meta name="author" content="{{ site.author.name }}">
   <link rel="sitemap" type="application/xml" href="{{ '/sitemap.xml' | relative_url }}">
