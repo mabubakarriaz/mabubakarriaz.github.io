@@ -91,7 +91,11 @@
   }
   </script>
   {% endunless %}
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <!-- Critical CSS: inlined to eliminate render-blocking stylesheet -->
+  <style>{% include critical.css %}</style>
+  <!-- Non-critical CSS: deferred via media="print" swap trick -->
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"></noscript>
 </head>
 <body>
 
@@ -149,6 +153,6 @@
     gtag('js', new Date());
     gtag('config', 'G-T8M8FBW7SY');
   </script>
-  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>
