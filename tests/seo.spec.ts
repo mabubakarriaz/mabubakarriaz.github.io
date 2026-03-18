@@ -228,7 +228,7 @@ test.describe('Sprint 2 — Structured Data / JSON-LD', () => {
 //       og-default.png must be created at /assets/images/og-default.png.
 //       twitter:card must be set to summary_large_image (not the default "summary").
 
-test.describe.skip('Sprint 3 — Open Graph & Social Sharing', () => {
+test.describe('Sprint 3 — Open Graph & Social Sharing', () => {
 
   const requiredOgTags = ['og:type', 'og:url', 'og:title', 'og:description', 'og:image'];
   const requiredTwitterTags = ['twitter:card', 'twitter:title', 'twitter:description', 'twitter:image'];
