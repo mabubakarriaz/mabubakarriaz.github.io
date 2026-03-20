@@ -33,7 +33,16 @@
       "Bash(curl -s http://127.0.0.1:4000/experience/)",
       "Bash(for page:*)",
       "Bash(do echo:*)",
-      "Bash(curl -s \"http://127.0.0.1:4000/certifications/yearly/\")"
+      "Bash(curl -s \"http://127.0.0.1:4000/certifications/yearly/\")",
+      "mcp__claude_ai_Canva__create-design-from-candidate",
+      "mcp__claude_ai_Canva__export-design",
+      "mcp__claude_ai_Canva__generate-design",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://abubakarriaz.com.pk/awards/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://abubakarriaz.com.pk/education/)",
+      "Bash(curl -s https://abubakarriaz.com.pk/certifications/)",
+      "Bash(curl -s https://abubakarriaz.com.pk/certifications/yearly/)",
+      "Bash(curl -s https://abubakarriaz.com.pk/awards/)",
+      "Bash(curl -s https://abubakarriaz.com.pk/education/)"
     ]
   }
 }
