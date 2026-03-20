@@ -473,9 +473,11 @@ test.describe('Sprint 5 — Latest from the Blog', () => {
 
 test.describe('Cross-cutting — Audience Link Safety', () => {
 
-  test('all external audience-related links have target="_blank" and rel="noopener"', async ({ page }) => {
+  test('all external audience links with target="_blank" have rel="noopener"', async ({ page }) => {
     await page.goto('/');
 
+    // Check that every external audience link that opens in a new tab also has rel="noopener"
+    // Note: some links (e.g. "Explore My Blog") intentionally navigate in the same tab
     const audiencePatterns = [
       'linkedin.com/newsletters',
       'blog.abubakarriaz.com.pk',
@@ -484,16 +486,14 @@ test.describe('Cross-cutting — Audience Link Safety', () => {
     ];
 
     for (const pattern of audiencePatterns) {
-      const links = page.locator(`a[href*="${pattern}"]`);
+      const links = page.locator(`a[href*="${pattern}"][target="_blank"]`);
       const count = await links.count();
 
       for (let i = 0; i < count; i++) {
         const link = links.nth(i);
         const href = await link.getAttribute('href');
-        const target = await link.getAttribute('target');
         const rel = await link.getAttribute('rel');
 
-        expect(target, `Link to ${href} must have target="_blank"`).toBe('_blank');
         expect(rel, `Link to ${href} must have rel containing "noopener"`).toContain('noopener');
       }
     }
