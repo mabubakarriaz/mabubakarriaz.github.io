@@ -438,7 +438,7 @@ test.describe('Sprint 5 — Final SEO Touches', () => {
 
   test.describe('5.3 Miscellaneous Technical SEO', () => {
 
-    test.skip('[task-5.3.1] favicon.ico exists', async ({ request }) => {
+    test('[task-5.3.1] favicon.ico exists', async ({ request }) => {
       const response = await request.get('/favicon.ico');
       expect(response.status(), 'favicon.ico must be accessible').toBe(200);
     });
@@ -449,14 +449,14 @@ test.describe('Sprint 5 — Final SEO Touches', () => {
       expect(appleIcon, 'apple-touch-icon link must exist').toBeTruthy();
     });
 
-    test.skip('[task-5.3.3] theme-color meta tag is present and Azure blue', async ({ page }) => {
+    test('[task-5.3.3] theme-color meta tag is present and Azure blue', async ({ page }) => {
       await page.goto('/');
       const themeColor = await page.locator('meta[name="theme-color"]').getAttribute('content');
       expect(themeColor, 'theme-color meta tag must exist').toBeTruthy();
       expect(themeColor, 'theme-color should be Azure blue #0078D4').toBe('#0078D4');
     });
 
-    test.skip('[task-5.3.4] custom 404 page exists and is branded', async ({ page }) => {
+    test('[task-5.3.4] custom 404 page exists and is branded', async ({ page }) => {
       const response = await page.goto('/this-page-does-not-exist-xyz-404-test');
       expect(response?.status(), '404 page should return 404 status').toBe(404);
 
