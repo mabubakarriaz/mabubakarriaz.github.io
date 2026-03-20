@@ -81,8 +81,6 @@ description: Page meta description for SEO.
 
 **Date format** used in content: `` `Mon YYYY` `` for certification dates, `` `Mon YYYY – Mon YYYY (duration)` `` for employment periods.
 
-## Git Workflow
-
 - **New branch per session**: At the start of each working session, create a new branch from `main` with a short descriptive name (e.g., `update-experience-titles`, `add-certifications`).
 - **Create a PR after final changes**: Once all changes in the session are complete, create a pull request from the session branch to `main`.
 - **Update the same PR if the session continues**: If the conversation continues with more changes, push additional commits to the same branch — do not create a new PR. Always update the existing PR's title and body to reflect the full set of changes made, whether the PR was just created or already existed.
