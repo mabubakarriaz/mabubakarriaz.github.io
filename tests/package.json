@@ -1,11 +1,15 @@
 {
-  "name": "abubakarriaz-seo-tests",
+  "name": "abubakarriaz-tests",
   "version": "1.0.0",
-  "description": "Playwright SEO regression tests for abubakarriaz.com.pk",
+  "description": "Playwright regression tests for abubakarriaz.com.pk (SEO + Audience Infrastructure)",
   "private": true,
   "scripts": {
     "test": "npx playwright test --config=playwright.config.ts",
     "test:local": "BASE_URL=http://localhost:4000 npx playwright test --config=playwright.config.ts",
+    "test:seo": "npx playwright test --config=playwright.config.ts seo.spec.ts",
+    "test:seo:local": "BASE_URL=http://localhost:4000 npx playwright test --config=playwright.config.ts seo.spec.ts",
+    "test:audience": "npx playwright test --config=playwright.config.ts audience.spec.ts",
+    "test:audience:local": "BASE_URL=http://localhost:4000 npx playwright test --config=playwright.config.ts audience.spec.ts",
     "test:sprint1": "npx playwright test --config=playwright.config.ts --grep 'Sprint 1'",
     "test:sprint2": "npx playwright test --config=playwright.config.ts --grep 'Sprint 2'",
     "test:sprint3": "npx playwright test --config=playwright.config.ts --grep 'Sprint 3'",

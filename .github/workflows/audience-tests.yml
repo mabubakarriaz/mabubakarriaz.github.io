@@ -1,5 +1,5 @@
-name: SEO Regression Tests
-run-name: "SEO Tests — ${{ github.event_name == 'pull_request' && github.event.pull_request.title || github.ref_name }}"
+name: Audience Infrastructure Tests
+run-name: "Audience Tests — ${{ github.event_name == 'pull_request' && github.event.pull_request.title || github.ref_name }}"
 
 on:
   push:
@@ -10,8 +10,8 @@ on:
       - main
 
 jobs:
-  seo-tests:
-    name: Run Playwright SEO Tests
+  audience-tests:
+    name: Run Playwright Audience Tests
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
@@ -39,10 +39,10 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: sleep 60
 
-      - name: Run SEO tests (production)
+      - name: Run Audience tests (production)
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         working-directory: tests
-        run: npm run test:seo
+        run: npm run test:audience
         env:
           BASE_URL: https://abubakarriaz.com.pk
 
@@ -59,10 +59,10 @@ jobs:
           bundle exec jekyll build
           bundle exec jekyll serve --detach --port 4000
 
-      - name: Run SEO tests (PR preview)
+      - name: Run Audience tests (PR preview)
         if: github.event_name == 'pull_request'
         working-directory: tests
-        run: npm run test:seo:local
+        run: npm run test:audience:local
         env:
           BASE_URL: http://localhost:4000
 
@@ -70,6 +70,6 @@ jobs:
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: playwright-report
+          name: playwright-report-audience
           path: tests/playwright-report/
           retention-days: 14

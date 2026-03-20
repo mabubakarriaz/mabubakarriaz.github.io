@@ -1,11 +1,13 @@
 import { defineConfig, devices } from '@playwright/test';
 
 /**
- * Playwright configuration — SEO Hardening Tests
+ * Playwright configuration — SEO & Audience Infrastructure Tests
  * Site: abubakarriaz.com.pk
  *
  * Targets the live production site by default.
  * For local testing: BASE_URL=http://localhost:4000 npx playwright test
+ * Run only SEO:      npx playwright test seo.spec.ts
+ * Run only Audience: npx playwright test audience.spec.ts
  */
 export default defineConfig({
   testDir: '.',
@@ -22,7 +24,7 @@ export default defineConfig({
     baseURL: process.env.BASE_URL ?? 'https://abubakarriaz.com.pk',
     extraHTTPHeaders: {
       // Identify the test bot in server logs
-      'User-Agent': 'Playwright-SEO-Test/1.0 (abubakarriaz.com.pk regression suite)',
+      'User-Agent': 'Playwright-Test/1.0 (abubakarriaz.com.pk regression suite)',
     },
     screenshot: 'only-on-failure',
     trace: 'on-first-retry',
