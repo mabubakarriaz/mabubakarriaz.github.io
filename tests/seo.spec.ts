@@ -321,7 +321,8 @@ test.describe('Sprint 4 — Performance & Core Web Vitals', () => {
 
     for (const preload of fontPreloads) {
       const crossorigin = await preload.getAttribute('crossorigin');
-      expect(crossorigin, 'Font preload must have crossorigin attribute').toBeTruthy();
+      // crossorigin without a value returns "" (anonymous), which is valid
+      expect(crossorigin, 'Font preload must have crossorigin attribute').not.toBeNull();
     }
   });
 
@@ -464,7 +465,10 @@ test.describe('Sprint 5 — Final SEO Touches', () => {
       expect(await homeLink.isVisible(), '404 page should have a link back to homepage').toBe(true);
     });
 
+    // Skip on local (http) builds — mixed content only applies to HTTPS sites
     test('[task-5.3.2] no HTTP resources loaded on HTTPS pages (no mixed content)', async ({ page }) => {
+      test.skip(BASE_URL.startsWith('http://'), 'Mixed content test only applies to HTTPS');
+
       const mixedContent: string[] = [];
       page.on('response', response => {
         const url = response.url();
