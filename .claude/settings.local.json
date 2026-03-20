@@ -42,7 +42,8 @@
       "Bash(curl -s https://abubakarriaz.com.pk/certifications/)",
       "Bash(curl -s https://abubakarriaz.com.pk/certifications/yearly/)",
       "Bash(curl -s https://abubakarriaz.com.pk/awards/)",
-      "Bash(curl -s https://abubakarriaz.com.pk/education/)"
+      "Bash(curl -s https://abubakarriaz.com.pk/education/)",
+      "Bash(gh api:*)"
     ]
   }
 }
