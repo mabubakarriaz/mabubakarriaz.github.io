@@ -79,7 +79,6 @@ test.describe('Sprint 1 — Newsletter CTAs & LinkedIn Integration', () => {
     });
 
     test('[task-1.2.3] homepage has a dedicated newsletter banner section', async ({ page }) => {
-      test.skip(true, 'task 1.2.3 not yet implemented — newsletter banner section pending');
       await page.goto('/');
 
       const newsletterSection = page.locator(
