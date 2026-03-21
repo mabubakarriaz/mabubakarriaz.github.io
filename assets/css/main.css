@@ -1398,6 +1398,22 @@ img { max-width: 100%; display: block; }
   color: var(--text-muted);
 }
 
+.footer-newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.footer-newsletter p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  max-width: 480px;
+}
+
 /* ============================================================
    SCROLL ANIMATIONS
    ============================================================ */
