@@ -1413,6 +1413,17 @@ img { max-width: 100%; display: block; }
   color: var(--text-muted);
   max-width: 480px;
 }
+.footer-rss-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.footer-rss-link:hover { color: var(--accent-cyan); }
 
 /* ============================================================
    NEWSLETTER BANNER
