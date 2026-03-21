@@ -1630,3 +1630,55 @@ img { max-width: 100%; display: block; }
   .badge-card { min-width: unset; }
   .hero-badge-stack { flex-direction: column; }
 }
+
+/* ============================================================
+   SHARE BAR
+   ============================================================ */
+.share-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 20px 40px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  margin-top: 16px;
+}
+
+.share-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 4px;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  color: var(--text-secondary);
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.share-btn:hover {
+  background: rgba(255,255,255,0.09);
+  color: var(--text-primary);
+  border-color: rgba(255,255,255,0.2);
+  text-decoration: none;
+}
+
+.share-btn-copy {
+  font-family: inherit;
+}
+
+@media (max-width: 768px) {
+  .share-bar { padding: 16px 20px; gap: 8px; }
+}
