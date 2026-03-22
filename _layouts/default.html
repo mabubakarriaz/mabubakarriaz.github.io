@@ -6,10 +6,7 @@
   <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
   <meta name="theme-color" content="#0078D4">
-  <meta name="color-scheme" content="dark">
-  <!-- Preload critical fonts (start fetch before CSS is parsed) -->
-  <link rel="preload" href="{{ '/assets/fonts/Inter-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="{{ '/assets/fonts/JetBrainsMono-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <meta name="color-scheme" content="light dark">
   <!-- Twitter Card: placed before jekyll-seo-tag so crawlers pick up our values first -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{{ page.title | default: site.title }}" />
