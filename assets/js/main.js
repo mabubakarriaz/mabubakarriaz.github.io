@@ -1,4 +1,41 @@
 /* ============================================================
+   THEME TOGGLE (1.2.3)
+   Reads/writes localStorage('theme'). Dark = no attribute on <html>.
+   Light = data-theme="light" on <html>.
+   ============================================================ */
+const themeToggle = document.getElementById('themeToggle');
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light');
+    }
+  });
+
+  // Respect OS preference changes when no manual override is stored
+  window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) {
+      if (e.matches) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
+    }
+  });
+}
+
+// Remove no-transition class after first paint to enable smooth theme switching
+window.addEventListener('load', () => {
+  requestAnimationFrame(() => {
+    document.documentElement.classList.remove('no-transition');
+  });
+});
+
+/* ============================================================
    NAVBAR: add .scrolled class on scroll
    ============================================================ */
 const navbar = document.getElementById('navbar');

@@ -44,6 +44,85 @@
   --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.18);
 }
 
+/* ============================================================
+   LIGHT MODE — [data-theme="light"] overrides
+   Dark is the default (no attribute). Light requires the attribute.
+   ============================================================ */
+[data-theme="light"] {
+  --bg-primary:    #FFFFFF;
+  --bg-secondary:  #F6F8FA;
+  --bg-card:       rgba(255, 255, 255, 0.9);
+  --bg-card-solid: #FFFFFF;
+  --accent:        #0078D4;
+  --accent-cyan:   #0078D4;
+  --accent-violet: #5C2D91;
+  --gradient:      linear-gradient(135deg, #0078D4 0%, #0091FF 100%);
+  --gradient-text: linear-gradient(135deg, #0078D4 0%, #106EBE 100%);
+  --border:        rgba(0, 0, 0, 0.10);
+  --border-hover:  rgba(0, 78, 212, 0.40);
+  --text-primary:  #1F2328;
+  --text-secondary:#656D76;
+  --text-muted:    #8C959F;
+  --shadow-card:   0 4px 24px rgba(0, 0, 0, 0.08);
+  --shadow-glow:   0 0 40px rgba(0, 120, 212, 0.10);
+}
+
+/* Navbar scrolled — light mode background */
+[data-theme="light"] .navbar.scrolled {
+  background: rgba(255, 255, 255, 0.92);
+}
+
+/* Mobile nav overlay — light mode */
+@media (max-width: 768px) {
+  [data-theme="light"] .nav-links {
+    background: rgba(255, 255, 255, 0.98);
+  }
+  [data-theme="light"] .nav-link { color: var(--text-secondary); }
+  [data-theme="light"] .nav-link:hover,
+  [data-theme="light"] .nav-link.active { color: var(--text-primary); }
+}
+
+/* ============================================================
+   THEME TOGGLE BUTTON (nav)
+   ============================================================ */
+.nav-theme-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background: none;
+  border: 1.5px solid var(--border);
+  border-radius: 50%;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+.nav-theme-btn:hover {
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+}
+
+/* Dark mode: show sun (click = go light). Light mode: show moon (click = go dark). */
+.icon-sun  { display: block; }
+.icon-moon { display: none;  }
+[data-theme="light"] .icon-sun  { display: none;  }
+[data-theme="light"] .icon-moon { display: block; }
+
+/* ============================================================
+   SMOOTH THEME TRANSITION (1.2.4)
+   Applies on user-initiated toggle, disabled on page load.
+   ============================================================ */
+html, body {
+  transition: background-color 250ms ease, color 250ms ease;
+}
+html.no-transition,
+html.no-transition * {
+  transition: none !important;
+}
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 16px; }
 body {
@@ -217,7 +296,7 @@ img { max-width: 100%; display: block; }
 @media (max-width: 768px) {
   .nav-links {
     display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(5, 8, 16, 0.97); -webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px);
+    background: rgba(5, 8, 16, 0.97); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
     flex-direction: column; justify-content: center; align-items: center;
     gap: 40px; z-index: 999;
   }
