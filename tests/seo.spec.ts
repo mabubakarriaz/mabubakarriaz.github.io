@@ -314,16 +314,15 @@ test.describe('Sprint 4 — Performance & Core Web Vitals', () => {
     }
   });
 
-  test('[task-4.3.2] critical fonts are preloaded', async ({ page }) => {
+  test('[task-4.3.2] system font stack — no font file preloads needed', async ({ page }) => {
+    // Design Modernization task 1.1.3 switched from self-hosted Inter/JetBrains Mono
+    // to a system font stack (Segoe UI, system-ui, Cascadia Code).
+    // System fonts ship with the OS — no @font-face declarations, no file downloads,
+    // and therefore no preload links required. Zero preloads is the correct state.
+    // If a custom font is ever reintroduced, it must use crossorigin on its preload link.
     await page.goto('/');
     const fontPreloads = await page.locator('link[rel="preload"][as="font"]').all();
-    expect(fontPreloads.length, 'At least one font should be preloaded').toBeGreaterThan(0);
-
-    for (const preload of fontPreloads) {
-      const crossorigin = await preload.getAttribute('crossorigin');
-      // crossorigin without a value returns "" (anonymous), which is valid
-      expect(crossorigin, 'Font preload must have crossorigin attribute').not.toBeNull();
-    }
+    expect(fontPreloads.length, 'System fonts require no font file preloads — expected 0').toBe(0);
   });
 
   test('[task-4.4.3] no render-blocking scripts (all scripts have defer or async)', async ({ page }) => {
