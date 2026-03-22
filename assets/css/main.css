@@ -381,26 +381,28 @@
 
 /* ============================================================
    DESIGN TOKENS — canonical system (design-tokens.md)
+   Dark mode is the DEFAULT (no data-theme attribute).
+   Light mode is activated via [data-theme="light"] on <html>.
    ============================================================ */
 :root {
-  /* --- Brand Colors --- */
+  /* --- Brand Colors (dark-mode defaults) --- */
   --color-primary:       #0078D4;
-  --color-primary-dark:  #005A9E;
-  --color-primary-light: #C7E0F4;
+  --color-primary-dark:  #1A8FE8;
+  --color-primary-light: #243A5E;
 
-  /* --- Neutral Scale --- */
-  --color-bg:            #FFFFFF;
-  --color-surface:       #F5F5F5;
-  --color-border:        #E0E0E0;
-  --color-text:          #1A1A1A;
-  --color-text-muted:    #555555;
-  --color-text-disabled: #999999;
+  /* --- Neutral Scale (dark-mode defaults — GitHub-dark inspired) --- */
+  --color-bg:            #0D1117;
+  --color-surface:       #161B22;
+  --color-border:        #30363D;
+  --color-text:          #E6EDF3;
+  --color-text-muted:    #8B949E;
+  --color-text-disabled: #6E7681;
 
-  /* --- Semantic --- */
-  --color-success: #107C10;
-  --color-warning: #D83B01;
+  /* --- Semantic (dark-mode defaults) --- */
+  --color-success: #238636;
+  --color-warning: #D29922;
   --color-info:    #0078D4;
-  --color-error:   #A80000;
+  --color-error:   #F85149;
 
   /* --- Typography --- */
   --font-sans: 'Segoe UI', system-ui, -apple-system, sans-serif;
@@ -483,27 +485,65 @@
 }
 
 /* ============================================================
-   DARK MODE — canonical token overrides (1.1.2)
-   Scoped to canonical --color-* tokens only;
-   legacy dark aliases are unchanged (already dark).
+   LIGHT MODE — [data-theme="light"] overrides (1.2)
+   Applied when <html data-theme="light"> is set by the toggle
+   or the user's OS prefers light and no manual override exists.
    ============================================================ */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-primary:       #2B88D8;
-    --color-primary-dark:  #106EBE;
-    --color-primary-light: #243A5E;
-    --color-bg:            #1A1A1A;
-    --color-surface:       #242424;
-    --color-border:        #333333;
-    --color-text:          #F0F0F0;
-    --color-text-muted:    #AAAAAA;
-    --color-text-disabled: #555555;
-    /* Shadows slightly softer in dark mode */
-    --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
-    --shadow-md: 0 4px 12px rgba(0,0,0,0.16);
-    --shadow-lg: 0 8px 24px rgba(0,0,0,0.20);
-    --shadow-xl: 0 16px 48px rgba(0,0,0,0.24);
+[data-theme="light"] {
+  /* Canonical tokens → light values */
+  --color-primary:       #0078D4;
+  --color-primary-dark:  #005A9E;
+  --color-primary-light: #C7E0F4;
+  --color-bg:            #FFFFFF;
+  --color-surface:       #F6F8FA;
+  --color-border:        #D0D7DE;
+  --color-text:          #1F2328;
+  --color-text-muted:    #656D76;
+  --color-text-disabled: #8C959F;
+  --color-success: #107C10;
+  --color-warning: #D83B01;
+  --color-info:    #0078D4;
+  --color-error:   #A80000;
+  /* Shadows lighter in light mode */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.10);
+  --shadow-xl: 0 16px 48px rgba(0,0,0,0.12);
+
+  /* Legacy aliases → light values (for below-fold components) */
+  --bg-primary:    #FFFFFF;
+  --bg-secondary:  #F6F8FA;
+  --bg-card:       rgba(255, 255, 255, 0.9);
+  --bg-card-solid: #FFFFFF;
+  --accent:        #0078D4;
+  --accent-cyan:   #0078D4;
+  --accent-violet: #5C2D91;
+  --gradient:      linear-gradient(135deg, #0078D4 0%, #0091FF 100%);
+  --gradient-text: linear-gradient(135deg, #0078D4 0%, #106EBE 100%);
+  --border:        rgba(0, 0, 0, 0.10);
+  --border-hover:  rgba(0, 78, 212, 0.40);
+  --text-primary:  #1F2328;
+  --text-secondary:#656D76;
+  --text-muted:    #8C959F;
+  --shadow-card:   0 4px 24px rgba(0, 0, 0, 0.08);
+  --shadow-glow:   0 0 40px rgba(0, 120, 212, 0.10);
+}
+
+/* Stats bar — light mode override (hardcoded dark bg) */
+[data-theme="light"] .stats-bar {
+  background: var(--color-surface);
+}
+
+/* Mobile nav overlay — light mode override (hardcoded dark bg) */
+@media (max-width: 768px) {
+  [data-theme="light"] .nav-links {
+    background: rgba(255, 255, 255, 0.98);
   }
+}
+
+/* Section dark — light mode override */
+[data-theme="light"] .section-dark {
+  background-color: var(--color-surface);
 }
 
 /* ============================================================
