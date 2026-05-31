@@ -1,7 +1,6 @@
 /* ============================================================
-   FONT STACK — system fonts only (1.1.3)
-   Segoe UI is the primary sans-serif (Microsoft Fluent aesthetic).
-   No font files loaded — zero extra network requests.
+   FONT STACK — Inter (sans) + JetBrains Mono (mono)
+   Loaded as local woff2 via @font-face in critical.css.
    --font-sans and --font-mono are defined in :root below.
    ============================================================ */
 
@@ -405,8 +404,10 @@
   --color-error:   #F85149;
 
   /* --- Typography --- */
-  --font-sans: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  --font-mono: 'Cascadia Code', 'Fira Code', monospace;
+  /* Brand fonts are Inter + JetBrains Mono (loaded via @font-face in critical.css).
+     The earlier Segoe/Cascadia "system fonts" experiment was design drift — retired. */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
   --text-xs:   0.75rem;
   --text-sm:   0.875rem;
   --text-base: 1rem;
@@ -475,7 +476,7 @@
 
   --text-primary:  #f1f5f9;
   --text-secondary:#94a3b8;
-  --text-muted:    #475569;
+  --text-muted:    #7c8aa1;
 
   --radius:    12px;
 
@@ -524,7 +525,7 @@
   --border-hover:  rgba(0, 78, 212, 0.40);
   --text-primary:  #1F2328;
   --text-secondary:#656D76;
-  --text-muted:    #8C959F;
+  --text-muted:    #5c6873;
   --shadow-card:   0 4px 24px rgba(0, 0, 0, 0.08);
   --shadow-glow:   0 0 40px rgba(0, 120, 212, 0.10);
 }
@@ -594,19 +595,23 @@ img { max-width: 100%; display: block; }
   background-clip: text;
 }
 
+/* Section kicker — terminal-path brand system (~/about), not a tracked-uppercase eyebrow.
+   A deliberate, named system tied to the console hero. */
 .section-tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  color: var(--text-secondary);
+  margin-bottom: 18px;
+}
+.section-tag::before {
+  content: "~/";
   color: var(--accent-cyan);
-  background: rgba(34, 211, 238, 0.08);
-  border: 1px solid rgba(34, 211, 238, 0.2);
-  padding: 4px 12px;
-  border-radius: 999px;
-  margin-bottom: 16px;
+  font-weight: 600;
 }
 
 .section-header {
@@ -896,49 +901,7 @@ img { max-width: 100%; display: block; }
 .social-link:hover { color: var(--accent-cyan); }
 .social-divider { color: var(--text-muted); }
 
-/* Hero badge stack */
-.hero-badge-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.badge-card {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 18px 22px;
-  background: var(--bg-card);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-card);
-  transition: var(--transition);
-}
-.badge-card:hover {
-  border-color: var(--border-hover);
-  box-shadow: var(--shadow-glow);
-  transform: translateX(-4px);
-}
-.badge-icon { font-size: 1.75rem; flex-shrink: 0; }
-.badge-label {
-  display: block;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--text-primary);
-}
-.badge-sub {
-  display: block;
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  font-family: var(--font-mono);
-  margin-top: 2px;
-}
-
-.animate-float { animation: floatY 4s ease-in-out infinite; }
-.animate-float-delay { animation: floatY 4s ease-in-out infinite; animation-delay: -1.3s; }
-.animate-float-delay-2 { animation: floatY 4s ease-in-out infinite; animation-delay: -2.6s; }
+/* Hero console panel layout styles live in critical.css (above the fold). */
 
 /* Scroll indicator */
 .scroll-indicator {
@@ -1642,11 +1605,6 @@ img { max-width: 100%; display: block; }
   66%       { transform: translate(-30px, 40px) scale(0.94); }
 }
 
-@keyframes floatY {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-10px); }
-}
-
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50%       { opacity: 0; }
@@ -1680,14 +1638,6 @@ img { max-width: 100%; display: block; }
   .hero-content {
     grid-template-columns: 1fr;
     gap: 48px;
-  }
-  .hero-badge-stack {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .badge-card {
-    flex: 1;
-    min-width: 200px;
   }
   .about-grid {
     grid-template-columns: 1fr;
@@ -1746,8 +1696,9 @@ img { max-width: 100%; display: block; }
   .cert-grid { grid-template-columns: 1fr; }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; justify-content: center; }
-  .badge-card { min-width: unset; }
-  .hero-badge-stack { flex-direction: column; }
+  .console-body { padding: 18px 16px; }
+  .console-cert { flex-wrap: wrap; gap: 6px 10px; }
+  .console-cert .code { margin-left: auto; }
 }
 
 /* ============================================================
@@ -1800,4 +1751,68 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 768px) {
   .share-bar { padding: 16px 20px; gap: 8px; }
+}
+
+/* ============================================================
+   ACCESSIBILITY — skip link + focus-visible rings
+   ============================================================ */
+.skip-link {
+  position: fixed;
+  top: 8px; left: 8px;
+  z-index: 2000;
+  padding: 10px 18px;
+  border-radius: var(--radius-sm, 6px);
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transform: translateY(-160%);
+  transition: transform 0.2s ease;
+}
+.skip-link:focus {
+  transform: translateY(0);
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.btn:focus-visible,
+.nav-resume-btn:focus-visible,
+.nav-theme-btn:focus-visible,
+.view-tab:focus-visible,
+.share-btn:focus-visible,
+.skill-tag:focus-visible { outline-offset: 2px; }
+
+/* Console accent text stays readable on the light theme's pale card */
+[data-theme="light"] .console-out--ok,
+[data-theme="light"] .console-live { color: #1a7f43; }
+
+/* ============================================================
+   REDUCED MOTION
+   Honor prefers-reduced-motion: keep content visible, drop
+   looping/decorative motion, collapse reveals to instant.
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  /* Reveals must not leave content hidden */
+  .animate-on-scroll { opacity: 1 !important; transform: none !important; }
+  .hero-text > * { opacity: 1 !important; transform: none !important; }
+  /* Park decorative loops in a calm resting state */
+  .orb,
+  .animate-float,
+  .animate-float-delay,
+  .animate-float-delay-2,
+  .scroll-arrow,
+  .hero-status-dot,
+  .console-live-dot { animation: none !important; transform: none !important; }
+  .hero-role .cursor { opacity: 1; animation: none !important; }
 }

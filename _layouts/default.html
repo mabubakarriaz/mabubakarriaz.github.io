@@ -110,6 +110,8 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="{{ '/' | relative_url }}" class="nav-logo">
@@ -138,7 +140,9 @@
     </div>
   </nav>
 
+  <main id="main-content">
   {{ content }}
+  </main>
 
   <footer class="site-footer">
     <div class="container">

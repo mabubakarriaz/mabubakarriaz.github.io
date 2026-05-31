@@ -138,6 +138,43 @@ if (roleEl) {
     setTimeout(type, delay);
   }
 
-  // small delay before starting so hero animation finishes first
-  setTimeout(type, 900);
+  // Respect reduced motion: keep the static role text, skip the typing loop.
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    // small delay before starting so hero animation finishes first
+    setTimeout(type, 900);
+  }
+}
+
+/* ============================================================
+   STAT COUNT-UP — animate numbers when the stats bar enters view
+   ============================================================ */
+const statValues = document.querySelectorAll('.stat-value[data-count]');
+if (statValues.length) {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const runCount = (el) => {
+    const target = parseInt(el.dataset.count, 10) || 0;
+    if (reduceMotion) { el.textContent = String(target); return; }
+    const DURATION = 1400;
+    const start = performance.now();
+    const tick = (now) => {
+      const progress = Math.min((now - start) / DURATION, 1);
+      const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+      el.textContent = String(Math.round(target * eased));
+      if (progress < 1) requestAnimationFrame(tick);
+      else el.textContent = String(target);
+    };
+    requestAnimationFrame(tick);
+  };
+
+  const statObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        runCount(entry.target);
+        statObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  statValues.forEach(el => statObserver.observe(el));
 }
