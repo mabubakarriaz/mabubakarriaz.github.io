@@ -1760,6 +1760,54 @@ img { max-width: 100%; display: block; }
 }
 
 /* ============================================================
+   CONTROL-PLANE INTERACTIONS — cursor spotlight, timeline draw,
+   console boot. Bold-but-bounded motion (PRODUCT.md: "push it hard").
+   ============================================================ */
+
+/* Cursor-follow spotlight inside card grids */
+.cert-card, .project-card { position: relative; isolation: isolate; }
+.cert-card::after, .project-card::after {
+  content: "";
+  position: absolute; inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(220px circle at var(--mx, 50%) var(--my, 50%),
+              rgba(99, 102, 241, 0.16), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+.cert-card:hover::after,
+.project-card:hover::after { opacity: 1; }
+.cert-card > *,
+.project-card > * { position: relative; z-index: 1; }
+
+/* Experience timeline as a deploy pipeline: nodes ignite + lines draw on reveal */
+.timeline-dot {
+  background: #2a3550;
+  box-shadow: none;
+  transition: background 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
+}
+.timeline-item.visible .timeline-dot {
+  background: var(--gradient);
+  box-shadow: 0 0 16px rgba(99, 102, 241, 0.6);
+}
+.timeline-line {
+  transform-origin: top center;
+  transform: scaleY(0);
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+}
+.timeline-item.visible .timeline-line { transform: scaleY(1); }
+
+/* Console boot — lines reveal sequentially once JS marks the panel */
+.hero-console.booting .console-body > * { opacity: 0; transform: translateY(6px); }
+.hero-console .console-body > *.lit {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* ============================================================
    ACCESSIBILITY — skip link + focus-visible rings
    ============================================================ */
 .skip-link {
@@ -1821,4 +1869,12 @@ img { max-width: 100%; display: block; }
   .hero-status-dot,
   .console-live-dot { animation: none !important; transform: none !important; }
   .hero-role .cursor { opacity: 1; animation: none !important; }
+  /* New control-plane effects: present, not animated */
+  .hero-net,
+  .hero-spotlight { display: none !important; }
+  .timeline-line { transform: none !important; }
+  .timeline-item .timeline-dot { background: var(--gradient) !important; }
+  .cert-card::after,
+  .project-card::after { display: none !important; }
+  .hero-console.booting .console-body > * { opacity: 1 !important; transform: none !important; }
 }
