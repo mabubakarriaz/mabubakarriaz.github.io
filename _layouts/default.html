@@ -10,6 +10,8 @@
     else if(!t&&window.matchMedia('(prefers-color-scheme: light)').matches){document.documentElement.setAttribute('data-theme','light');}
     // Default: dark mode (no attribute needed)
     document.documentElement.classList.add('no-transition');
+    // Mark that JS is active so scroll-reveal only hides content when it can reveal it.
+    document.documentElement.classList.add('js');
   })();
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
