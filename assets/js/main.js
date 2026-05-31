@@ -190,10 +190,9 @@ const FINE_POINTER   = window.matchMedia('(pointer: fine)').matches;
    Nodes wander, link to nearby nodes, and reach toward the cursor.
    Paused off-screen / on hidden tabs; disabled for reduced motion.
    ============================================================ */
-(function heroNetwork() {
-  const canvas = document.getElementById('heroNet');
-  const hero   = document.getElementById('home');
-  if (!canvas || !hero || REDUCED_MOTION) return;
+function initHeroNetwork(canvas) {
+  const host = canvas.closest('.hero, .page-hero');
+  if (!host) return;
   const ctx = canvas.getContext('2d');
   if (!ctx) return;
 
@@ -210,7 +209,7 @@ const FINE_POINTER   = window.matchMedia('(pointer: fine)').matches;
     canvas.width  = Math.round(w * dpr);
     canvas.height = Math.round(h * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    const count = Math.max(26, Math.min(Math.round((w * h) / 22000), 70));
+    const count = Math.max(22, Math.min(Math.round((w * h) / 22000), 70));
     nodes = Array.from({ length: count }, () => ({
       x: Math.random() * w,
       y: Math.random() * h,
@@ -271,23 +270,43 @@ const FINE_POINTER   = window.matchMedia('(pointer: fine)').matches;
   if ('IntersectionObserver' in window) {
     new IntersectionObserver((entries) => {
       entries.forEach(e => (e.isIntersecting ? start() : stop()));
-    }, { threshold: 0 }).observe(hero);
+    }, { threshold: 0 }).observe(host);
   }
 
   if (FINE_POINTER) {
-    hero.addEventListener('pointermove', (e) => {
-      const r = hero.getBoundingClientRect();
+    host.addEventListener('pointermove', (e) => {
+      const r = host.getBoundingClientRect();
       pointer.x = e.clientX - r.left;
       pointer.y = e.clientY - r.top;
-      hero.style.setProperty('--mx', pointer.x + 'px');
-      hero.style.setProperty('--my', pointer.y + 'px');
-      hero.classList.add('is-pointing');
+      host.style.setProperty('--mx', pointer.x + 'px');
+      host.style.setProperty('--my', pointer.y + 'px');
+      host.classList.add('is-pointing');
     }, { passive: true });
-    hero.addEventListener('pointerleave', () => {
+    host.addEventListener('pointerleave', () => {
       pointer.x = -9999; pointer.y = -9999;
-      hero.classList.remove('is-pointing');
+      host.classList.remove('is-pointing');
     });
   }
+}
+
+if (!REDUCED_MOTION) {
+  document.querySelectorAll('canvas.hero-net').forEach(initHeroNetwork);
+}
+
+/* ============================================================
+   SCROLL PROGRESS — a thin gradient telemetry bar across the top
+   ============================================================ */
+(function scrollProgress() {
+  const bar = document.getElementById('scrollProgress');
+  if (!bar) return;
+  const update = () => {
+    const doc = document.documentElement;
+    const max = doc.scrollHeight - doc.clientHeight;
+    bar.style.width = (max > 0 ? (doc.scrollTop / max) * 100 : 0) + '%';
+  };
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update, { passive: true });
+  update();
 })();
 
 /* ============================================================

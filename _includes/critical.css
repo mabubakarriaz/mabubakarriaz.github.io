@@ -235,7 +235,19 @@ img { max-width: 100%; display: block; }
   opacity: 0;
   transition: opacity 0.5s ease;
 }
-.hero.is-pointing .hero-spotlight { opacity: 1; }
+.is-pointing .hero-spotlight { opacity: 1; }
+
+/* Scroll progress — gradient telemetry bar pinned to the top edge */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px; width: 0;
+  z-index: 1100;
+  background: var(--gradient);
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.6);
+  will-change: width;
+}
+
 .hero-content {
   position: relative; z-index: 1;
   display: grid; grid-template-columns: 1fr 380px;
@@ -359,9 +371,11 @@ img { max-width: 100%; display: block; }
 .page-hero::before {
   content: ''; position: absolute; inset: 0;
   background-image:
-    linear-gradient(rgba(99,102,241,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(99,102,241,0.04) 1px, transparent 1px);
-  background-size: 60px 60px;
+    linear-gradient(rgba(99,102,241,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99,102,241,0.05) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 120% at 70% 0%, #000 35%, transparent 80%);
+          mask-image: radial-gradient(ellipse 80% 120% at 70% 0%, #000 35%, transparent 80%);
 }
 .page-hero-orb {
   position: absolute; width: 400px; height: 400px; border-radius: 50%;

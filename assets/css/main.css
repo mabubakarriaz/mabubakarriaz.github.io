@@ -932,10 +932,20 @@ img { max-width: 100%; display: block; }
    STATS BAR
    ============================================================ */
 .stats-bar {
+  position: relative;
   background: rgba(10, 15, 30, 0.95);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   padding: 40px 0;
+  overflow: hidden;
+}
+.stats-bar::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent) 35%, var(--accent-cyan) 65%, transparent);
+  opacity: 0.6;
 }
 
 .stats-grid {
@@ -965,6 +975,7 @@ img { max-width: 100%; display: block; }
   background-clip: text;
   line-height: 1;
   letter-spacing: -0.03em;
+  filter: drop-shadow(0 0 22px rgba(99, 102, 241, 0.35));
 }
 .stat-plus {
   font-size: 1.8rem;
@@ -981,7 +992,7 @@ img { max-width: 100%; display: block; }
 .stat-divider {
   width: 1px;
   height: 48px;
-  background: var(--border);
+  background: linear-gradient(to bottom, transparent, var(--accent), transparent);
   flex-shrink: 0;
 }
 
@@ -1021,12 +1032,15 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.01em;
   color: var(--text-secondary);
   margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
   font-family: var(--font-mono);
 }
 .skills-title::before {
   content: "~/";
   color: var(--accent-cyan);
   font-weight: 600;
+  margin-right: 1px;
 }
 
 .skills-grid {
