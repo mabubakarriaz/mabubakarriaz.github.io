@@ -415,7 +415,9 @@ img { max-width: 100%; display: block; }
 @media (max-width: 768px) {
   .hero-stage-inner { transform: none; }
   .fp-pipeline, .fp-stack { display: none; }
-  .fp-console { max-width: none; }
+  /* Full-bleed the console to the column width; drop the desktop offset margin
+     so its fixed 360px width can't push the hero text off-screen. */
+  .fp-console { width: 100%; max-width: 100%; margin-left: 0; margin-right: 0; }
 }
 .console-bar {
   display: flex; align-items: center; gap: 10px;
