@@ -2003,7 +2003,9 @@ img { max-width: 100%; display: block; }
    ============================================================ */
 @media (max-width: 1024px) {
   .hero-content {
-    grid-template-columns: 1fr;
+    /* minmax(0, 1fr) lets the single track shrink below the console panel's
+       intrinsic 360px width instead of forcing the whole hero past the viewport. */
+    grid-template-columns: minmax(0, 1fr);
     gap: 48px;
   }
   .about-grid {
@@ -2049,6 +2051,10 @@ img { max-width: 100%; display: block; }
   .timeline-item { grid-template-columns: 24px 1fr; gap: 16px; }
   .timeline-card { padding: 20px; }
   .timeline-header { flex-wrap: wrap; }
+  /* The longest date pill ("… · 4 yrs 2 mos") is wider than a 320px viewport as
+     one nowrap line; let it shrink and wrap so it can't drag the card off-screen.
+     flex-shrink must be re-enabled or it stays pinned at max-content width. */
+  .timeline-date { white-space: normal; flex-shrink: 1; }
 
   .cert-grid { grid-template-columns: 1fr 1fr; }
   .projects-grid { grid-template-columns: 1fr; }
@@ -2063,6 +2069,9 @@ img { max-width: 100%; display: block; }
   .cert-grid { grid-template-columns: 1fr; }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; justify-content: center; }
+  /* The "available for…" pill is too long for narrow phones; shrink it and
+     let it wrap to two lines rather than spill past the right edge. */
+  .hero-status { font-size: 0.7rem; padding: 5px 12px; white-space: normal; line-height: 1.5; }
   .console-body { padding: 18px 16px; }
   .console-cert { flex-wrap: wrap; gap: 6px 10px; }
   .console-cert .code { margin-left: auto; }
