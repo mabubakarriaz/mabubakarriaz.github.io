@@ -314,15 +314,19 @@ test.describe('Sprint 4 — Performance & Core Web Vitals', () => {
     }
   });
 
-  test('[task-4.3.2] system font stack — no font file preloads needed', async ({ page }) => {
-    // Design Modernization task 1.1.3 switched from self-hosted Inter/JetBrains Mono
-    // to a system font stack (Segoe UI, system-ui, Cascadia Code).
-    // System fonts ship with the OS — no @font-face declarations, no file downloads,
-    // and therefore no preload links required. Zero preloads is the correct state.
-    // If a custom font is ever reintroduced, it must use crossorigin on its preload link.
+  test('[task-4.3.2] self-hosted brand fonts — any font preload must be crossorigin', async ({ page }) => {
+    // The Control Plane brand uses self-hosted Inter + JetBrains Mono, declared via
+    // @font-face (woff2) inside the inlined critical CSS — no third-party font CDN.
+    // Self-hosted fonts may be preloaded for performance, but a font preload without
+    // crossorigin is silently ignored by the browser (fonts are always CORS-fetched),
+    // so any preload that IS present must carry the crossorigin attribute.
     await page.goto('/');
     const fontPreloads = await page.locator('link[rel="preload"][as="font"]').all();
-    expect(fontPreloads.length, 'System fonts require no font file preloads — expected 0').toBe(0);
+    for (const link of fontPreloads) {
+      const href        = await link.getAttribute('href');
+      const crossorigin = await link.getAttribute('crossorigin');
+      expect(crossorigin, `font preload for "${href}" must set crossorigin`).not.toBeNull();
+    }
   });
 
   test('[task-4.4.3] no render-blocking scripts (all scripts have defer or async)', async ({ page }) => {

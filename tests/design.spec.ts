@@ -62,18 +62,28 @@ async function getAllCssText(page: Page): Promise<string> {
 test.describe('Phase 1 — Foundation & Design System Setup', () => {
 
   // ── 1.1 Design Tokens ──
+  //
+  // The live brand is "The Control Plane" — a dark indigo→cyan space theme.
+  // The tokens that DRIVE the UI are --bg-primary / --accent / --accent-cyan /
+  // --text-primary (defined in critical.css + main.css).
+  //
+  // NOTE: an older --color-* layer (Azure #0078D4 + GitHub-dark #0D1117) still
+  // lingers in main.css as un-migrated scaffolding, but NO component consumes it
+  // and it is explicitly slated for retirement (see CLAUDE.md → Design Context).
+  // These tests assert the real brand, not the dead layer.
 
   test.describe('1.1 Design Tokens', () => {
 
     // ── task-1.1.1 ──
 
-    test('[task-1.1.1] color tokens are defined on :root', async ({ page }) => {
+    test('[task-1.1.1] Control Plane color tokens are defined on :root', async ({ page }) => {
       await page.goto('/');
       const colorVars = [
-        '--color-primary', '--color-primary-dark', '--color-primary-light',
-        '--color-bg', '--color-surface', '--color-border',
-        '--color-text', '--color-text-muted', '--color-text-disabled',
-        '--color-success', '--color-warning', '--color-info', '--color-error',
+        '--bg-primary', '--bg-secondary', '--bg-card', '--bg-card-solid',
+        '--accent', '--accent-cyan', '--accent-violet',
+        '--gradient', '--gradient-text',
+        '--border', '--border-hover',
+        '--text-primary', '--text-secondary', '--text-muted',
       ];
       for (const v of colorVars) {
         const value = await getCssVar(page, v);
@@ -81,19 +91,52 @@ test.describe('Phase 1 — Foundation & Design System Setup', () => {
       }
     });
 
-    test('[task-1.1.1] primary brand color is Azure blue #0078D4 in light mode', async ({ page }) => {
-      // Light mode is activated by data-theme="light" (OS preference detected via JS)
-      await page.emulateMedia({ colorScheme: 'light' });
+    test('[task-1.1.1] primary accent is indigo #6366f1 in dark mode', async ({ page }) => {
+      await page.emulateMedia({ colorScheme: 'dark' });
       await page.goto('/');
-      const primary = await getCssVar(page, '--color-primary');
-      expect(primary.toLowerCase(), '--color-primary must be #0078d4 in light mode').toBe('#0078d4');
+      const accent = await getCssVar(page, '--accent');
+      expect(accent.toLowerCase(), '--accent must be the Control Plane indigo #6366f1').toBe('#6366f1');
     });
 
-    test('[task-1.1.1] background token is white (#FFFFFF) in light mode', async ({ page }) => {
+    test('[task-1.1.1] cyan telemetry accent is #22d3ee in dark mode', async ({ page }) => {
+      await page.emulateMedia({ colorScheme: 'dark' });
+      await page.goto('/');
+      const cyan = await getCssVar(page, '--accent-cyan');
+      expect(cyan.toLowerCase(), '--accent-cyan must be #22d3ee').toBe('#22d3ee');
+    });
+
+    test('[task-1.1.1] base background is near-black #050810 in dark mode', async ({ page }) => {
+      await page.emulateMedia({ colorScheme: 'dark' });
+      await page.goto('/');
+      const bg = await getCssVar(page, '--bg-primary');
+      expect(bg.toLowerCase(), '--bg-primary must be the near-black base #050810').toBe('#050810');
+    });
+
+    test('[task-1.1.1] dark-mode gradient spine is a 135° indigo→cyan ramp (never inverted)', async ({ page }) => {
+      await page.emulateMedia({ colorScheme: 'dark' });
+      await page.goto('/');
+      // Custom properties are returned as their raw authored text (hex), not parsed to rgb().
+      const gradient = (await getCssVar(page, '--gradient')).toLowerCase();
+      // The dark spine runs indigo (#6366f1) → cyan (#22d3ee); both angle and order are brand invariants.
+      expect(gradient, '--gradient must use a 135deg ramp').toContain('135deg');
+      const indigoAt = gradient.indexOf('#6366f1');
+      const cyanAt   = gradient.indexOf('#22d3ee');
+      expect(indigoAt, '--gradient must contain the indigo stop #6366f1').toBeGreaterThanOrEqual(0);
+      expect(cyanAt,   '--gradient must contain the cyan stop #22d3ee').toBeGreaterThanOrEqual(0);
+      expect(indigoAt, '--gradient must run indigo→cyan, not cyan→indigo').toBeLessThan(cyanAt);
+    });
+
+    test('[task-1.1.1] light-mode gradient keeps the same 135° angle and indigo→cyan order', async ({ page }) => {
       await page.emulateMedia({ colorScheme: 'light' });
       await page.goto('/');
-      const bg = await getCssVar(page, '--color-bg');
-      expect(bg.toLowerCase(), '--color-bg must be #ffffff in light mode').toBe('#ffffff');
+      // Light mode rides the same spine with deeper stops (#4f46e5 → #06b6d4) — angle/order unchanged.
+      const gradient = (await getCssVar(page, '--gradient')).toLowerCase();
+      expect(gradient, 'light --gradient must use the same 135deg angle').toContain('135deg');
+      const indigoAt = gradient.indexOf('#4f46e5');
+      const cyanAt   = gradient.indexOf('#06b6d4');
+      expect(indigoAt, 'light --gradient must contain the indigo stop #4f46e5').toBeGreaterThanOrEqual(0);
+      expect(cyanAt,   'light --gradient must contain the cyan stop #06b6d4').toBeGreaterThanOrEqual(0);
+      expect(indigoAt, 'light --gradient must run indigo→cyan, not inverted').toBeLessThan(cyanAt);
     });
 
     test('[task-1.1.1] typography tokens are defined', async ({ page }) => {
@@ -111,9 +154,10 @@ test.describe('Phase 1 — Foundation & Design System Setup', () => {
       }
     });
 
-    test('[task-1.1.1] shadow tokens are defined', async ({ page }) => {
+    test('[task-1.1.1] shadow + glow tokens are defined', async ({ page }) => {
       await page.goto('/');
-      for (const v of ['--shadow-sm', '--shadow-md', '--shadow-lg', '--shadow-xl']) {
+      // Scale shadows + the Control Plane depth tokens (glow/blur, not drop shadows)
+      for (const v of ['--shadow-sm', '--shadow-md', '--shadow-lg', '--shadow-xl', '--shadow-card', '--shadow-glow']) {
         const value = await getCssVar(page, v);
         expect(value, `${v} must be defined`).toBeTruthy();
       }
@@ -129,7 +173,7 @@ test.describe('Phase 1 — Foundation & Design System Setup', () => {
 
     test('[task-1.1.1] animation tokens are defined', async ({ page }) => {
       await page.goto('/');
-      for (const v of ['--duration-fast', '--duration-normal', '--duration-slow', '--ease-default']) {
+      for (const v of ['--duration-fast', '--duration-normal', '--duration-slow', '--ease-default', '--transition']) {
         const value = await getCssVar(page, v);
         expect(value, `${v} must be defined`).toBeTruthy();
       }
@@ -155,42 +199,41 @@ test.describe('Phase 1 — Foundation & Design System Setup', () => {
       expect(attr, '<html> must have data-theme="light" when OS prefers light').toBe('light');
     });
 
-    test('[task-1.1.2] dark mode --color-primary is Azure blue #0078D4', async ({ page }) => {
-      // Both modes share the same primary brand blue
+    test('[task-1.1.2] dark mode --bg-primary is the near-black base (#050810)', async ({ page }) => {
       await page.emulateMedia({ colorScheme: 'dark' });
       await page.goto('/');
-      const primary = await getCssVar(page, '--color-primary');
-      expect(primary.toLowerCase(), '--color-primary in dark mode must be #0078d4').toBe('#0078d4');
+      const bg = await getCssVar(page, '--bg-primary');
+      expect(bg.toLowerCase(), '--bg-primary in dark mode must be #050810').toBe('#050810');
     });
 
-    test('[task-1.1.2] dark mode --color-bg is the dark background (#0D1117)', async ({ page }) => {
-      // Actual dark-mode default: GitHub-dark inspired (#0D1117, not design-tokens.md #1A1A1A)
+    test('[task-1.1.2] dark mode --text-primary is a light readable value (#f1f5f9)', async ({ page }) => {
       await page.emulateMedia({ colorScheme: 'dark' });
       await page.goto('/');
-      const bg = await getCssVar(page, '--color-bg');
-      expect(bg.toLowerCase(), '--color-bg in dark mode must be #0d1117').toBe('#0d1117');
+      const text = await getCssVar(page, '--text-primary');
+      expect(text.toLowerCase(), '--text-primary in dark mode must be #f1f5f9').toBe('#f1f5f9');
     });
 
-    test('[task-1.1.2] dark mode --color-text is a light readable value (#E6EDF3)', async ({ page }) => {
-      // Actual dark-mode text: #E6EDF3 (GitHub dark text), not design-tokens #F0F0F0
-      await page.emulateMedia({ colorScheme: 'dark' });
-      await page.goto('/');
-      const text = await getCssVar(page, '--color-text');
-      expect(text.toLowerCase(), '--color-text in dark mode must be #e6edf3').toBe('#e6edf3');
-    });
-
-    test('[task-1.1.2] light mode switches --color-bg to white (#FFFFFF)', async ({ page }) => {
+    test('[task-1.1.2] light mode switches --bg-primary to white (#FFFFFF)', async ({ page }) => {
       await page.emulateMedia({ colorScheme: 'light' });
       await page.goto('/');
-      const bg = await getCssVar(page, '--color-bg');
-      expect(bg.toLowerCase(), '--color-bg must be #ffffff in light mode').toBe('#ffffff');
+      const bg = await getCssVar(page, '--bg-primary');
+      expect(bg.toLowerCase(), '--bg-primary must be #ffffff in light mode').toBe('#ffffff');
     });
 
-    test('[task-1.1.2] light mode switches --color-text to dark (#1F2328)', async ({ page }) => {
+    test('[task-1.1.2] light mode switches --text-primary to dark (#1F2328)', async ({ page }) => {
       await page.emulateMedia({ colorScheme: 'light' });
       await page.goto('/');
-      const text = await getCssVar(page, '--color-text');
-      expect(text.toLowerCase(), '--color-text in light mode must be #1f2328').toBe('#1f2328');
+      const text = await getCssVar(page, '--text-primary');
+      expect(text.toLowerCase(), '--text-primary in light mode must be #1f2328').toBe('#1f2328');
+    });
+
+    test('[task-1.1.2] light mode keeps the accent on the indigo spine, not Azure blue', async ({ page }) => {
+      // Light theme rides the same indigo→cyan spine (#4f46e5), NOT the retired Azure #0078D4.
+      await page.emulateMedia({ colorScheme: 'light' });
+      await page.goto('/');
+      const accent = (await getCssVar(page, '--accent')).toLowerCase();
+      expect(accent, '--accent in light mode must stay indigo (#4f46e5)').toBe('#4f46e5');
+      expect(accent, '--accent must NOT regress to the retired Azure blue #0078d4').not.toBe('#0078d4');
     });
 
     // ── task-1.1.3 ──
@@ -206,32 +249,35 @@ test.describe('Phase 1 — Foundation & Design System Setup', () => {
       expect(fontRequests, `Google Fonts CDN requests found: ${fontRequests.join(', ')}`).toHaveLength(0);
     });
 
-    test('[task-1.1.3] --font-sans uses Segoe UI / system-ui stack', async ({ page }) => {
+    test('[task-1.1.3] --font-sans is the Inter brand stack', async ({ page }) => {
       await page.goto('/');
       const fontSans = await getCssVar(page, '--font-sans');
-      expect(fontSans, '--font-sans must include Segoe UI or system-ui').toMatch(/Segoe UI|system-ui|-apple-system/i);
+      expect(fontSans, '--font-sans must lead with Inter (the Control Plane brand sans)').toMatch(/Inter/i);
     });
 
-    test('[task-1.1.3] no external font file downloads (zero CDN font requests)', async ({ page }) => {
+    test('[task-1.1.3] --font-mono is the JetBrains Mono stack (telemetry/code)', async ({ page }) => {
+      await page.goto('/');
+      const fontMono = await getCssVar(page, '--font-mono');
+      expect(fontMono, '--font-mono must lead with JetBrains Mono').toMatch(/JetBrains Mono/i);
+    });
+
+    test('[task-1.1.3] brand fonts are self-hosted, not pulled from a third-party CDN', async ({ page }) => {
+      // Inter + JetBrains Mono ship as local woff2 (@font-face in critical.css).
+      // Any font file request must be same-origin — never Google or another CDN.
       const externalFontReqs: string[] = [];
       page.on('request', (req) => {
         const url = req.url();
         if (
           req.resourceType() === 'font' &&
           !url.includes('abubakarriaz.com.pk') &&
-          !url.includes('localhost')
+          !url.includes('localhost') &&
+          !url.startsWith('data:')
         ) {
           externalFontReqs.push(url);
         }
       });
       await page.goto('/');
-      expect(externalFontReqs, `External font downloads: ${externalFontReqs.join(', ')}`).toHaveLength(0);
-    });
-
-    test('[task-1.1.3] zero font preload links in <head> (system fonts need none)', async ({ page }) => {
-      await page.goto('/');
-      const preloads = await page.locator('link[rel="preload"][as="font"]').count();
-      expect(preloads, 'System fonts require no preload links — expected 0').toBe(0);
+      expect(externalFontReqs, `Third-party font downloads: ${externalFontReqs.join(', ')}`).toHaveLength(0);
     });
 
     // ── task-1.1.4 ──
@@ -723,21 +769,21 @@ test.describe('Phase 4 — Polish & Performance', () => {
 
 test.describe('Cross-cutting — Design System Consistency', () => {
 
-  test('[design-system] body has a non-transparent background in dark mode', async ({ page }) => {
+  test('[design-system] body renders on the near-black Control Plane base in dark mode', async ({ page }) => {
     await page.emulateMedia({ colorScheme: 'dark' });
     await page.goto('/');
     const bg = await page.locator('body').evaluate((el) => getComputedStyle(el).backgroundColor);
     expect(bg, 'Body must have a background color').toBeTruthy();
     expect(bg, 'Body background must not be transparent').not.toBe('rgba(0, 0, 0, 0)');
+    // --bg-primary #050810 → rgb(5, 8, 16). This is what actually paints the page.
+    expect(bg.replace(/\s/g, ''), 'Body bg must be the #050810 base').toBe('rgb(5,8,16)');
   });
 
-  test('[design-system] dark mode --color-bg token is dark (#0D1117)', async ({ page }) => {
-    // Actual dark-mode bg value — differs from design-tokens.md because implementation
-    // chose GitHub-dark palette (#0D1117) over the original spec (#1A1A1A).
+  test('[design-system] dark mode --bg-primary token is the near-black base (#050810)', async ({ page }) => {
     await page.emulateMedia({ colorScheme: 'dark' });
     await page.goto('/');
-    const bg = await getCssVar(page, '--color-bg');
-    expect(bg.toLowerCase(), 'Dark mode --color-bg must be #0d1117').toBe('#0d1117');
+    const bg = await getCssVar(page, '--bg-primary');
+    expect(bg.toLowerCase(), 'Dark mode --bg-primary must be #050810').toBe('#050810');
   });
 
   test('[design-system] all footer external links have target="_blank" and rel="noopener"', async ({ page }) => {
