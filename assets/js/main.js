@@ -36,6 +36,34 @@ window.addEventListener('load', () => {
 });
 
 /* ============================================================
+   SMOOTH SCROLL (Lenis) — the motion spine.
+   Uses native scroll under the hood, so the scroll listeners below
+   (navbar .scrolled, scroll-progress, active-nav) keep firing.
+   Disabled under reduced motion; touch stays native (Lenis default).
+   ============================================================ */
+let lenis = null;
+(function initSmoothScroll() {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || typeof Lenis === 'undefined') return;
+  lenis = new Lenis({ lerp: 0.1, smoothWheel: true, wheelMultiplier: 1 });
+  const raf = (time) => { lenis.raf(time); requestAnimationFrame(raf); };
+  requestAnimationFrame(raf);
+  window.__lenis = lenis;
+
+  // Smooth in-page anchor navigation, accounting for the fixed navbar.
+  document.querySelectorAll('a[href^="#"]').forEach((a) => {
+    const id = a.getAttribute('href');
+    if (!id || id.length < 2) return;
+    a.addEventListener('click', (e) => {
+      const target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      lenis.scrollTo(target, { offset: -72, duration: 1.1 });
+    });
+  });
+})();
+
+/* ============================================================
    NAVBAR: add .scrolled class on scroll
    ============================================================ */
 const navbar = document.getElementById('navbar');
@@ -294,6 +322,43 @@ if (!REDUCED_MOTION) {
 }
 
 /* ============================================================
+   HERO STAGE TILT — the floating panel stack reacts to the pointer.
+   Differential depth per panel (data-depth) sells the 3D parallax.
+   Fine pointers only; disabled for reduced motion.
+   ============================================================ */
+(function initHeroTilt() {
+  if (REDUCED_MOTION || !FINE_POINTER) return;
+  const stage = document.querySelector('.hero-stage[data-tilt]');
+  if (!stage) return;
+  const inner = stage.querySelector('.hero-stage-inner');
+  const panels = stage.querySelectorAll('[data-depth]');
+  const host = stage.closest('.hero');
+  const BASE_RY = -15, BASE_RX = 8, SWING = 9;
+  let tx = 0, ty = 0, cx = 0, cy = 0, raf = null;
+
+  const render = () => {
+    cx += (tx - cx) * 0.08;
+    cy += (ty - cy) * 0.08;
+    inner.style.setProperty('--ry', (BASE_RY + cx * SWING) + 'deg');
+    inner.style.setProperty('--rx', (BASE_RX - cy * SWING) + 'deg');
+    panels.forEach((p) => {
+      const d = parseFloat(p.dataset.depth) || 0.5;
+      p.style.setProperty('--ph', (cx * d * 22) + 'px');
+      p.style.setProperty('--pv', (cy * d * 22) + 'px');
+    });
+    raf = (Math.abs(tx - cx) > 0.001 || Math.abs(ty - cy) > 0.001) ? requestAnimationFrame(render) : null;
+  };
+  const queue = () => { if (!raf) raf = requestAnimationFrame(render); };
+
+  host.addEventListener('pointermove', (e) => {
+    tx = (e.clientX / window.innerWidth - 0.5) * 2;
+    ty = (e.clientY / window.innerHeight - 0.5) * 2;
+    queue();
+  }, { passive: true });
+  host.addEventListener('pointerleave', () => { tx = 0; ty = 0; queue(); });
+})();
+
+/* ============================================================
    SCROLL PROGRESS — a thin gradient telemetry bar across the top
    ============================================================ */
 (function scrollProgress() {
@@ -310,10 +375,35 @@ if (!REDUCED_MOTION) {
 })();
 
 /* ============================================================
+   HORIZONTAL RAILS — certs filmstrip + projects gallery.
+   Prev/next step by ~80% of the visible width; buttons disable
+   at the ends. Smooth scroll honors reduced-motion via CSS.
+   ============================================================ */
+(function initRails() {
+  document.querySelectorAll('.rail-track').forEach((track) => {
+    const rail = track.closest('.h-rail');
+    if (!rail) return;
+    const prev = rail.querySelector('.rail-prev');
+    const next = rail.querySelector('.rail-next');
+    const step = () => Math.max(track.clientWidth * 0.8, 260);
+    const update = () => {
+      const max = track.scrollWidth - track.clientWidth - 2;
+      if (prev) prev.disabled = track.scrollLeft <= 2;
+      if (next) next.disabled = track.scrollLeft >= max;
+    };
+    if (prev) prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+    if (next) next.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+    track.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update, { passive: true });
+    update();
+  });
+})();
+
+/* ============================================================
    CARD CURSOR SPOTLIGHT — a glow tracks the pointer inside grids
    ============================================================ */
 if (FINE_POINTER && !REDUCED_MOTION) {
-  document.querySelectorAll('.cert-grid, .projects-grid').forEach((grid) => {
+  document.querySelectorAll('.cert-grid, .projects-grid, .rail-track').forEach((grid) => {
     grid.addEventListener('pointermove', (e) => {
       const card = e.target.closest('.cert-card, .project-card');
       if (!card) return;
@@ -325,11 +415,38 @@ if (FINE_POINTER && !REDUCED_MOTION) {
 }
 
 /* ============================================================
+   ABOUT — pinned scroll-telling. As each chapter crosses the
+   viewport center, activate it and swap the sticky instrument panel.
+   Works with native scroll, so it runs with or without Lenis.
+   ============================================================ */
+(function aboutStory() {
+  const story = document.getElementById('aboutStory');
+  if (!story) return;
+  const chapters = Array.from(story.querySelectorAll('.story-chapter'));
+  const layers = Array.from(story.querySelectorAll('.stage-layer'));
+  if (!chapters.length) return;
+
+  const setActive = (i) => {
+    chapters.forEach((c, n) => c.classList.toggle('is-current', n === i));
+    layers.forEach((l, n) => l.classList.toggle('is-active', n === i));
+  };
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) setActive(Number(e.target.dataset.chapter) || 0);
+    });
+  }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+
+  chapters.forEach((c) => io.observe(c));
+  setActive(0);
+})();
+
+/* ============================================================
    CONSOLE BOOT — reveal the hero console's lines in sequence.
    Defaults to fully visible; only animates when motion is allowed.
    ============================================================ */
 (function consoleBoot() {
-  const panel = document.querySelector('.hero-console');
+  const panel = document.querySelector('.fp-console');
   if (!panel || REDUCED_MOTION) return;
   const lines = Array.from(panel.querySelectorAll('.console-body > *'));
   if (!lines.length) return;
