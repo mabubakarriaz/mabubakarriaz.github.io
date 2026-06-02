@@ -1790,6 +1790,10 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 860px) {
   .tier-grid { grid-template-columns: 1fr; gap: 20px; max-width: 480px; margin: 0 auto; }
+  /* Single column: lead with the most-requested offer instead of stranding it
+     in the middle of the stack. The grid honors `order`. */
+  .tier-card--featured { order: -1; }
+  .tier-card { padding: 28px 24px; }
 }
 
 /* ============================================================
@@ -2075,6 +2079,41 @@ img { max-width: 100%; display: block; }
   .console-body { padding: 18px 16px; }
   .console-cert { flex-wrap: wrap; gap: 6px 10px; }
   .console-cert .code { margin-left: auto; }
+}
+
+/* ============================================================
+   MOBILE STORY (adapt) — curate the small-screen narrative.
+   A phone visit is short and one-handed, so mobile tells a tighter
+   story than the full desktop stack:
+
+     identity → proof → how I work → track record → credentials →
+     recognition → the ask (Engage) → stay in touch (Newsletter)
+
+   Two desktop sections, Projects and Education, are tangents to that
+   arc (their full content lives on dedicated pages), so they're
+   dropped here. The closing beats — Engage and Newsletter — are
+   pulled to the end so the scroll lands on a call to action rather
+   than on Awards. Desktop and tablet keep every section in source
+   order; this is a mobile-only recomposition, not a different IA.
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Drop the off-arc sections. Their content is unchanged on larger
+     screens and still reachable via /projects/ and /education/. */
+  #projects,
+  #education { display: none; }
+
+  /* The Projects nav target no longer exists on mobile; hide its link
+     so the menu can't scroll to a hidden section. */
+  .nav-link[href="#projects"] { display: none; }
+
+  /* Re-sequence the remaining sections. `main` becomes a flex column
+     only to unlock `order`; the visual result is the same vertical
+     stack as normal block flow. Untouched children keep order:0 and
+     thus source order — only the finale is moved. */
+  #main-content { display: flex; flex-direction: column; }
+  #awards     { order: 1; }  /* recognition, just before the ask */
+  #engage     { order: 2; }  /* the ask — Work with me */
+  #newsletter { order: 3; }  /* stay in touch — the closing band */
 }
 
 /* ============================================================

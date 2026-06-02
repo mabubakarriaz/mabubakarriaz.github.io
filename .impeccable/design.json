@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-01T00:00:00Z",
+  "generatedAt": "2026-06-02T14:23:45.684Z",
   "title": "Design System: Abubakar Riaz Portfolio",
   "extensions": {
     "colorMeta": {
@@ -8,57 +8,162 @@
         "role": "primary",
         "displayName": "Signal Indigo",
         "canonical": "#6366f1",
-        "tonalRamp": ["#1e1b4b", "#312e81", "#3730a3", "#4338ca", "#4f46e5", "#6366f1", "#818cf8", "#c7d2fe"]
+        "tonalRamp": [
+          "#1e1b4b",
+          "#312e81",
+          "#3730a3",
+          "#4338ca",
+          "#4f46e5",
+          "#6366f1",
+          "#818cf8",
+          "#c7d2fe"
+        ]
       },
       "accent-cyan": {
         "role": "secondary",
         "displayName": "Telemetry Cyan",
         "canonical": "#22d3ee",
-        "tonalRamp": ["#083344", "#155e75", "#0e7490", "#0891b2", "#06b6d4", "#22d3ee", "#67e8f9", "#cffafe"]
+        "tonalRamp": [
+          "#083344",
+          "#155e75",
+          "#0e7490",
+          "#0891b2",
+          "#06b6d4",
+          "#22d3ee",
+          "#67e8f9",
+          "#cffafe"
+        ]
       },
       "accent-violet": {
         "role": "tertiary",
         "displayName": "Orbit Violet",
         "canonical": "#8b5cf6",
-        "tonalRamp": ["#2e1065", "#4c1d95", "#5b21b6", "#6d28d9", "#7c3aed", "#8b5cf6", "#a78bfa", "#ddd6fe"]
+        "tonalRamp": [
+          "#2e1065",
+          "#4c1d95",
+          "#5b21b6",
+          "#6d28d9",
+          "#7c3aed",
+          "#8b5cf6",
+          "#a78bfa",
+          "#ddd6fe"
+        ]
       },
       "bg-primary": {
         "role": "neutral",
         "displayName": "Deep Space",
         "canonical": "#050810",
-        "tonalRamp": ["#050810", "#0a0f1e", "#0d162d", "#1e293b", "#334155", "#475569", "#94a3b8", "#f1f5f9"]
+        "tonalRamp": [
+          "#050810",
+          "#0a0f1e",
+          "#0d162d",
+          "#1e293b",
+          "#334155",
+          "#475569",
+          "#94a3b8",
+          "#f1f5f9"
+        ]
       },
       "text-primary": {
         "role": "neutral",
         "displayName": "Bright Ink",
         "canonical": "#f1f5f9",
-        "tonalRamp": ["#0f172a", "#1e293b", "#334155", "#475569", "#64748b", "#94a3b8", "#cbd5e1", "#f1f5f9"]
+        "tonalRamp": [
+          "#0f172a",
+          "#1e293b",
+          "#334155",
+          "#475569",
+          "#64748b",
+          "#94a3b8",
+          "#cbd5e1",
+          "#f1f5f9"
+        ]
       }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "Hero name only — the single loudest element, capped at ~96px." },
-      "headline": { "displayName": "Headline", "purpose": "Section and page titles." },
-      "title": { "displayName": "Title", "purpose": "Card titles: roles, cert names, project names, award titles." },
-      "body": { "displayName": "Body", "purpose": "Paragraph copy and descriptions, ~65-75ch." },
-      "label": { "displayName": "Label (Mono)", "purpose": "Telemetry: dates, eyebrows, metadata pills, the logo, the cursor. JetBrains Mono only." }
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero name only — the single loudest element, capped at ~96px."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section and page titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card titles: roles, cert names, project names, award titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Paragraph copy and descriptions, ~65-75ch."
+      },
+      "label": {
+        "displayName": "Label (Mono)",
+        "purpose": "Telemetry: dates, eyebrows, metadata pills, the logo, the cursor. JetBrains Mono only."
+      }
     },
     "shadows": [
-      { "name": "card-rest", "value": "0 4px 24px rgba(0,0,0,0.4)", "purpose": "Quiet ambient seat for floating cards against the dark ground." },
-      { "name": "accent-glow", "value": "0 0 40px rgba(99,102,241,0.18)", "purpose": "The hover signature — an indigo bloom, not a directional drop shadow." },
-      { "name": "node-glow", "value": "0 0 16px rgba(99,102,241,0.5)", "purpose": "Tight halo on timeline dots and live markers so nodes read as emitting light." },
-      { "name": "primary-btn", "value": "0 4px 20px rgba(99,102,241,0.35)", "purpose": "Soft indigo seat under the primary button; deepens to 0 8px 30px on hover." }
+      {
+        "name": "card-rest",
+        "value": "0 4px 24px rgba(0,0,0,0.4)",
+        "purpose": "Quiet ambient seat for floating cards against the dark ground."
+      },
+      {
+        "name": "accent-glow",
+        "value": "0 0 40px rgba(99,102,241,0.18)",
+        "purpose": "The hover signature — an indigo bloom, not a directional drop shadow."
+      },
+      {
+        "name": "node-glow",
+        "value": "0 0 16px rgba(99,102,241,0.5)",
+        "purpose": "Tight halo on timeline dots and live markers so nodes read as emitting light."
+      },
+      {
+        "name": "primary-btn",
+        "value": "0 4px 20px rgba(99,102,241,0.35)",
+        "purpose": "Soft indigo seat under the primary button; deepens to 0 8px 30px on hover."
+      }
     ],
     "motion": [
-      { "name": "ease-default", "value": "cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Default easing for all state transitions and reveals." },
-      { "name": "duration-fast", "value": "150ms", "purpose": "Micro feedback." },
-      { "name": "duration-normal", "value": "250ms", "purpose": "Theme toggle and standard state changes." },
-      { "name": "transition-base", "value": "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "The shared --transition applied to nearly all interactive elements." },
-      { "name": "reveal", "value": "opacity 0.7s, transform 0.7s cubic-bezier(0.4,0,0.2,1)", "purpose": "Scroll-in fade-and-rise for .animate-on-scroll; staggered 0.05s per grid child." }
+      {
+        "name": "ease-default",
+        "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Default easing for all state transitions and reveals."
+      },
+      {
+        "name": "duration-fast",
+        "value": "150ms",
+        "purpose": "Micro feedback."
+      },
+      {
+        "name": "duration-normal",
+        "value": "250ms",
+        "purpose": "Theme toggle and standard state changes."
+      },
+      {
+        "name": "transition-base",
+        "value": "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "The shared --transition applied to nearly all interactive elements."
+      },
+      {
+        "name": "reveal",
+        "value": "opacity 0.7s, transform 0.7s cubic-bezier(0.4,0,0.2,1)",
+        "purpose": "Scroll-in fade-and-rise for .animate-on-scroll; staggered 0.05s per grid child."
+      }
     ],
     "breakpoints": [
-      { "name": "lg", "value": "1024px" },
-      { "name": "md", "value": "768px" },
-      { "name": "sm", "value": "480px" }
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "sm",
+        "value": "480px"
+      }
     ]
   },
   "components": [
@@ -129,20 +234,46 @@
   ],
   "narrative": {
     "northStar": "The Control Plane",
-    "overview": "This portfolio renders a cloud architect's craft as the thing a cloud architect actually builds: a dark, instrument-grade control plane. The surface is near-black deep space lit from within by indigo-to-cyan gradients, drifting blurred orbs, and a faint engineering grid. The personality is bold, precise, and distinctive — an engineer's confidence as visual conviction. Color is committed, not hedged; depth comes from light, blur, and translucency rather than hard shadows. It rejects the generic resume template, the corporate/sterile Fluent-default look, and the trendy AI-startup clone.",
+    "overview": "This portfolio renders a cloud architect's craft as the thing a cloud architect actually builds: a dark, instrument-grade control plane. The surface is near-black deep space lit from within by indigo-to-cyan gradients, drifting blurred orbs, and a faint engineering grid. The personality is bold, precise, and distinctive — an engineer's confidence as visual conviction. Color is committed, not hedged; depth comes from light, blur, and translucency rather than hard shadows. It rejects the generic resume template, the corporate/sterile Fluent-default look, and the trendy AI-startup clone. Responsive behavior is composition, not just reflow: desktop runs the full eleven-section sequence, while the phone surface is curated into a tighter story (identity, proof, how I work, stack, track record, credentials, recognition, then the Engage and Newsletter call-to-action) because mobile visits are short and one-handed.",
     "keyCharacteristics": [
       "Dark by default (near-black deep-space canvas); a full light theme exists as an opt-in override.",
       "A committed indigo to cyan gradient as the system's signature, with violet as a third voice.",
       "Monospace (JetBrains Mono) reserved for telemetry: dates, eyebrows, metadata, the logo, the cursor.",
       "Depth via blur, glow, and translucency — never via heavy drop shadows or borders.",
-      "Glow-on-hover and small directional nudges as the interaction signature."
+      "Glow-on-hover and small directional nudges as the interaction signature.",
+      "Mobile is a curated story, not a scaled-down desktop: tangential sections (Projects, Education) drop away and the Engage to Newsletter CTA closes the scroll (The Mobile-Story Rule)."
     ],
     "rules": [
-      { "name": "The Gradient-Spine Rule", "body": "The indigo to cyan gradient runs on a 135 degree axis everywhere it appears. Never invert the stops, re-angle it, or add a second unrelated gradient.", "section": "colors" },
-      { "name": "The Cyan-Is-Telemetry Rule", "body": "Cyan marks live or machine data: dates, metadata pills, the cursor, the logo brackets, hover affordances. Forbidden as a large fill or as body text.", "section": "colors" },
-      { "name": "The Mono-Is-Instrumentation Rule", "body": "JetBrains Mono is reserved for telemetry-class text. Forbidden for headings, body copy, or anything sentence-length.", "section": "typography" },
-      { "name": "The One-Family Display Rule", "body": "Hierarchy comes from Inter's weight range (400-900) and scale, not from added display faces.", "section": "typography" },
-      { "name": "The Glow-Not-Drop Rule", "body": "Elevation responds to state with a colored glow bloom, not a darker or larger drop shadow. Surfaces are calm at rest.", "section": "elevation" }
+      {
+        "name": "The Gradient-Spine Rule",
+        "body": "The indigo to cyan gradient runs on a 135 degree axis everywhere it appears. Never invert the stops, re-angle it, or add a second unrelated gradient.",
+        "section": "colors"
+      },
+      {
+        "name": "The Cyan-Is-Telemetry Rule",
+        "body": "Cyan marks live or machine data: dates, metadata pills, the cursor, the logo brackets, hover affordances. Forbidden as a large fill or as body text.",
+        "section": "colors"
+      },
+      {
+        "name": "The Mono-Is-Instrumentation Rule",
+        "body": "JetBrains Mono is reserved for telemetry-class text. Forbidden for headings, body copy, or anything sentence-length.",
+        "section": "typography"
+      },
+      {
+        "name": "The One-Family Display Rule",
+        "body": "Hierarchy comes from Inter's weight range (400-900) and scale, not from added display faces.",
+        "section": "typography"
+      },
+      {
+        "name": "The Glow-Not-Drop Rule",
+        "body": "Elevation responds to state with a colored glow bloom, not a darker or larger drop shadow. Surfaces are calm at rest.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Mobile-Story Rule",
+        "body": "On phones (<=768px) the page is curated into a narrative, not shrunk. Off-arc sections (Projects, Education) are dropped, the primary CTA (Engage, then Newsletter) is pulled to the close, and every nav target still resolves. Desktop and tablet keep the full section set in source order — the mobile recomposition is a display:none plus flex-order overlay, never a separate information architecture or a content fork.",
+        "section": "overview"
+      }
     ],
     "dos": [
       "Do keep the indigo to cyan gradient on a 135 degree axis everywhere it appears.",
@@ -151,7 +282,8 @@
       "Do drive hierarchy from Inter's weight range (400-900) and scale, not extra type families.",
       "Do bump body text from Muted Slate toward Bright Ink wherever it must clear 4.5:1; Faint Slate is for large or non-critical text only.",
       "Do provide a prefers-reduced-motion fallback for every orb drift, fade-in, blink, and hover transform.",
-      "Do treat the dark theme as default and keep the light theme at full parity."
+      "Do treat the dark theme as default and keep the light theme at full parity.",
+      "Do curate mobile into a story rather than shrinking the desktop stack: on phones (<=768px) drop off-arc sections (Projects, Education) and pull the Engage to Newsletter CTA to the close so the scroll ends on the ask (The Mobile-Story Rule). Keep desktop's full section set and source order untouched — the recomposition is a media-query overlay, not a fork."
     ],
     "donts": [
       "Don't revive the dormant Azure-blue + Segoe UI + GitHub-dark token layer as the visible brand — it's migration drift and reads as the corporate/sterile Fluent-default look the brand rejects.",
@@ -160,7 +292,8 @@
       "Don't use cyan as a large fill or as body text, and never invert or re-angle the gradient spine.",
       "Don't add hard drop shadows or borders heavier than 1px to convey elevation.",
       "Don't introduce a serif or a second sans for headings, or use monospace for sentence-length copy.",
-      "Don't exceed the ~96px display ceiling or tighten display letter-spacing past -0.04em."
+      "Don't exceed the ~96px display ceiling or tighten display letter-spacing past -0.04em.",
+      "Don't treat mobile as desktop-scaled-down: never leave a nav link pointing at a section hidden on that breakpoint, and never bury the primary CTA mid-scroll on phones. If a section is off the mobile arc, drop it and its nav entry together."
     ]
   }
 }

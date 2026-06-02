@@ -104,12 +104,17 @@ The personality is **bold, precise, distinctive** — an engineer's confidence e
 
 This system explicitly rejects three things, carried straight from the brand's anti-references. It is **not a generic resume template** — no interchangeable CV-builder shell where only the name changes. It is **not corporate or sterile** — no enterprise-stock, Fluent-default Microsoft look (notably, the dormant Azure-blue + Segoe UI token layer in the CSS is *drift to retire*, not the brand). And it is **not a trendy AI-startup clone** — no cream-and-slate neutrals, no gradient-mesh-by-default, no tiny tracked uppercase eyebrow stamped above every section.
 
+Responsive behavior is composition, not just reflow. The desktop surface runs the full eleven-section sequence; the phone surface is **curated to a tighter story** because a mobile visit is short and one-handed (PRODUCT.md: *"short, evaluative visits, often arriving from LinkedIn… frequently on mobile"*). The mobile arc reads: identity (hero) → proof (stats) → how I work (the pinned About story) → the stack → track record (experience) → credentials (certs) → recognition (awards) → **the ask (Engage)** → **stay in touch (Newsletter)**. Two desktop sections, Projects and Education, are tangents to that arc and are dropped on phones (their full content still lives on dedicated pages and on desktop/tablet); the Engage → Newsletter call-to-action is pulled to the end so the scroll lands on the ask, not on a list of awards.
+
+**The Mobile-Story Rule.** On phones (`≤768px`) the page is curated into a narrative, not shrunk. Off-arc sections are dropped, the primary CTA (Engage, then Newsletter) is pulled to the close, and every nav target still resolves. Desktop and tablet keep the full section set in source order — the mobile recomposition is a `display:none` + flex-`order` overlay, never a separate information architecture or a content fork.
+
 **Key Characteristics:**
 - Dark by default (near-black deep-space canvas); a full light theme exists as an opt-in override.
 - A committed indigo → cyan gradient as the system's signature, with violet as a third voice.
 - Monospace (JetBrains Mono) reserved for telemetry: dates, eyebrows, metadata, the logo, the cursor.
 - Depth via blur, glow, and translucency — never via heavy drop shadows or borders.
 - Glow-on-hover and small directional nudges (`translateX`/`translateY`) as the interaction signature.
+- Mobile is a curated story, not a scaled-down desktop: tangential sections drop away and the Engage → Newsletter CTA closes the scroll (The Mobile-Story Rule).
 
 ## 2. Colors
 
@@ -201,7 +206,13 @@ The site currently has no form inputs (CTAs link out to LinkedIn/RSS). When inpu
 - **Logo:** `<AR/>` in JetBrains Mono with cyan brackets — the terminal signature.
 - **Links:** Muted Slate, 0.9rem; hover/active brightens to near-white and grows a gradient underline left-to-right.
 - **Controls:** A circular theme toggle (sun/moon) and the cyan resume pill sit inline.
-- **Mobile:** Hamburger opens a full-screen blurred overlay; links scale up to 1.5rem, centered.
+- **Mobile (`≤768px`):** Hamburger opens a full-screen blurred overlay; links scale up to 1.5rem, centered. The menu is curated to what the phone actually renders — the Projects link is dropped because that section is hidden at this breakpoint (The Mobile-Story Rule). Never leave a nav link pointing at a section hidden on its own breakpoint.
+
+### Engage Tiers (the ask)
+
+Three offer cards (Cloud architecture, Team training, Speaking) in a `repeat(3, 1fr)` grid. The middle card is the **featured** tier: a `Most requested` cyan-gradient badge, a gradient border-box edge, and a deeper glow on hover (`0 0 50px → 72px rgba(99,102,241,…)`). Each card carries a `~/`-prefixed mono kicker, a one-line "for whom", a cyan-check include list, and a full-width CTA pinned to the card foot. As the climax of the page, Engage is where the gradient spine does its closing work.
+
+- **Single-column reorder:** when the grid collapses to one column (`≤860px`), the featured tier is pulled to the top with `order: -1` so the strongest offer leads instead of sitting marooned in the middle. Padding tightens to `28px 24px`.
 
 ### Signature: The Experience Timeline
 A two-column grid (40px marker rail + content) where each entry is a glowing indigo **node** (`14px`, Node Glow halo) connected by a gradient line that fades to transparent. Cards carry a square company badge with a per-company gradient, a monospace date pill, and `›`-marked bullets in indigo. This is the system's most distinctive pattern — the literal "control plane" read — and should be preserved as the model for any chronological content.
@@ -216,6 +227,7 @@ A two-column grid (40px marker rail + content) where each entry is a glowing ind
 - **Do** bump body text from Muted Slate toward Bright Ink wherever it must clear 4.5:1; Faint Slate (`#475569`) is for large or non-critical text only.
 - **Do** provide a `prefers-reduced-motion` fallback (crossfade or instant) for every orb drift, fade-in, blink, and hover transform — the bold motion makes this non-negotiable.
 - **Do** treat the dark theme as default and keep the light theme at full parity (it already exists as a `[data-theme="light"]` override).
+- **Do** curate mobile into a story rather than shrinking the desktop stack: on phones (`≤768px`) drop off-arc sections (Projects, Education) and pull the Engage → Newsletter CTA to the close so the scroll ends on the ask (The Mobile-Story Rule). Keep desktop's full section set and source order untouched — the recomposition is a media-query overlay, not a fork.
 
 ### Don't:
 - **Don't** revive the dormant Azure-blue (`#0078D4`) + Segoe UI + GitHub-dark token layer as the visible brand — it's migration drift and it reads as the **corporate / sterile, Fluent-default Microsoft look** the brand explicitly rejects.
@@ -225,3 +237,4 @@ A two-column grid (40px marker rail + content) where each entry is a glowing ind
 - **Don't** add hard drop shadows or borders heavier than 1px to convey elevation; that's the 2014-app tell this system is built to avoid.
 - **Don't** introduce a serif or a second sans for headings, or use monospace for sentence-length copy.
 - **Don't** exceed the ~96px display ceiling or tighten display letter-spacing past -0.04em.
+- **Don't** treat mobile as desktop-scaled-down: never leave a nav link pointing at a section hidden on that breakpoint, and never bury the primary CTA mid-scroll on phones. If a section is off the mobile arc, drop it and its nav entry together.
