@@ -448,11 +448,11 @@ test.describe('Sprint 5 — Final SEO Touches', () => {
       expect(appleIcon, 'apple-touch-icon link must exist').toBeTruthy();
     });
 
-    test('[task-5.3.3] theme-color meta tag is present and Azure blue', async ({ page }) => {
+    test('[task-5.3.3] theme-color meta tag is present and matches the Control Plane theme', async ({ page }) => {
       await page.goto('/');
       const themeColor = await page.locator('meta[name="theme-color"]').getAttribute('content');
       expect(themeColor, 'theme-color meta tag must exist').toBeTruthy();
-      expect(themeColor, 'theme-color should be Azure blue #0078D4').toBe('#0078D4');
+      expect(themeColor, 'theme-color should be the near-black Control Plane base #050810').toBe('#050810');
     });
 
     test('[task-5.3.4] custom 404 page exists and is branded', async ({ page }) => {
