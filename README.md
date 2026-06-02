@@ -36,8 +36,26 @@ gem install bundler
 
 ### Run locally
 
+> **Note:** Use the full Ruby path (`/c/Ruby32-x64/bin/bundle`) rather than the bare `bundle` shim — the system shim is broken on this machine and will fail silently.
+
 ```bash
-/c/Ruby32-x64/bin/bundle exec jekyll serve --livereload
+# Build once and serve (no auto-rebuild)
+/c/Ruby32-x64/bin/bundle exec jekyll serve --no-watch
 ```
 
-Then open [http://localhost:4000](http://localhost:4000) in your browser.
+Then open [http://127.0.0.1:4000](http://127.0.0.1:4000) in your browser.
+
+**Other useful commands:**
+
+```bash
+# Auto-rebuild on file changes (best while iterating on design)
+/c/Ruby32-x64/bin/bundle exec jekyll serve --livereload
+
+# Serve on a different port
+/c/Ruby32-x64/bin/bundle exec jekyll serve --no-watch --port 4001
+
+# Build only, no server (output goes to _site/)
+/c/Ruby32-x64/bin/bundle exec jekyll build
+```
+
+Press `Ctrl-C` in the terminal to stop the server.

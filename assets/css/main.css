@@ -1,7 +1,6 @@
 /* ============================================================
-   FONT STACK — system fonts only (1.1.3)
-   Segoe UI is the primary sans-serif (Microsoft Fluent aesthetic).
-   No font files loaded — zero extra network requests.
+   FONT STACK — Inter (sans) + JetBrains Mono (mono)
+   Loaded as local woff2 via @font-face in critical.css.
    --font-sans and --font-mono are defined in :root below.
    ============================================================ */
 
@@ -11,7 +10,7 @@
 
 /* Page hero (replaces full-screen hero on subpages) */
 .page-hero {
-  padding: 140px 0 64px;
+  padding: 150px 0 72px;
   background: var(--bg-secondary);
   border-bottom: 1px solid var(--border);
   position: relative;
@@ -22,23 +21,65 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(99,102,241,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(99,102,241,0.04) 1px, transparent 1px);
-  background-size: 60px 60px;
+    linear-gradient(rgba(99,102,241,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99,102,241,0.05) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 130% at 72% -10%, #000 32%, transparent 80%);
+          mask-image: radial-gradient(ellipse 80% 130% at 72% -10%, #000 32%, transparent 80%);
+}
+.page-hero::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent) 35%, var(--accent-cyan) 65%, transparent);
+  opacity: 0.6;
 }
 .page-hero-orb {
   position: absolute;
-  width: 400px; height: 400px;
+  width: 440px; height: 440px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(99,102,241,0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(99,102,241,0.22) 0%, transparent 70%);
   filter: blur(80px);
-  top: -100px; right: -80px;
+  top: -120px; right: -80px;
   pointer-events: none;
 }
 .page-hero-inner {
   position: relative;
   z-index: 1;
 }
+
+/* Bespoke floating instrument readout per sub-page hero */
+.page-hero-readout {
+  position: absolute;
+  top: 50%; right: max(24px, calc((100% - 1120px) / 2 + 24px));
+  transform: translateY(-50%);
+  width: 230px;
+  font-family: var(--font-mono);
+  background: var(--bg-card);
+  -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
+  border: 1px solid var(--border-hover);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card), var(--shadow-glow);
+  padding: 18px 20px;
+  z-index: 1;
+}
+.readout-bar {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.72rem; color: var(--text-secondary);
+  padding-bottom: 12px; margin-bottom: 14px; border-bottom: 1px solid var(--border);
+}
+.readout-dot {
+  width: 7px; height: 7px; border-radius: 50%; background: #2bd576;
+  box-shadow: 0 0 8px #2bd576; animation: pulseDot 2.4s ease-in-out infinite;
+}
+.readout-metric { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.readout-num {
+  font-size: 2.4rem; font-weight: 900; letter-spacing: -0.03em; line-height: 1;
+  background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.readout-unit { font-size: 0.74rem; color: var(--text-muted); }
+.readout-foot { margin-top: 14px; font-size: 0.72rem; color: var(--text-muted); }
+.readout-foot::before { content: '~/'; color: var(--accent-cyan); }
+
+@media (max-width: 980px) { .page-hero-readout { display: none; } }
 .breadcrumb {
   display: flex;
   align-items: center;
@@ -405,8 +446,10 @@
   --color-error:   #F85149;
 
   /* --- Typography --- */
-  --font-sans: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  --font-mono: 'Cascadia Code', 'Fira Code', monospace;
+  /* Brand fonts are Inter + JetBrains Mono (loaded via @font-face in critical.css).
+     The earlier Segoe/Cascadia "system fonts" experiment was design drift — retired. */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
   --text-xs:   0.75rem;
   --text-sm:   0.875rem;
   --text-base: 1rem;
@@ -475,7 +518,7 @@
 
   --text-primary:  #f1f5f9;
   --text-secondary:#94a3b8;
-  --text-muted:    #475569;
+  --text-muted:    #7c8aa1;
 
   --radius:    12px;
 
@@ -510,23 +553,24 @@
   --shadow-lg: 0 8px 24px rgba(0,0,0,0.10);
   --shadow-xl: 0 16px 48px rgba(0,0,0,0.12);
 
-  /* Legacy aliases → light values (for below-fold components) */
+  /* Legacy aliases → light values (for below-fold components).
+     Light theme rides the same indigo->cyan spine as dark (legacy Azure-blue retired). */
   --bg-primary:    #FFFFFF;
-  --bg-secondary:  #F6F8FA;
+  --bg-secondary:  #F4F5FB;
   --bg-card:       rgba(255, 255, 255, 0.9);
   --bg-card-solid: #FFFFFF;
-  --accent:        #0078D4;
-  --accent-cyan:   #0078D4;
-  --accent-violet: #5C2D91;
-  --gradient:      linear-gradient(135deg, #0078D4 0%, #0091FF 100%);
-  --gradient-text: linear-gradient(135deg, #0078D4 0%, #106EBE 100%);
-  --border:        rgba(0, 0, 0, 0.10);
-  --border-hover:  rgba(0, 78, 212, 0.40);
+  --accent:        #4f46e5;
+  --accent-cyan:   #0e7490;
+  --accent-violet: #7c3aed;
+  --gradient:      linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+  --gradient-text: linear-gradient(135deg, #4338ca 0%, #0e7490 100%);
+  --border:        rgba(79, 70, 229, 0.14);
+  --border-hover:  rgba(79, 70, 229, 0.40);
   --text-primary:  #1F2328;
-  --text-secondary:#656D76;
-  --text-muted:    #8C959F;
-  --shadow-card:   0 4px 24px rgba(0, 0, 0, 0.08);
-  --shadow-glow:   0 0 40px rgba(0, 120, 212, 0.10);
+  --text-secondary:#52525b;
+  --text-muted:    #6b6f76;
+  --shadow-card:   0 4px 24px rgba(31, 27, 74, 0.08);
+  --shadow-glow:   0 0 40px rgba(79, 70, 229, 0.12);
 }
 
 /* Stats bar — light mode override (hardcoded dark bg) */
@@ -594,19 +638,23 @@ img { max-width: 100%; display: block; }
   background-clip: text;
 }
 
+/* Section kicker — terminal-path brand system (~/about), not a tracked-uppercase eyebrow.
+   A deliberate, named system tied to the console hero. */
 .section-tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  color: var(--text-secondary);
+  margin-bottom: 18px;
+}
+.section-tag::before {
+  content: "~/";
   color: var(--accent-cyan);
-  background: rgba(34, 211, 238, 0.08);
-  border: 1px solid rgba(34, 211, 238, 0.2);
-  padding: 4px 12px;
-  border-radius: 999px;
-  margin-bottom: 16px;
+  font-weight: 600;
 }
 
 .section-header {
@@ -896,49 +944,7 @@ img { max-width: 100%; display: block; }
 .social-link:hover { color: var(--accent-cyan); }
 .social-divider { color: var(--text-muted); }
 
-/* Hero badge stack */
-.hero-badge-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.badge-card {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 18px 22px;
-  background: var(--bg-card);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-card);
-  transition: var(--transition);
-}
-.badge-card:hover {
-  border-color: var(--border-hover);
-  box-shadow: var(--shadow-glow);
-  transform: translateX(-4px);
-}
-.badge-icon { font-size: 1.75rem; flex-shrink: 0; }
-.badge-label {
-  display: block;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--text-primary);
-}
-.badge-sub {
-  display: block;
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  font-family: var(--font-mono);
-  margin-top: 2px;
-}
-
-.animate-float { animation: floatY 4s ease-in-out infinite; }
-.animate-float-delay { animation: floatY 4s ease-in-out infinite; animation-delay: -1.3s; }
-.animate-float-delay-2 { animation: floatY 4s ease-in-out infinite; animation-delay: -2.6s; }
+/* Hero console panel layout styles live in critical.css (above the fold). */
 
 /* Scroll indicator */
 .scroll-indicator {
@@ -969,10 +975,20 @@ img { max-width: 100%; display: block; }
    STATS BAR
    ============================================================ */
 .stats-bar {
+  position: relative;
   background: rgba(10, 15, 30, 0.95);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   padding: 40px 0;
+  overflow: hidden;
+}
+.stats-bar::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent) 35%, var(--accent-cyan) 65%, transparent);
+  opacity: 0.6;
 }
 
 .stats-grid {
@@ -1002,6 +1018,7 @@ img { max-width: 100%; display: block; }
   background-clip: text;
   line-height: 1;
   letter-spacing: -0.03em;
+  filter: drop-shadow(0 0 22px rgba(99, 102, 241, 0.35));
 }
 .stat-plus {
   font-size: 1.8rem;
@@ -1018,7 +1035,7 @@ img { max-width: 100%; display: block; }
 .stat-divider {
   width: 1px;
   height: 48px;
-  background: var(--border);
+  background: linear-gradient(to bottom, transparent, var(--accent), transparent);
   flex-shrink: 0;
 }
 
@@ -1051,13 +1068,22 @@ img { max-width: 100%; display: block; }
 }
 
 .skills-title {
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--text-secondary);
   margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
   font-family: var(--font-mono);
+}
+.skills-title::before {
+  content: "~/";
+  color: var(--accent-cyan);
+  font-weight: 600;
+  margin-right: 1px;
 }
 
 .skills-grid {
@@ -1090,6 +1116,204 @@ img { max-width: 100%; display: block; }
   background: rgba(139, 92, 246, 0.08);
   border: 1px solid rgba(139, 92, 246, 0.2);
   color: #a78bfa;
+}
+
+/* ============================================================
+   PINNED STORY (About) — sticky visual + scroll-stepped chapters.
+   Huly "MetaBrain" move: the left instrument panel swaps as the
+   right column scrolls through chapters. CSS sticky does the pin;
+   IntersectionObserver swaps the active layer.
+   ============================================================ */
+.pinned-story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: start;
+  position: relative;
+}
+.story-viz {
+  position: sticky;
+  top: 112px;
+  height: min(62vh, 440px);
+}
+.story-stack { position: relative; width: 100%; height: 100%; }
+
+.stage-layer {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateY(20px) scale(0.985);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+.stage-layer.is-active { opacity: 1; transform: none; }
+
+.layer-panel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
+  border: 1px solid var(--border-hover);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card), var(--shadow-glow);
+  padding: 22px 24px;
+  font-family: var(--font-mono);
+}
+.layer-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-bottom: 14px; margin-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+.layer-bar-title { font-size: 0.78rem; color: var(--text-secondary); }
+.layer-bar-title::before { content: '~/'; color: var(--accent-cyan); font-weight: 600; }
+.layer-caption {
+  margin-top: auto; padding-top: 16px;
+  font-family: var(--font-sans); font-size: 0.86rem;
+  color: var(--text-secondary); line-height: 1.65;
+}
+
+/* Layer 0 — topology */
+.topo { width: 100%; flex: 1; min-height: 0; }
+.topo-nodes circle { fill: var(--bg-card-solid); stroke: var(--accent); stroke-width: 1.5; }
+.topo-nodes .topo-core circle { stroke: var(--accent-cyan); filter: drop-shadow(0 0 8px rgba(34,211,238,0.6)); }
+.topo-nodes text { fill: var(--text-muted); font-size: 9px; text-anchor: middle; font-family: var(--font-mono); }
+.topo-links path { stroke-dasharray: 5 5; animation: dashFlow 5s linear infinite; }
+
+/* Layer 1 — pipeline */
+.layer-pipeline { display: flex; flex-direction: column; gap: 13px; flex: 1; justify-content: center; }
+.layer-pipeline li {
+  display: flex; align-items: center; font-size: 0.86rem;
+  color: var(--text-secondary); position: relative; padding-left: 26px;
+}
+.layer-pipeline li::before { content: '✓'; position: absolute; left: 0; color: #2bd576; font-weight: 700; }
+.layer-pipeline li.run { color: var(--text-primary); }
+.layer-pipeline li.run::before { content: '▶'; color: var(--accent-cyan); }
+
+/* Layer 2 — signals */
+.layer-signals { display: flex; flex-direction: column; gap: 15px; flex: 1; justify-content: center; }
+.layer-signals li { display: flex; align-items: center; gap: 11px; font-size: 0.86rem; color: var(--text-secondary); }
+.sig-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gradient); box-shadow: 0 0 8px rgba(99,102,241,0.6); flex-shrink: 0; }
+.sig-tag {
+  margin-left: auto; font-size: 0.7rem; color: var(--accent-cyan);
+  background: rgba(34,211,238,0.08); border: 1px solid rgba(34,211,238,0.2);
+  padding: 2px 9px; border-radius: 999px;
+}
+
+/* Chapters */
+.story-chapters { display: flex; flex-direction: column; }
+.story-chapter {
+  min-height: 56vh;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 28px 0;
+}
+.story-chapter:first-child { padding-top: 8px; }
+.chapter-index {
+  font-family: var(--font-mono); font-size: 0.8rem;
+  color: var(--accent-cyan); letter-spacing: 0.12em; margin-bottom: 12px;
+}
+.chapter-title {
+  font-size: clamp(1.5rem, 3vw, 2.05rem); font-weight: 800;
+  letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 16px;
+  color: var(--text-primary); text-wrap: balance;
+}
+.story-chapter p { color: var(--text-secondary); line-height: 1.8; font-size: 1.05rem; max-width: 30rem; }
+.story-chapter strong { color: var(--text-primary); font-weight: 600; }
+/* Dim inactive chapters only when JS can re-activate them (keeps no-JS readable) */
+.js .story-chapter { opacity: 0.4; transition: opacity 0.45s ease; }
+.js .story-chapter.is-current { opacity: 1; }
+
+@keyframes dashFlow { to { stroke-dashoffset: -20; } }
+
+/* ============================================================
+   CAPABILITIES BENTO — asymmetric instrument tiles.
+   6-col grid; tiles span varied col/row counts. Collapses to
+   2-col then 1-col. Real, distinct content per tile (not an
+   identical icon-heading-text grid).
+   ============================================================ */
+.bento {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: minmax(158px, auto);
+  gap: 16px;
+}
+.bento-tile {
+  position: relative;
+  display: flex; flex-direction: column;
+  background: var(--bg-card);
+  -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 26px 28px;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.bento-tile:hover { border-color: var(--border-hover); box-shadow: var(--shadow-glow); transform: translateY(-3px); }
+.tile-kicker { font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); margin-bottom: 14px; }
+.tile-kicker::before { content: '~/'; color: var(--accent-cyan); font-weight: 600; }
+.tile-title { font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px; letter-spacing: -0.01em; }
+.tile-text { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65; }
+
+.tile-arch  { grid-column: span 4; grid-row: span 2; }
+.tile-certs { grid-column: span 2; grid-row: span 2; }
+.tile-auto  { grid-column: span 3; }
+.tile-data  { grid-column: span 3; }
+.tile-skills{ grid-column: span 6; }
+
+.tile-arch::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.6;
+  background: radial-gradient(420px circle at 88% 115%, rgba(99,102,241,0.16), transparent 60%);
+}
+.tile-arch > * { position: relative; z-index: 1; }
+.tile-list { margin-top: auto; padding-top: 18px; display: flex; flex-direction: column; gap: 9px; }
+.tile-list li { font-size: 0.9rem; color: var(--text-secondary); padding-left: 18px; position: relative; }
+.tile-list li::before { content: '›'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+
+.tile-metric { display: flex; align-items: baseline; gap: 9px; margin: 2px 0 8px; }
+.tile-metric-num {
+  font-size: 2.6rem; font-weight: 900; letter-spacing: -0.03em; line-height: 1;
+  background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 18px rgba(99,102,241,0.3));
+}
+.tile-metric-unit { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); }
+.tile-issuers { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0; }
+.issuer-chip {
+  font-family: var(--font-mono); font-size: 0.7rem; padding: 3px 9px; border-radius: 999px;
+  background: rgba(34,211,238,0.08); border: 1px solid rgba(34,211,238,0.2); color: #67e8f9;
+}
+.tile-link { margin-top: auto; font-size: 0.84rem; font-weight: 600; color: var(--accent); transition: var(--transition); }
+.tile-link:hover { color: var(--accent-cyan); }
+
+.tile-pipeline { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin: 6px 0 14px; }
+.tile-pipeline li { font-family: var(--font-mono); font-size: 0.76rem; color: var(--text-secondary); display: flex; align-items: center; }
+.tile-pipeline li:not(:last-child)::after { content: '→'; margin-left: 8px; color: var(--accent); }
+
+.tile-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 14px; }
+.tile-chips span {
+  font-family: var(--font-mono); font-size: 0.72rem; padding: 3px 10px; border-radius: 999px;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); color: var(--text-muted);
+}
+.tile-skills .skills-grid { margin-top: 2px; }
+
+@media (max-width: 860px) {
+  .bento { grid-template-columns: repeat(2, 1fr); }
+  .tile-arch, .tile-certs { grid-column: span 2; grid-row: auto; }
+  .tile-auto, .tile-data, .tile-skills { grid-column: span 2; }
+}
+@media (max-width: 520px) {
+  .bento { grid-template-columns: 1fr; }
+  .bento-tile { grid-column: 1 / -1; }
+}
+
+@media (max-width: 900px) {
+  .pinned-story { grid-template-columns: 1fr; gap: 0; }
+  .story-viz {
+    position: relative; top: 0; height: auto;
+    margin-bottom: 28px;
+  }
+  .story-stack { height: 280px; }
+  .story-chapter { min-height: auto; padding: 22px 0; }
+  .js .story-chapter { opacity: 1; }
 }
 
 /* ============================================================
@@ -1465,6 +1689,110 @@ img { max-width: 100%; display: block; }
 }
 
 /* ============================================================
+   HORIZONTAL RAIL — certs filmstrip + projects gallery.
+   scroll-snap rail with prev/next buttons and edge-fade mask.
+   Keyboard: track is focusable and scrollable; buttons step.
+   data-lenis-prevent keeps the wheel native inside the rail.
+   ============================================================ */
+.h-rail { position: relative; display: flex; align-items: center; gap: 12px; }
+.rail-track {
+  display: flex; align-items: stretch; gap: 20px;
+  flex: 1; min-width: 0;
+  overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth;
+  padding: 6px 6px 18px;
+  scrollbar-width: thin; scrollbar-color: var(--border-hover) transparent;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 26px, #000 calc(100% - 26px), transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 26px, #000 calc(100% - 26px), transparent);
+}
+.rail-track::-webkit-scrollbar { height: 6px; }
+.rail-track::-webkit-scrollbar-thumb { background: var(--border-hover); border-radius: 999px; }
+.rail-track:focus-visible { outline: 2px solid var(--accent-cyan); outline-offset: 3px; border-radius: var(--radius); }
+.rail-track > * { scroll-snap-align: start; flex: 0 0 auto; }
+.rail-track .cert-card { width: 288px; }
+
+.rail-btn {
+  flex-shrink: 0; width: 42px; height: 42px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--bg-card); border: 1px solid var(--border); color: var(--text-secondary);
+  cursor: pointer; transition: var(--transition);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+}
+.rail-btn:hover:not(:disabled) { border-color: var(--accent-cyan); color: var(--accent-cyan); transform: translateY(-1px); }
+.rail-btn:disabled { opacity: 0.3; cursor: default; }
+
+/* Project gallery cards rendered as deploy panels with a window bar */
+.h-rail--lg .rail-track .project-card { width: 322px; }
+.h-rail--lg .project-card { padding-top: 52px; }
+.h-rail--lg .project-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 35px;
+  border-bottom: 1px solid var(--border);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  background:
+    radial-gradient(circle 3.5px at 20px 17px, #ef4d57 62%, transparent 64%),
+    radial-gradient(circle 3.5px at 34px 17px, #f5b73d 62%, transparent 64%),
+    radial-gradient(circle 3.5px at 48px 17px, #2bd576 62%, transparent 64%),
+    rgba(255,255,255,0.03);
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .rail-btn { display: none; }
+}
+
+/* ============================================================
+   ENGAGE — work-with-me tiers (huly pricing-page adaptation)
+   ============================================================ */
+.section-lead {
+  margin: 18px auto 0; max-width: 44rem;
+  color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7; text-wrap: pretty;
+}
+.tier-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }
+.tier-card {
+  position: relative; display: flex; flex-direction: column;
+  background: var(--bg-card); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
+  border: 1px solid var(--border); border-radius: var(--radius-lg);
+  padding: 32px 30px; transition: var(--transition);
+}
+.tier-card:hover { border-color: var(--border-hover); box-shadow: var(--shadow-glow); transform: translateY(-4px); }
+.tier-kicker { font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); margin-bottom: 14px; }
+.tier-kicker::before { content: '~/'; color: var(--accent-cyan); font-weight: 600; }
+.tier-name { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em; color: var(--text-primary); margin-bottom: 8px; }
+.tier-for {
+  font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;
+  margin-bottom: 22px; padding-bottom: 22px; border-bottom: 1px solid var(--border);
+}
+.tier-includes { display: flex; flex-direction: column; gap: 13px; margin-bottom: 28px; flex: 1; }
+.tier-includes li { font-size: 0.92rem; color: var(--text-secondary); padding-left: 28px; position: relative; line-height: 1.5; }
+.tier-includes li::before {
+  content: ''; position: absolute; left: 0; top: 1px; width: 17px; height: 17px; border-radius: 50%;
+  background: rgba(34,211,238,0.12); border: 1px solid rgba(34,211,238,0.32);
+}
+.tier-includes li::after {
+  content: '✓'; position: absolute; left: 4px; top: 0; font-size: 0.64rem; color: var(--accent-cyan); font-weight: 700;
+}
+.tier-cta { width: 100%; justify-content: center; margin-top: auto; }
+
+.tier-card--featured {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--bg-card-solid), var(--bg-card-solid)) padding-box,
+    var(--gradient) border-box;
+  box-shadow: 0 0 50px rgba(99,102,241,0.2);
+}
+.tier-card--featured:hover { transform: translateY(-6px); box-shadow: 0 0 72px rgba(99,102,241,0.3); }
+.tier-badge {
+  position: absolute; top: -12px; left: 30px;
+  font-family: var(--font-mono); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.04em;
+  color: #fff; background: var(--gradient); padding: 4px 12px; border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(99,102,241,0.4);
+}
+
+@media (max-width: 860px) {
+  .tier-grid { grid-template-columns: 1fr; gap: 20px; max-width: 480px; margin: 0 auto; }
+}
+
+/* ============================================================
    FOOTER
    ============================================================ */
 .site-footer {
@@ -1610,12 +1938,14 @@ img { max-width: 100%; display: block; }
 /* ============================================================
    SCROLL ANIMATIONS
    ============================================================ */
-.animate-on-scroll {
+/* Content is visible by default; only hidden-for-reveal when JS is present
+   to drive the .visible toggle. No-JS visitors and crawlers see everything. */
+.js .animate-on-scroll {
   opacity: 0;
   transform: translateY(32px);
   transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1);
 }
-.animate-on-scroll.visible {
+.js .animate-on-scroll.visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -1640,11 +1970,6 @@ img { max-width: 100%; display: block; }
   0%, 100% { transform: translate(0, 0) scale(1); }
   33%       { transform: translate(40px, -60px) scale(1.06); }
   66%       { transform: translate(-30px, 40px) scale(0.94); }
-}
-
-@keyframes floatY {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-10px); }
 }
 
 @keyframes blink {
@@ -1680,14 +2005,6 @@ img { max-width: 100%; display: block; }
   .hero-content {
     grid-template-columns: 1fr;
     gap: 48px;
-  }
-  .hero-badge-stack {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .badge-card {
-    flex: 1;
-    min-width: 200px;
   }
   .about-grid {
     grid-template-columns: 1fr;
@@ -1746,8 +2063,9 @@ img { max-width: 100%; display: block; }
   .cert-grid { grid-template-columns: 1fr; }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; justify-content: center; }
-  .badge-card { min-width: unset; }
-  .hero-badge-stack { flex-direction: column; }
+  .console-body { padding: 18px 16px; }
+  .console-cert { flex-wrap: wrap; gap: 6px 10px; }
+  .console-cert .code { margin-left: auto; }
 }
 
 /* ============================================================
@@ -1800,4 +2118,126 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 768px) {
   .share-bar { padding: 16px 20px; gap: 8px; }
+}
+
+/* ============================================================
+   CONTROL-PLANE INTERACTIONS — cursor spotlight, timeline draw,
+   console boot. Bold-but-bounded motion (PRODUCT.md: "push it hard").
+   ============================================================ */
+
+/* Cursor-follow spotlight inside card grids */
+.cert-card, .project-card { position: relative; isolation: isolate; }
+.cert-card::after, .project-card::after {
+  content: "";
+  position: absolute; inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(220px circle at var(--mx, 50%) var(--my, 50%),
+              rgba(99, 102, 241, 0.16), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+.cert-card:hover::after,
+.project-card:hover::after { opacity: 1; }
+.cert-card > *,
+.project-card > * { position: relative; z-index: 1; }
+
+/* Experience timeline as a deploy pipeline: nodes ignite + lines draw on reveal */
+.timeline-dot {
+  background: #2a3550;
+  box-shadow: none;
+  transition: background 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
+}
+.timeline-item.visible .timeline-dot {
+  background: var(--gradient);
+  box-shadow: 0 0 16px rgba(99, 102, 241, 0.6);
+}
+.timeline-line {
+  transform-origin: top center;
+  transform: scaleY(0);
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+}
+.timeline-item.visible .timeline-line { transform: scaleY(1); }
+
+/* Console boot — lines reveal sequentially once JS marks the panel */
+.fp-console.booting .console-body > * { opacity: 0; transform: translateY(6px); }
+.fp-console .console-body > *.lit {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* ============================================================
+   ACCESSIBILITY — skip link + focus-visible rings
+   ============================================================ */
+.skip-link {
+  position: fixed;
+  top: 8px; left: 8px;
+  z-index: 2000;
+  padding: 10px 18px;
+  border-radius: var(--radius-sm, 6px);
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transform: translateY(-160%);
+  transition: transform 0.2s ease;
+}
+.skip-link:focus {
+  transform: translateY(0);
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.btn:focus-visible,
+.nav-resume-btn:focus-visible,
+.nav-theme-btn:focus-visible,
+.view-tab:focus-visible,
+.share-btn:focus-visible,
+.skill-tag:focus-visible { outline-offset: 2px; }
+
+/* Console accent text stays readable on the light theme's pale card */
+[data-theme="light"] .console-out--ok,
+[data-theme="light"] .console-live { color: #1a7f43; }
+
+/* ============================================================
+   REDUCED MOTION
+   Honor prefers-reduced-motion: keep content visible, drop
+   looping/decorative motion, collapse reveals to instant.
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  /* Reveals must not leave content hidden */
+  .animate-on-scroll { opacity: 1 !important; transform: none !important; }
+  .hero-text > * { opacity: 1 !important; transform: none !important; }
+  /* Park decorative loops in a calm resting state */
+  .orb,
+  .animate-float,
+  .animate-float-delay,
+  .animate-float-delay-2,
+  .scroll-arrow,
+  .hero-status-dot,
+  .console-live-dot { animation: none !important; transform: none !important; }
+  .hero-role .cursor { opacity: 1; animation: none !important; }
+  /* New control-plane effects: present, not animated */
+  .hero-net,
+  .hero-spotlight { display: none !important; }
+  .timeline-line { transform: none !important; }
+  .timeline-item .timeline-dot { background: var(--gradient) !important; }
+  .cert-card::after,
+  .project-card::after { display: none !important; }
+  .fp-console.booting .console-body > * { opacity: 1 !important; transform: none !important; }
+  .hero-stage-inner { transform: none !important; }
+  .float-panel { transform: none !important; }
 }

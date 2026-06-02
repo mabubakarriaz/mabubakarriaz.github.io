@@ -30,6 +30,9 @@ show_downloads: false
 exclude:
   - README.md
   - CLAUDE.md
+  - PRODUCT.md
+  - DESIGN.md
   - Gemfile
   - Gemfile.lock
   - .claude/
+  - .impeccable/

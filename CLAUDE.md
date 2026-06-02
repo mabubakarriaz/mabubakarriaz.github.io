@@ -95,3 +95,16 @@ These commands **fail on this machine** — use the alternatives instead:
 | `bundle exec jekyll serve` | `/c/Ruby32-x64/bin/bundle exec jekyll serve --no-watch` | System `bundle` shim is broken |
 | `python3 -c "..."` | `node -e "..."` | Python is not installed |
 | `gh pr edit --body "..."` | `gh api repos/mabubakarriaz/mabubakarriaz.github.io/pulls/{N} -X PATCH -f body="..."` | `gh pr edit` fails with GitHub Projects (classic) deprecation GraphQL error |
+
+## Design Context
+
+Strategy and visual system for any design work live in two root files (read both before touching UI):
+
+- [`PRODUCT.md`](PRODUCT.md) — register (`brand`), audience, purpose, brand personality, anti-references, and design principles. The strategic "who/what/why".
+- [`DESIGN.md`](DESIGN.md) — the visual system in Google Stitch format: tokens, color/type/elevation, components, and Do's/Don'ts. Its sidecar [`.impeccable/design.json`](.impeccable/design.json) carries tonal ramps, motion, and component snippets.
+
+**North Star: "The Control Plane".** The live brand is the dark indigo→cyan "space" theme (`--accent: #6366f1`, `--accent-cyan: #22d3ee`, Inter + JetBrains Mono, near-black `#050810`). Core rules: the 135° gradient spine is never inverted; cyan marks telemetry only (dates, metadata, logo), never a fill or body text; depth comes from glow/blur, not drop shadows.
+
+**Token drift to retire, not the brand:** the canonical Azure-blue (`#0078D4`) + Segoe UI + GitHub-dark token layer in [`main.css`](assets/css/main.css)/[`critical.css`](_includes/critical.css) is in-progress migration scaffolding the components have NOT adopted. It reads as the generic Microsoft/Fluent look, which is an explicit anti-reference. Build against the space theme.
+
+The `impeccable` skill (`/impeccable <command>`) reads these files before any design task.
