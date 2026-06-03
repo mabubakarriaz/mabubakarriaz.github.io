@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-02T14:23:45.684Z",
+  "generatedAt": "2026-06-03T00:00:00Z",
   "title": "Design System: Abubakar Riaz Portfolio",
   "extensions": {
     "colorMeta": {
@@ -241,6 +241,8 @@
       "Monospace (JetBrains Mono) reserved for telemetry: dates, eyebrows, metadata, the logo, the cursor.",
       "Depth via blur, glow, and translucency — never via heavy drop shadows or borders.",
       "Glow-on-hover and small directional nudges as the interaction signature.",
+      "A story read top to bottom: voice-led section titles, a section-lead connector per section, and the ~/ kicker carrying one terminal session through the page (The Guided-Traversal Rule).",
+      "No emoji and no pictorial card icons: identity comes from structure (issuer bars, gradient signal-nodes, the deploy-panel window bar, mono telemetry).",
       "Mobile is a curated story, not a scaled-down desktop: tangential sections (Projects, Education) drop away and the Engage to Newsletter CTA closes the scroll (The Mobile-Story Rule)."
     ],
     "rules": [
@@ -273,6 +275,16 @@
         "name": "The Mobile-Story Rule",
         "body": "On phones (<=768px) the page is curated into a narrative, not shrunk. Off-arc sections (Projects, Education) are dropped, the primary CTA (Engage, then Newsletter) is pulled to the close, and every nav target still resolves. Desktop and tablet keep the full section set in source order — the mobile recomposition is a display:none plus flex-order overlay, never a separate information architecture or a content fork.",
         "section": "overview"
+      },
+      {
+        "name": "The Guided-Traversal Rule",
+        "body": "The page is one narrative, not a directory. Section headings are first-person voice-led sentences, never resume labels; most sections open with a single section-lead that advances the story; the ~/ mono kicker continues the hero console session as the connective spine. If a heading could be swapped onto any other portfolio unchanged, rewrite it.",
+        "section": "overview"
+      },
+      {
+        "name": "The No-Emoji-Icons Rule",
+        "body": "Emoji are forbidden as card icons, section markers, or heading decoration. They read as generic template furniture and break the instrument-grade voice. Identity comes from the issuer bar, the deploy-panel window bar, signal nodes, the gradient spine, and mono telemetry. The only glyph exception is the functional pipeline check inside the hero/about console panels, which is machine status, not decoration.",
+        "section": "components"
       }
     ],
     "dos": [
@@ -283,7 +295,9 @@
       "Do bump body text from Muted Slate toward Bright Ink wherever it must clear 4.5:1; Faint Slate is for large or non-critical text only.",
       "Do provide a prefers-reduced-motion fallback for every orb drift, fade-in, blink, and hover transform.",
       "Do treat the dark theme as default and keep the light theme at full parity.",
-      "Do curate mobile into a story rather than shrinking the desktop stack: on phones (<=768px) drop off-arc sections (Projects, Education) and pull the Engage to Newsletter CTA to the close so the scroll ends on the ask (The Mobile-Story Rule). Keep desktop's full section set and source order untouched — the recomposition is a media-query overlay, not a fork."
+      "Do curate mobile into a story rather than shrinking the desktop stack: on phones (<=768px) drop off-arc sections (Projects, Education) and pull the Engage to Newsletter CTA to the close so the scroll ends on the ask (The Mobile-Story Rule). Keep desktop's full section set and source order untouched — the recomposition is a media-query overlay, not a fork.",
+      "Do write section headings as first-person, voice-led sentences and open most sections with one section-lead connector, so the page reads as a guided traversal rather than a directory (The Guided-Traversal Rule).",
+      "Do give cards their identity from structure (issuer bars, the deploy-panel window bar, signal nodes, the gradient spine, mono telemetry), not from a pictorial icon (The No-Emoji-Icons Rule)."
     ],
     "donts": [
       "Don't revive the dormant Azure-blue + Segoe UI + GitHub-dark token layer as the visible brand — it's migration drift and reads as the corporate/sterile Fluent-default look the brand rejects.",
@@ -293,7 +307,10 @@
       "Don't add hard drop shadows or borders heavier than 1px to convey elevation.",
       "Don't introduce a serif or a second sans for headings, or use monospace for sentence-length copy.",
       "Don't exceed the ~96px display ceiling or tighten display letter-spacing past -0.04em.",
-      "Don't treat mobile as desktop-scaled-down: never leave a nav link pointing at a section hidden on that breakpoint, and never bury the primary CTA mid-scroll on phones. If a section is off the mobile arc, drop it and its nav entry together."
+      "Don't treat mobile as desktop-scaled-down: never leave a nav link pointing at a section hidden on that breakpoint, and never bury the primary CTA mid-scroll on phones. If a section is off the mobile arc, drop it and its nav entry together.",
+      "Don't use resume-label section titles (Professional Experience, Featured Certifications, Academic Background, Honors and Awards); write them in this person's voice instead.",
+      "Don't put emoji or pictorial icons on cards, section markers, or headings; use structural identity instead (The No-Emoji-Icons Rule).",
+      "Don't dress the stats bar as the SaaS hero-metric strip; keep the gradient numbers but label them with lowercase mono telemetry so it reads as an instrument status line."
     ]
   }
 }

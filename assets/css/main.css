@@ -379,6 +379,8 @@
   transform: translateX(6px);
 }
 .award-full-icon { font-size: 2.5rem; }
+/* Awards-full grid keeps its first column; the node aligns to the title's first line. */
+.award-full-item .award-node { margin-top: 7px; }
 .award-full-title {
   margin: 0;
   font-size: 1.05rem;
@@ -1025,11 +1027,11 @@ img { max-width: 100%; display: block; }
 }
 
 .stat-label {
-  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
   font-weight: 500;
   color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.01em;
 }
 
 .stat-divider {
@@ -1617,6 +1619,14 @@ img { max-width: 100%; display: block; }
 }
 
 .edu-icon { font-size: 2.5rem; flex-shrink: 0; }
+/* A telemetry node anchors each entry instead of a graduation-cap emoji. */
+.edu-node {
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--gradient);
+  box-shadow: 0 0 14px rgba(99, 102, 241, 0.55);
+  flex-shrink: 0;
+  margin-top: 7px;
+}
 .edu-period {
   display: block;
   font-family: var(--font-mono);
@@ -1669,6 +1679,13 @@ img { max-width: 100%; display: block; }
 }
 
 .award-icon { font-size: 1.75rem; flex-shrink: 0; }
+/* Awards read as signals on the control plane: a glowing node, not a trophy emoji. */
+.award-node {
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--gradient);
+  box-shadow: 0 0 14px rgba(99, 102, 241, 0.55);
+  flex-shrink: 0;
+}
 .award-body { flex: 1; min-width: 0; }
 .award-title {
   font-size: 0.975rem;
