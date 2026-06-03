@@ -4,9 +4,10 @@ description: >
   Branch-and-PR lifecycle management for the portfolio repo (github.com/mabubakarriaz/mabubakarriaz.github.io).
   Use this skill whenever work begins on a new feature, fix, or task and needs its own branch, or when changes are
   complete and need a pull request. Trigger when the user says "start a new feature", "create a branch", "open a PR",
-  "git-flow", "git ops", or asks to follow the branch/PR workflow. Always creates a fresh `claude/NNN-<slug>` branch
-  off main for new work, then opens a PR to main with a proper summary via the gh CLI for the user to review and
-  merge manually. Other skills (design-modernization, seo-hardening, audience-infrastructure) defer to this skill
+  "git-flow", "git ops", asks to close stale/outdated PRs, or asks to follow the branch/PR workflow. Always creates a
+  fresh `claude/NNN-<slug>` branch off main for new work, then opens a PR to main with a proper summary via the gh CLI
+  for the user to review and merge manually; also closes superseded/outdated PRs (with confirmation + a reason comment).
+  Other skills (design-modernization, seo-hardening, audience-infrastructure) defer to this skill
   for all branch and PR operations.
 ---
 
@@ -121,10 +122,48 @@ gh api repos/mabubakarriaz/mabubakarriaz.github.io/pulls/<N> -X PATCH \
   -f body="<updated full body>"
 ```
 
+## Closing stale / outdated PRs
+
+When opening a new PR — or whenever the user asks to tidy up open PRs — check for stale ones and close those that no longer apply. **Never close a PR without first confirming it's genuinely outdated**, and always leave a comment explaining why.
+
+A PR is a close candidate when any of these hold:
+- It is **superseded** — its changes were re-done, reverted, or made obsolete by later merged work (e.g. a design polish PR that predates a full redesign).
+- It is **far behind `main`** and its diff no longer applies cleanly to the current code.
+- It targets a **retired direction** (e.g. the old Azure-blue/Segoe token layer rather than the Control Plane brand).
+- It has been **open and untouched for a long time** with no path to merge.
+
+Confirm staleness before closing:
+
+```bash
+# List open PRs with age + mergeability
+gh pr list --state open --json number,title,headRefName,updatedAt,mergeable \
+  --jq '.[] | "#\(.number) [\(.headRefName)] mergeable=\(.mergeable) updated=\(.updatedAt) — \(.title)"'
+
+# How far behind / ahead of main is a candidate branch?
+git fetch origin <branch>
+git rev-list --count origin/<branch>..origin/main   # commits it is BEHIND main
+git rev-list --count origin/main..origin/<branch>    # commits it is AHEAD (its own work)
+
+# Inspect its commits to judge whether the work still matters
+gh pr view <N> --json commits --jq '.commits[] | "\(.oid[0:7]) \(.messageHeadline)"'
+```
+
+Close with a comment stating the reason and how to revive it:
+
+```bash
+gh pr close <N> --comment "Closing as superseded by #<X>/#<Y>. This branch is N commits behind main and targets <retired direction>. Reopen or re-branch off current main if still wanted."
+```
+
+**Rules:**
+- Only close PRs that are clearly stale by the criteria above — when in doubt, ask the user rather than closing.
+- **Never** close a PR you just opened, or one the user is actively iterating on.
+- Always include a reason and a revival path in the close comment.
+
 ## Hard rules
 
 - **Never** push to `main` or merge a PR. The user reviews and merges.
 - **Never** force-push a shared branch or rewrite published history without explicit instruction.
 - **Always** branch from an up-to-date `main` (`git pull origin main` first).
 - One feature → one branch → one PR. Keep them aligned.
+- **Never** close a PR without confirming it's stale (per the criteria above) and leaving a reason comment.
 - If `gh` is not authenticated, tell the user to run `gh auth login` rather than working around it.
