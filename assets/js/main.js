@@ -110,7 +110,15 @@ sections.forEach(s => sectionObserver.observe(s));
 
 /* ============================================================
    SCROLL-TRIGGERED ANIMATIONS
+   The entrance fade is an enhancement on top of an already-laid-out
+   page, never a gate on whether content shows. The observer plays the
+   fade for elements scrolled into view from below; a safety sweep
+   reveals anything already at/above the fold immediately so anchor
+   jumps, programmatic scrolls, and missed callbacks can't strand a
+   section dimmed.
    ============================================================ */
+const animTargets = Array.from(document.querySelectorAll('.animate-on-scroll'));
+
 const animObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -118,9 +126,30 @@ const animObserver = new IntersectionObserver((entries) => {
       animObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+}, { threshold: 0, rootMargin: '0px 0px -10% 0px' });
 
-document.querySelectorAll('.animate-on-scroll').forEach(el => animObserver.observe(el));
+// Reveal everything currently in or above the viewport right away;
+// only genuinely below-fold elements wait for their scroll-in entrance.
+const revealInView = () => {
+  const vh = window.innerHeight || document.documentElement.clientHeight;
+  animTargets.forEach((el) => {
+    if (el.classList.contains('visible')) return;
+    if (el.getBoundingClientRect().top < vh * 0.92) {
+      el.classList.add('visible');
+      animObserver.unobserve(el);
+    }
+  });
+};
+
+animTargets.forEach(el => animObserver.observe(el));
+revealInView();
+window.addEventListener('load', revealInView);
+// Anchor navigation lands on a section instantly; sweep once it settles
+// so the destination is never left mid-fade.
+window.addEventListener('hashchange', () => requestAnimationFrame(revealInView));
+document.querySelectorAll('a[href^="#"]').forEach((a) => {
+  a.addEventListener('click', () => setTimeout(revealInView, 80));
+});
 
 /* ============================================================
    TYPING ANIMATION for hero role

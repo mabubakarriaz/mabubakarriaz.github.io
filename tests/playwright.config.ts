@@ -12,7 +12,12 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: '.',
   testMatch: '**/*.spec.ts',
-  timeout: 30_000,
+  // Several specs loop a single test over all 6 pages, and every page.goto
+  // waits for the `load` event — which is gated on the async Google Analytics
+  // script (an external request). Six sequential navigations behind a slow
+  // third-party fetch, under parallel worker load, overruns a 30s budget and
+  // flakes. 60s gives the cross-page loops headroom without masking real hangs.
+  timeout: 60_000,
   retries: 1,            // Retry once on flaky network responses
   workers: 2,            // 2 parallel workers — polite to production server
   reporter: [
