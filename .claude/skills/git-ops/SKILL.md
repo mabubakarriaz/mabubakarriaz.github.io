@@ -6,7 +6,8 @@ description: >
   complete and need a pull request. Trigger when the user says "start a new feature", "create a branch", "open a PR",
   "git-flow", "git ops", asks to close stale/outdated PRs, or asks to follow the branch/PR workflow. Always creates a
   fresh `claude/NNN-<slug>` branch off main for new work, then opens a PR to main with a proper summary via the gh CLI
-  for the user to review and merge manually; also closes superseded/outdated PRs (with confirmation + a reason comment).
+  for the user to review and merge manually; labels each PR and records its project (Personal Portfolio); also closes
+  superseded/outdated PRs (with confirmation + a reason comment).
   Other skills (design-modernization, seo-hardening, audience-infrastructure) defer to this skill
   for all branch and PR operations.
 ---
@@ -83,6 +84,8 @@ gh pr create --base main --head "claude/${next}-<short-kebab-slug>" \
 ## Summary
 <1–3 sentences: what this PR does and why>
 
+**Project:** Personal Portfolio
+
 ## Changes
 - `<file1>` — <what changed and why>
 - `<file2>` — <what changed and why>
@@ -96,13 +99,39 @@ EOF
 )"
 ```
 
-The PR title should read as a plain summary of the feature (no `claude/` prefix needed in the title).
+The PR title should read as a plain summary of the feature (no `claude/` prefix needed in the title). Always keep the **`**Project:** Personal Portfolio`** line in the body — every PR in this repo belongs to the Personal Portfolio project.
 
-### Step 5 — Hand off for review
+### Step 5 — Label the PR (and project assignment)
+
+Every PR gets **at least one label**. Pick the single best fit for the change, plus `automated-task` since agent PRs are automated via code/PR.
+
+> ⚠️ **Do not use `gh pr edit --add-label`** — it fails on this repo with the same Projects-classic GraphQL error as `gh pr edit --body`. Set labels via the REST API instead:
+
+```bash
+gh api repos/mabubakarriaz/mabubakarriaz.github.io/issues/<PR_NUMBER>/labels \
+  -X POST -f "labels[]=<best-label>" -f "labels[]=automated-task" --jq '.[].name'
+```
+
+**Label guide** (repo labels — pick the closest one as the primary):
+
+| Change type | Primary label |
+|---|---|
+| New feature / capability / UI addition | `enhancement` |
+| Fix for broken behavior | `bug` |
+| Docs, skills, config, tooling, READMEs | `documentation` |
+| Audience-infrastructure WBS task | `audience-infrastructure` |
+| PR needs the user to do something manual | `manual-task` |
+
+Always add `automated-task` alongside the primary label for agent-created PRs.
+
+**Project field.** Every PR belongs to the **Personal Portfolio** project. This is recorded as the `**Project:** Personal Portfolio` line in the PR body (above). Assigning the PR to a GitHub *project board* via CLI is **not currently possible** — the repo is linked to a classic project (which breaks `gh pr edit`) and the auth token lacks the `read:project`/`project` scopes. If board assignment is needed, tell the user to either set it in the GitHub web UI or run `gh auth refresh -s project,read:project` first; do not silently skip it.
+
+### Step 6 — Hand off for review
 
 Report back to the user:
 - The branch name and PR URL (printed by `gh pr create`).
 - A one-line summary of what the PR does.
+- The label(s) applied and the project (Personal Portfolio).
 - That **they review and merge manually** — this skill does not merge.
 - If the conversation continues with more changes to the *same* feature, push to the same branch and update the existing PR (see below) — do not open a new PR.
 
@@ -165,5 +194,6 @@ gh pr close <N> --comment "Closing as superseded by #<X>/#<Y>. This branch is N 
 - **Never** force-push a shared branch or rewrite published history without explicit instruction.
 - **Always** branch from an up-to-date `main` (`git pull origin main` first).
 - One feature → one branch → one PR. Keep them aligned.
+- **Always** apply at least one label (via the REST API, not `gh pr edit`) and keep the `**Project:** Personal Portfolio` line in every PR body.
 - **Never** close a PR without confirming it's stale (per the criteria above) and leaving a reason comment.
 - If `gh` is not authenticated, tell the user to run `gh auth login` rather than working around it.
