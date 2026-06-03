@@ -135,6 +135,17 @@ Report back to the user:
 - That **they review and merge manually** — this skill does not merge.
 - If the conversation continues with more changes to the *same* feature, push to the same branch and update the existing PR (see below) — do not open a new PR.
 
+### Step 7 — Return to `main`
+
+Once the PR exists (and the branch is fully pushed), switch back to `main` so the working tree is clean and ready for the next task:
+
+```bash
+git checkout main
+git pull origin main   # keep local main current with what will be merged
+```
+
+This leaves the feature branch intact on the remote (the open PR keeps it alive) while the local checkout sits on an up-to-date `main`. **Only switch after the push + PR succeed** — never leave un-pushed commits stranded by checking out away from the feature branch. If the same feature continues later, check the branch back out (`git checkout claude/NNN-<slug>`) and push more commits to the existing PR.
+
 ## Updating an existing PR
 
 When the same feature continues after a PR is open, push more commits to the same branch, then refresh the PR description so it reflects the **full** set of changes:
@@ -195,5 +206,6 @@ gh pr close <N> --comment "Closing as superseded by #<X>/#<Y>. This branch is N 
 - **Always** branch from an up-to-date `main` (`git pull origin main` first).
 - One feature → one branch → one PR. Keep them aligned.
 - **Always** apply at least one label (via the REST API, not `gh pr edit`) and keep the `**Project:** Personal Portfolio` line in every PR body.
+- **Always** return to `main` after the PR is created and pushed — but only once the push succeeds, never with un-pushed commits.
 - **Never** close a PR without confirming it's stale (per the criteria above) and leaving a reason comment.
 - If `gh` is not authenticated, tell the user to run `gh auth login` rather than working around it.
