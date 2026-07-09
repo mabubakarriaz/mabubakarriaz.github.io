@@ -102,11 +102,15 @@ This portfolio renders a cloud architect's craft as the thing a cloud architect 
 
 The personality is **bold, precise, distinctive** — an engineer's confidence expressed as visual conviction. Density is generous and rhythmic rather than cramped: 100px section breathing, deliberate fades on scroll, restraint in the type and looseness in the dark canvas. Color is committed, not hedged: the indigo/cyan/violet triad does real work across heroes, gradients, and hover glow rather than sitting in the margins as a timid accent. Light carries depth; lines are kept hairline-faint so the glow reads.
 
-This system explicitly rejects three things, carried straight from the brand's anti-references. It is **not a generic resume template** — no interchangeable CV-builder shell where only the name changes. It is **not corporate or sterile** — no enterprise-stock, Fluent-default Microsoft look (notably, the dormant Azure-blue + Segoe UI token layer in the CSS is *drift to retire*, not the brand). And it is **not a trendy AI-startup clone** — no cream-and-slate neutrals, no gradient-mesh-by-default, no tiny tracked uppercase eyebrow stamped above every section.
+This system explicitly rejects three things, carried straight from the brand's anti-references. It is **not a generic resume template** — no interchangeable CV-builder shell where only the name changes, and no resume-label section headings ("Professional Experience", "Featured Certifications", "Academic Background"). It is **not corporate or sterile** — no enterprise-stock, Fluent-default Microsoft look (notably, the dormant Azure-blue + Segoe UI token layer in the CSS is *drift to retire*, not the brand). And it is **not a trendy AI-startup clone** — no cream-and-slate neutrals, no gradient-mesh-by-default, no tiny tracked uppercase eyebrow stamped above every section, and **no emoji icons** as card decoration (☁️/🏆/🎓 and the like read as generic template furniture, the opposite of instrument-grade).
+
+The page reads as a **story, not a directory**. Sections are narrative beats told in the architect's own first-person voice, not categories on a CV. Each section title is a sentence with a point ("From data engineer to cloud architect", "Proof, not just a profile", "Systems I've shipped"), and most content sections open with a single `section-lead` line that advances the arc rather than restating the heading. The connective spine is the `~/` mono kicker: read top to bottom, the kickers (`~/about → ~/stack → ~/experience → ~/credentials → ~/projects → ~/engage`) continue the terminal session the hero console opens, so the visitor is touring one coherent control plane rather than paging through a stack of resume blocks.
 
 Responsive behavior is composition, not just reflow. The desktop surface runs the full eleven-section sequence; the phone surface is **curated to a tighter story** because a mobile visit is short and one-handed (PRODUCT.md: *"short, evaluative visits, often arriving from LinkedIn… frequently on mobile"*). The mobile arc reads: identity (hero) → proof (stats) → how I work (the pinned About story) → the stack → track record (experience) → credentials (certs) → recognition (awards) → **the ask (Engage)** → **stay in touch (Newsletter)**. Two desktop sections, Projects and Education, are tangents to that arc and are dropped on phones (their full content still lives on dedicated pages and on desktop/tablet); the Engage → Newsletter call-to-action is pulled to the end so the scroll lands on the ask, not on a list of awards.
 
 **The Mobile-Story Rule.** On phones (`≤768px`) the page is curated into a narrative, not shrunk. Off-arc sections are dropped, the primary CTA (Engage, then Newsletter) is pulled to the close, and every nav target still resolves. Desktop and tablet keep the full section set in source order — the mobile recomposition is a `display:none` + flex-`order` overlay, never a separate information architecture or a content fork.
+
+**The Guided-Traversal Rule.** The page is one narrative, not a directory of sections. Every section heading is a voice-led sentence in the first person ("From data engineer to cloud architect", "Proof, not just a profile", "Systems I've shipped"), never a resume label ("Professional Experience", "Featured Certifications"). Most content sections open with a single `section-lead` line that advances the story instead of restating the title, and the `~/` mono kicker continues the hero console's terminal session as the connective spine. If a heading could be swapped onto any other portfolio unchanged, rewrite it until it carries this person's voice.
 
 **Key Characteristics:**
 - Dark by default (near-black deep-space canvas); a full light theme exists as an opt-in override.
@@ -114,6 +118,8 @@ Responsive behavior is composition, not just reflow. The desktop surface runs th
 - Monospace (JetBrains Mono) reserved for telemetry: dates, eyebrows, metadata, the logo, the cursor.
 - Depth via blur, glow, and translucency — never via heavy drop shadows or borders.
 - Glow-on-hover and small directional nudges (`translateX`/`translateY`) as the interaction signature.
+- A story read top to bottom: voice-led section titles, a `section-lead` connector per section, and the `~/` kicker carrying one terminal session through the page (The Guided-Traversal Rule).
+- No emoji and no pictorial card icons: identity comes from structure — issuer bars, gradient signal-nodes, the deploy-panel window bar, and mono telemetry.
 - Mobile is a curated story, not a scaled-down desktop: tangential sections drop away and the Engage → Newsletter CTA closes the scroll (The Mobile-Story Rule).
 
 ## 2. Colors
@@ -155,7 +161,8 @@ A committed dark palette where a single indigo→cyan gradient carries the brand
 - **Headline** (800, `clamp(2rem, 4vw, 2.75rem)`, lh 1.15, ls -0.02em): Section and page titles.
 - **Title** (700, 1.05rem, lh 1.3): Card titles — roles, cert names, project names, award titles.
 - **Body** (400, 1–1.05rem, lh 1.6–1.75): Paragraph copy and descriptions. Constrain to ~520–560px (≈65–75ch) for hero and about text.
-- **Label** (600, 0.75rem, ls 0.05–0.12em, UPPERCASE, JetBrains Mono): Eyebrows, dates, metadata pills, stat labels, the scroll indicator. Always monospace, always short.
+- **Label** (600, 0.75rem, ls 0.05–0.12em, UPPERCASE, JetBrains Mono): Eyebrows, dates, metadata pills, the scroll indicator. Always monospace, always short.
+- **Telemetry caption** (500, 0.78rem, JetBrains Mono, **lowercase**): Stat-bar labels ("years building", "projects shipped") and similar readouts. Mono and lowercase so the stats bar reads as an instrument status line, not the uppercase-tracked SaaS metric strip.
 
 ### Named Rules
 **The Mono-Is-Instrumentation Rule.** JetBrains Mono is reserved for telemetry-class text: dates, code-ish labels, the `<AR/>` logo, the cursor, section tags. It is forbidden for headings, body copy, or anything sentence-length. Mono here earns its keep because the subject *is* technical; it is never decoration.
@@ -217,6 +224,18 @@ Three offer cards (Cloud architecture, Team training, Speaking) in a `repeat(3, 
 ### Signature: The Experience Timeline
 A two-column grid (40px marker rail + content) where each entry is a glowing indigo **node** (`14px`, Node Glow halo) connected by a gradient line that fades to transparent. Cards carry a square company badge with a per-company gradient, a monospace date pill, and `›`-marked bullets in indigo. This is the system's most distinctive pattern — the literal "control plane" read — and should be preserved as the model for any chronological content.
 
+### Card identity without icons
+Cards earn their identity from structure, never from a decorative icon. **Cert cards** lead with the colored issuer bar (`azure` / `hashicorp` / `github` …) plus the cert name and a cyan mono date — no emoji. **Project cards** in the gallery rail wear a deploy-panel window bar (three traffic-light dots) as their visual anchor; the project name leads directly under it. Removing the old emoji slot is the rule, not a one-off: a pictorial icon above a card heading is the template tell this system rejects.
+
+### Signal nodes
+Awards and homepage education entries are marked by a small **signal node** (`.award-node` / `.edu-node`: a 12px gradient dot with a soft indigo glow), reusing the timeline/signal vocabulary so achievements read as live markers on the control plane rather than trophy/graduation emoji. In a centered row the node sits inline; in the awards-full grid (`auto 1fr auto`) it holds the first column with a `7px` top nudge onto the title's first line.
+
+### Narrative lead
+`section-lead` is the story's connective tissue: one centered line under a section title (`max-width: 44rem`, Muted Slate, `text-wrap: pretty`) that advances the arc rather than restating the heading. Used on most content sections, never as a generic subtitle.
+
+### Named Rules
+**The No-Emoji-Icons Rule.** Emoji are forbidden as card icons, section markers, or heading decoration (☁️/🏆/🎓/🐳 and the family). They read as generic template furniture and break the instrument-grade voice. Identity comes from the issuer bar, the window bar, signal nodes, the gradient spine, and mono telemetry. The only glyph exception is the functional pipeline `✓` inside the hero/about console panels, which is machine status, not decoration.
+
 ## 6. Do's and Don'ts
 
 ### Do:
@@ -228,10 +247,14 @@ A two-column grid (40px marker rail + content) where each entry is a glowing ind
 - **Do** provide a `prefers-reduced-motion` fallback (crossfade or instant) for every orb drift, fade-in, blink, and hover transform — the bold motion makes this non-negotiable.
 - **Do** treat the dark theme as default and keep the light theme at full parity (it already exists as a `[data-theme="light"]` override).
 - **Do** curate mobile into a story rather than shrinking the desktop stack: on phones (`≤768px`) drop off-arc sections (Projects, Education) and pull the Engage → Newsletter CTA to the close so the scroll ends on the ask (The Mobile-Story Rule). Keep desktop's full section set and source order untouched — the recomposition is a media-query overlay, not a fork.
+- **Do** write section headings as first-person, voice-led sentences and open most sections with one `section-lead` connector, so the page reads as a guided traversal rather than a directory (The Guided-Traversal Rule).
+- **Do** give cards their identity from structure — issuer bars, the deploy-panel window bar, signal nodes, the gradient spine, mono telemetry — not from a pictorial icon (The No-Emoji-Icons Rule).
 
 ### Don't:
 - **Don't** revive the dormant Azure-blue (`#0078D4`) + Segoe UI + GitHub-dark token layer as the visible brand — it's migration drift and it reads as the **corporate / sterile, Fluent-default Microsoft look** the brand explicitly rejects.
-- **Don't** let the page slide into a **generic resume template** — if a section could belong to any portfolio with the name swapped, give it the control-plane treatment (glow, mono telemetry, gradient spine) instead.
+- **Don't** let the page slide into a **generic resume template** — if a section could belong to any portfolio with the name swapped, give it the control-plane treatment (glow, mono telemetry, gradient spine) instead. This includes the headings: no resume-label titles ("Professional Experience", "Featured Certifications", "Academic Background", "Honors & Awards").
+- **Don't** put emoji or pictorial icons on cards, section markers, or headings (☁️/🏆/🎓/🐳 …). They read as the generic-template look the brand rejects; use structural identity instead (The No-Emoji-Icons Rule). The functional pipeline `✓` in the console panels is the only allowed glyph.
+- **Don't** dress the stats bar as the SaaS hero-metric strip (big gradient number + tiny tracked-uppercase label). Keep the gradient numbers (brand) but label them with lowercase mono telemetry so it reads as an instrument status line.
 - **Don't** drift toward a **trendy AI-startup clone**: no cream-and-slate neutrals, no gradient-mesh-by-default hero, and no tiny tracked-uppercase eyebrow stamped above *every* section. One mono `section-tag` used with intent is voice; on every heading it's AI scaffolding.
 - **Don't** use cyan as a large fill or as body text (The Cyan-Is-Telemetry Rule), and never invert or re-angle the gradient spine.
 - **Don't** add hard drop shadows or borders heavier than 1px to convey elevation; that's the 2014-app tell this system is built to avoid.
